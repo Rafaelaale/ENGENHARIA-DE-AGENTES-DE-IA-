@@ -1,0 +1,38 @@
+﻿REGRAS DE FUTEBOL
+
+REGRA 1 - O CAMPO DE JOGO
+Uma partida é disputada entre duas equipes. Cada equipe deve ter no máximo onze jogadores, sendo um deles o goleiro. A partida não pode começar ou continuar se uma equipe tiver menos de sete jogadores.
+
+REGRA 3 - OS JOGADORES
+Um jogador pode ser substituído conforme as regras da competição. O goleiro pode trocar de posição com outro jogador durante a partida, desde que o árbitro seja informado.
+
+REGRA 5 - O ÁRBITRO
+O árbitro tem autoridade para aplicar as regras do jogo. Suas decisões sobre os fatos relacionados à partida são definitivas.
+
+REGRA 10 - DETERMINAÇÃO DO RESULTADO
+Um gol é marcado quando a bola ultrapassa completamente a linha de fundo, entre os postes e abaixo do travessão, desde que nenhuma infração tenha sido cometida pela equipe que marcou.
+
+REGRA 11 - IMPEDIMENTO
+Um jogador está em posição de impedimento quando qualquer parte da cabeça, do corpo ou dos pés está no campo adversário, excluindo a linha do meio de campo, e está mais próxima da linha de fundo adversária do que a bola e o penúltimo adversário.
+
+Um jogador em posição de impedimento somente será punido se participar ativamente da jogada, interferindo no jogo, interferindo em um adversário ou obtendo vantagem da posição.
+
+Não existe infração de impedimento quando um jogador recebe a bola diretamente de um tiro de meta, arremesso lateral ou escanteio.
+
+REGRA 12 - FALTAS E INFRAÇÕES
+É infração tocar deliberadamente a bola com a mão ou o braço. O árbitro deve considerar o movimento da mão ou do braço em direção à bola e a posição da mão ou do braço.
+
+Um gol marcado diretamente com a mão ou o braço não é válido, mesmo que o contato seja acidental. Também é infração quando um jogador, imediatamente após a bola tocar acidentalmente sua mão ou braço, marca um gol ou cria uma oportunidade de gol.
+
+O goleiro pode tocar a bola com as mãos dentro da sua própria área penal, observando as limitações previstas nas regras.
+
+Uma falta pode ocorrer por ação descuidada, imprudente ou com uso de força excessiva. Uma ação com força excessiva deve ser punida com cartão vermelho.
+
+REGRA 13 - TIROS LIVRES
+Os tiros livres podem ser diretos ou indiretos. Um gol pode ser marcado diretamente de um tiro livre direto contra a equipe adversária.
+
+REGRA 14 - TIRO PENAL
+Um tiro penal é concedido quando um jogador comete uma infração punível com tiro livre direto dentro da própria área penal.
+
+REGRA 17 - TIRO DE CANTO
+Um tiro de canto é concedido quando a bola ultrapassa completamente a linha de fundo, tendo sido tocada por último por um jogador da equipe defensora, sem que tenha sido marcado um gol.
