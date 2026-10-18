@@ -1,0 +1,109 @@
+PROVENIÊNCIA DA CONSOLIDAÇÃO — 18/10/2026
+
+Destino: https://github.com/Rafaelaale/ENGENHARIA-DE-AGENTES-DE-IA-
+Commit anterior à consolidação: aba8ba7143ac977bf7ed5c14f3b38b5e61f5cee6
+
+1. INVENTÁRIO E PRESERVAÇÃO DO DESTINO
+
+O destino já tinha README.md e rag-foundations-langchain/, com código, aulas,
+documentos, geradores de PDFs e referências do professor.
+
+rag-foundations-langchain/ foi movida para projetos/rag-langchain/, não substituída
+por uma cópia da fonte. Todos os arquivos anteriores foram mantidos; o README foi
+ampliado e três demos receberam ajustes descritos abaixo.
+
+As aulas abaixo existiam somente no destino e foram preservadas:
+  aulas/aula_avaliacao_local.py
+  aulas/aula_buscas_vetoriais.py
+  aulas/aula_validacao_comparativa_local.py
+
+2. FONTES VERIFICADAS
+
+Rafaelaale/langchain-ollama-alura
+  URL: https://github.com/Rafaelaale/langchain-ollama-alura
+  Branch padrão: main
+  Commit: 0916cedbf8b2f0994a69859d428dd1bd5103d570
+  Snapshot: https://github.com/Rafaelaale/langchain-ollama-alura/tree/0916cedbf8b2f0994a69859d428dd1bd5103d570
+  Destino: projetos/langchain-ollama-alura/
+  Copiados: os seis scripts main*.py, as 16 aulas e os quatro documentos GTB
+  (três PDFs e um TXT). README e requirements foram adaptados, não transcritos
+  cegamente. A fonte contém exemplos OpenAI e Ollama, memória, roteamento e RAG;
+  não é uma cópia do projeto rag-langchain.
+  Ignorados/substituídos: imagem externa do README; .gitignore específico,
+  substituído pelas regras da raiz; dependências antigas e incompletas.
+
+Rafaelaale/rag-langchain
+  URL: https://github.com/Rafaelaale/rag-langchain
+  Branch padrão: main
+  Commit: 958634b78507dfdc49be65e759de2061811c1540
+  Snapshot: https://github.com/Rafaelaale/rag-langchain/tree/958634b78507dfdc49be65e759de2061811c1540
+  Destino: projetos/rag-langchain/ (mapeamento do conteúdo já presente).
+  Comparação antes dos ajustes: todos os arquivos da fonte já estavam presentes.
+  Código e documentos eram idênticos byte a byte. Somente README e .gitignore
+  diferiam, e o destino tinha as três aulas adicionais listadas acima.
+  Não foi feita uma segunda cópia. Foram mantidos aulas/, documentos/, projetos/,
+  referencias/, os dois geradores e o .gitignore local do destino.
+  Nenhum conteúdo substantivo exclusivo da fonte ficou faltando.
+  A fonte não trazia manifesto de dependências; foi criado requirements.txt.
+
+Rafaelaale/langchain-ollama-alura. (com ponto final)
+  URL: https://github.com/Rafaelaale/langchain-ollama-alura.
+  O repositório existe: não foi tratado como erro de digitação.
+  Branch padrão indicada nos metadados: main; nenhuma branch efetivamente criada.
+  A consulta de conteúdo retornou HTTP 409 "Git Repository is empty";
+  a listagem de branches retornou vazia. Tamanho informado: zero.
+  Commit: inexistente. Nada copiado; nenhuma pasta artificial foi criada.
+  Não há material para determinar duplicação de conteúdo com o nome sem ponto.
+
+3. ADAPTAÇÕES LOCAIS
+
+- README principal e guias dos projetos apresentam escopo educacional, comandos,
+  distinção entre modelos locais e API paga e limitações dos dados.
+- Adicionados manifestos de dependências para Python 3.12. A checagem de
+  advisories identificou versões vulneráveis de LangChain, langchain-community
+  e PyPDF no requirements original. Os manifestos usam versões corrigidas;
+  o import de prompt em main_chat.py passou para langchain_core.
+- Chroma 1.5.9 foi sinalizado com vulnerabilidades sem versão corrigida.
+  Por isso não foi adicionado. Nas demos executáveis de RH e medicamentos,
+  Chroma foi trocado por FAISS em memória; foi removida a exclusão de diretório
+  de índice do exemplo de medicamentos.
+- Os caminhos das três demos em projetos/rag-langchain/projetos/ agora apontam
+  para documentos/ na raiz do próprio projeto, independentemente do diretório
+  de onde o script é invocado.
+- Removida a desserialização pickle de índices FAISS em agente_futebol.py e
+  aula_rag_pdfs.py. Os índices são construídos em memória a partir dos documentos
+  incluídos. Isso troca a reutilização em disco por recriação a cada execução.
+- As referências do professor foram preservadas sem reescrita e identificadas
+  como históricas, fora do ambiente de execução recomendado. Os nomes originais
+  e a separação entre aulas/adaptações e referências mantêm a atribuição.
+
+4. EXCLUSÕES E LIMITES
+
+Não foram importados .git/, .env, credenciais, ambientes virtuais, caches,
+checkpoints, índices vetoriais ou modelos baixados. Os snapshots inspecionados
+não continham esses artefatos; a raiz ganhou regras preventivas de .gitignore.
+Nenhum .env.example foi necessário. Os PDFs/TXT são dados de estudo, não índices.
+
+Os PDFs de RH e medicamentos são sintéticos; o material de futebol é didático.
+Os documentos GTB são arquivos de estudo já presentes na fonte; não foi atribuída
+autoria desses materiais ao portfólio. As referências identificadas como do
+professor mantêm essa identificação. Nenhuma nova licença foi presumida.
+
+Nenhum repositório de origem foi alterado, removido, arquivado ou teve suas
+configurações modificadas. Esta operação consolida arquivos, não o histórico Git
+completo dos repositórios de origem.
+
+5. VALIDAÇÃO
+
+Dependências instaladas em ambiente temporário Python 3.12; pip check sem
+conflitos. Verificados sintaxe dos 35 arquivos Python, imports do ambiente
+recomendado, leitura dos PDFs, links locais dos READMEs e regras de exclusão.
+
+Exercitados os fluxos de futebol, medicamentos, interface Streamlit de RH
+(incluindo uma pergunta e reranking), RAG PDF/TXT e chat com memória usando
+embeddings e modelos simulados. Leitores de documentos e busca FAISS reais.
+Essas verificações de fluxo não medem qualidade das respostas.
+
+Ollama não está instalado no ambiente da consolidação; não foi feita inferência
+real, download de modelos nem chamada paga à OpenAI. Algumas APIs didáticas
+emitem avisos de depreciação, mas funcionaram nas verificações de fluxo.
