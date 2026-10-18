@@ -7,9 +7,8 @@ from langchain_ollama import OllamaEmbeddings, OllamaLLM
 from langchain_community.vectorstores import FAISS
 
 
-PASTA_PROJETO = Path(__file__).resolve().parent.parent
+PASTA_PROJETO = Path(__file__).resolve().parents[2]
 ARQUIVO_REGRAS = PASTA_PROJETO / "documentos" / "regras_futebol.txt"
-PASTA_INDICE = PASTA_PROJETO / "indice" / "regras_futebol"
 
 MODELO_EMBEDDING = "nomic-embed-text:latest"
 MODELO_LLM = "gemma3:1b"
@@ -21,22 +20,12 @@ def parar(modelo):
 
 def obter_indice():
     embeddings = OllamaEmbeddings(model=MODELO_EMBEDDING)
-    if (PASTA_INDICE / "index.faiss").exists():
-        print("Carregando indice salvo...")
-        return FAISS.load_local(
-            str(PASTA_INDICE),
-            embeddings,
-            allow_dangerous_deserialization=True,
-        )
-
     print("Criando indice...")
     documentos = TextLoader(str(ARQUIVO_REGRAS), encoding="utf-8").load()
     chunks = RecursiveCharacterTextSplitter(
         chunk_size=400, chunk_overlap=50
     ).split_documents(documentos)
     indice = FAISS.from_documents(chunks, embeddings)
-    PASTA_INDICE.parent.mkdir(parents=True, exist_ok=True)
-    indice.save_local(str(PASTA_INDICE))
     return indice
 
 

@@ -1,13 +1,14 @@
 ﻿import os
 import re
+from pathlib import Path
 import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_ollama import OllamaEmbeddings, ChatOllama
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
 
-PERSIST_DIRECTORY = "./chroma_rh_local"
+PASTA_DOCUMENTOS = Path(__file__).resolve().parents[2] / "documentos"
 EMBEDDING_MODEL = "nomic-embed-text:latest"
 LLM_MODEL = "gemma3:1b"
 
@@ -15,12 +16,13 @@ LLM_MODEL = "gemma3:1b"
 def carregar_documentos():
     caminhos = ["politica_ferias.pdf", "politica_home_office.pdf", "codigo_conduta.pdf"]
     documentos = []
-    for caminho in caminhos:
+    for nome in caminhos:
+        caminho = PASTA_DOCUMENTOS / nome
         if os.path.exists(caminho):
             loader = PyPDFLoader(caminho)
             docs = loader.load()
             for doc in docs:
-                doc.metadata["documento"] = caminho
+                doc.metadata["documento"] = caminho.name
             documentos.extend(docs)
     return documentos
 
@@ -44,10 +46,9 @@ def enriquecer_chunks(chunks):
 @st.cache_resource
 def criar_vectorstore(_chunks):
     embeddings = OllamaEmbeddings(model=EMBEDDING_MODEL)
-    vectorstore = Chroma.from_documents(
+    vectorstore = FAISS.from_documents(
         documents=_chunks,
         embedding=embeddings,
-        persist_directory=PERSIST_DIRECTORY
     )
     return vectorstore
 

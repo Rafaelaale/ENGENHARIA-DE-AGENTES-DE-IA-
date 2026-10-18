@@ -1,16 +1,15 @@
 ﻿import json
 import random
-import shutil
 import urllib.request
 from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-raiz = Path(__file__).resolve().parents[1]
-caminhos_bulas = [raiz / "dipirona.pdf", raiz / "paracetamol.pdf"]
+raiz = Path(__file__).resolve().parents[2]
+caminhos_bulas = [raiz / "documentos" / nome for nome in ("dipirona.pdf", "paracetamol.pdf")]
 faltando = [p.name for p in caminhos_bulas if not p.exists()]
 if faltando:
     raise SystemExit("Faltam os PDFs na pasta do projeto: " + ", ".join(faltando))
@@ -68,14 +67,10 @@ for i, chunk in enumerate(random.sample(chunks, min(2, len(chunks))), start=1):
     print("\nConteúdo (início):")
     print(chunk.page_content[:300])
 
-destino = raiz / "chroma_bulas_local"
-if destino.exists():
-    shutil.rmtree(destino)
 print("Gerando embeddings locais...")
-vectorstore = Chroma.from_documents(
+vectorstore = FAISS.from_documents(
     documents=chunks,
     embedding=OllamaEmbeddings(model="nomic-embed-text:latest"),
-    persist_directory=str(destino)
 )
 retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 nome_modelo = modelo_chat()
