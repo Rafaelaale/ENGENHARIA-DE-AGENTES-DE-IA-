@@ -26,7 +26,8 @@ agente_abertura_conta = create_agent(
     tools=[],
     system_prompt=(
         "Você é um especialista em abertura de contas do banco MDBank. "
-        "Ajude o cliente a abrir uma conta e explique os tipos disponíveis."
+        "Ajude o cliente a abrir uma conta. "
+        "Explique os tipos de contas disponíveis: conta simples e conta completa."
     ),
 )
 
