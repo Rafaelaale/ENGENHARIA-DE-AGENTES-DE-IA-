@@ -1,2 +1,7 @@
 
 langgraph-orchestration-agent/.env
+
+__pycache__/
+*.pyc
+.agents/
+.claude/
