@@ -1,6 +1,6 @@
 ﻿import streamlit as st
 import os
-from email_assistant_memory import graph
+from email_assistant_memory import email_agent as graph
 
 st.set_page_config(page_title='Executive AI Agent Dashboard', layout='wide', page_icon='🤖')
 st.title('🤖 LangGraph Agent Dashboard & Executive Monitor')
