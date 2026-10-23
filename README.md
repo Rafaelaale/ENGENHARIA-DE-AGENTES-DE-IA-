@@ -1,44 +1,31 @@
-﻿# 🧠 Engenharia de Agentes de IA — Portfolio Técnico
+﻿# 🤖 Engenharia de Agentes Autônomos: LangGraph, RAG & Executive Dashboards
 
-Portfólio de engenharia de software e inteligência artificial voltado a arquiteturas avançadas de agentes autônomos, sistemas RAG e orquestração de grafos orientados a estado com execução local (custo zero).
-
----
-
-## 📂 Projetos no Repositório
-
-### 1. [🤖 LangGraph Orchestration Agent](./langgraph-orchestration-agent)
-- **Foco:** Orquestração de agentes corporativos com controle de estado determístico.
-- **Destaques:**
-  - Máquina de estados finita com **LangGraph** (`StateGraph`).
-  - **Human-in-the-Loop (HITL)** para aprovação manual de ações sensíveis (agendamento).
-  - Roteamento semântico de intenções (Triagem autônoma de e-mails).
-  - **Memória Semântica de Longo Prazo** para persistência de contatos.
-  - Interface interativa em **Streamlit** e execução 100% on-premises via **Ollama (`llama3.2:1b`)**.
-
-### 2. [📚 RAG Foundations & Local Agents](./rag-foundations-langchain)
-- **Foco:** Arquitetura de recuperação de informação aumentada por geração (RAG).
-- **Destaques:**
-  - Embeddings locais com **Ollama** (`nomic-embed-text`) e bases vetoriais locais (**Chroma**).
-  - Padrão **ReAct** (Reasoning + Acting) para busca semântica em documentos confidenciais.
-  - Respostas fundamentadas com controle de contexto e redução de alucinações.
+## 📌 Visão Geral do Repositório
+Solução corporativa voltada para a arquitetura de agentes autônomos utilizando grafos de decisão com LangGraph, recuperação contextual via RAG e interfaces executivas com Streamlit. Foco em execução local com Ollama, determinismo e Human-in-the-Loop (HITL).
 
 ---
 
-## 🛠️ Stack Tecnológica Consolidada
+## 🏗️ Módulos Principais
 
-| Categoria | Tecnologias |
-| :--- | :--- |
-| **Orquestração & Frameworks** | LangGraph, LangChain, LangChain-Core |
-| **Modelos Locais (LLM & Embeddings)** | Ollama (`llama3.2:1b`, `nomic-embed-text`) |
-| **Bases Vetoriais & Persistência** | Chroma, MemoryStore |
-| **Interfaces de Apresentação** | Streamlit |
-| **Linguagem & Ambiente** | Python 3.11, PowerShell, Git |
+### 1. `langgraph-orchestration-agent/` (Core do Agente & HITL)
+- **LangGraph State Management:** Grafos de decisão, controle de estado e memória semântica com checkpoints.
+- **Human-in-the-Loop (HITL):** Pontos de interrupção determinísticos para aprovação humana em ações críticas.
+- **LLM Local:** Processamento via Ollama (`llama3.2:1b`), garantindo privacidade e custo zero.
+- **Executive Dashboard (`app_dashboard.py`):** Visualização do grafo, simulador de triagem e painel de auditoria.
+
+### 2. `rag-foundations-langchain/` (Fundamentos de RAG)
+- **Base Vetorial:** ChromaDB local para recuperação semântica de documentos.
+- **Embeddings:** Execução local com Nomic-Embed-Text e Gemma via Ollama CLI.
 
 ---
 
-## 🎯 Objetivo de Engenharia
+## ⚙️ Instruções de Execução
 
-Demonstrar a aplicação prática de padrões corporativos de IA Generativa:
-- Governança e auditoria com Human-in-the-Loop.
-- Eliminação de custos de API e compliance de dados com modelos locais.
-- Arquiteturas orientadas a eventos e grafos auditáveis.
+```powershell
+# Execução do agente via terminal (com HITL interativo)
+cd langgraph-orchestration-agent
+py -3.11 email_assistant_memory.py
+
+# Execução do Dashboard Executivo
+streamlit run app_dashboard.py
+```
