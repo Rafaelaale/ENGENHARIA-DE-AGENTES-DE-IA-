@@ -1,0 +1,180 @@
+Notebook: C:\Users\rafal\orquestrando-agentes-langgraph\Aula_02_Componentes.ipynb
+Total de c?lulas: 25
+
+--- C?lula 1 | code ---
+class AgentState(TypedDict):
+messages: Annotated[Sequence[BaseMassage], operator.add]
+
+--- C?lula 2 | code ---
+class AgentState(TypedDict):
+input: str
+chat_history: list[BaseMessage]
+agent_outcome: Union[AgentAction, AgentFinish, None]
+intermediate_steps: Annotated[list[tuple[AgentAction, str]], operator.add]
+
+--- C?lula 3 | code ---
+%pip install -U google-generativeai
+%pip install google-ai-generativelanguage==0.6.15
+%pip install -U langchain-google-genai
+%pip install -U langchain-community
+%pip install -U langgraph
+%pip install -U langgraph langchain-community
+%pip install python-dotenv
+
+--- C?lula 4 | code ---
+from langgraph.graph import StateGraph, END
+from typing import TypedDict, Annotated, List
+import operator
+import google.generativeai as genai
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, ToolMessage
+from langchain_community.tools.tavily_search import TavilySearchResults
+
+--- C?lula 5 | code ---
+import os
+from dotenv import load_dotenv
+load_dotenv()
+os.environ['GOOGLE_API_KEY'] = os.getenv('GEMINI_API_KEY')
+os.environ['TAVILY_API_KEY'] = os.getenv('TAVILY_API_KEY')
+
+--- C?lula 6 | code ---
+tool = TavilySearchResults(max_results=4)
+print(type(tool))
+print(tool.name)
+
+--- C?lula 7 | code ---
+class AgentState(TypedDict):
+messages: Annotated[list[AnyMessage], operator.add]
+
+--- C?lula 8 | code ---
+class Agent:
+def __init__(self, model, tools, system=""):
+self.system = system
+graph = StateGraph(AgentState)
+graph.add_node("llm", self.call_gemini)
+graph.add_node("action", self.take_action)
+graph.add_conditional_edges(
+"llm",
+
+--- C?lula 9 | code ---
+prompt = """Você é um assistente de pesquisa inteligente. Use o mecanismo de busca para procurar informações. \
+Você tem permissão para fazer múltiplas chamadas (seja em conjunto ou em sequência). \
+Procure informações apenas quando tiver certeza do que você quer. \
+Se precisar pesquisar alguma informação antes de fazer uma pergunta de acompanhamento, você tem permissão para fazer isso!
+"""
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+abot = Agent(model, [tool], system=prompt)
+
+--- C?lula 10 | code ---
+mermaid_code = abot.graph.get_graph().draw_mermaid()
+print(mermaid_code)
+
+--- C?lula 11 | code ---
+from IPython.display import Image, display
+try:
+image_data = abot.graph.get_graph().draw_mermaid_png()
+display(Image(data=image_data))
+except Exception as e:
+print(f"Erro ao tentar gerar PNG do Mermaid: {e}")
+print("\nCertifique-se de que a sua versão do LangGraph possui o método `.draw_mermaid_png()`.")
+print("Como alternativa, use `.draw_mermaid()` para obter a string e visualizar externamente.")
+
+--- C?lula 12 | code ---
+%pip install -U langchain-tavily
+
+--- C?lula 13 | code ---
+class AgentState(TypedDict):
+messages: Annotated[List[BaseMessage], operator.add]
+class Agent:
+def __init__(self, model, tools, system=""):
+self.system = system
+graph = StateGraph(AgentState)
+graph.add_node("llm", self.call_gemini)
+graph.add_node("action", self.take_action)
+
+--- C?lula 14 | code ---
+prompt = """Você é um assistente de pesquisa inteligente. Use o mecanismo de busca para procurar informações. \
+Você tem permissão para fazer múltiplas chamadas (seja em conjunto ou em sequência). \
+Procure informações apenas quando tiver certeza do que você quer. \
+Se precisar pesquisar alguma informação antes de fazer uma pergunta de acompanhamento, você tem permissão para fazer isso!
+"""
+model_instance = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+tool_instance = TavilySearch(max_results=4)
+abot = Agent(model_instance, [tool_instance], system=prompt)
+
+--- C?lula 15 | code ---
+from datetime import date
+current_date = date.today().strftime("%d/%m/%Y") # Formato dd/mm/aaaa
+prompt = f"""Você é um assistente de pesquisa inteligente e altamente atualizado. \
+Sua principal prioridade é encontrar as informações mais RECENTES e em TEMPO REAL sempre que possível. \
+A data atual é {current_date}. \
+Ao buscar sobre o tempo ou eventos que se referem a "hoje" ou "agora", \
+você DEVE **incluir a data atual '{current_date}' na sua consulta para a ferramenta de busca**. \
+Por exemplo, se a pergunta é "tempo em cidade x hoje", a consulta para a ferramenta deve ser "tempo em cidade x {current_date}". \
+
+--- C?lula 16 | code ---
+user_query_tomorrow = "Como está o tempo em São Paulo amanhã?" #atualizamos apenas a pergunta do usuário
+messages_tomorrow = [HumanMessage(content=user_query_tomorrow)]
+print("\n--- Iniciando interação do agente para amanhã ---")
+final_result_state_tomorrow = None
+for s in abot.graph.stream({"messages": messages_tomorrow}):
+print(s)
+print("---")
+final_result_state_tomorrow = s
+
+--- C?lula 17 | code ---
+from langchain_core.messages import HumanMessage
+user_query_tomorrow = "Como foi o tempo em São Paulo ontem?"
+messages_tomorrow = [HumanMessage(content=user_query_tomorrow)]
+print("\n--- Iniciando interação do agente ---")
+final_result_state_tomorrow = None
+for s in abot.graph.stream({"messages": messages_tomorrow}):
+print(s)
+print("---")
+
+--- C?lula 18 | markdown ---
+Então, vamos chamar novamente este agente, perguntando: "Qual é o tempo em SP hoje? Dessa vez, vamos olhar em detalhes o que o agente buscou e como ele o fez.
+
+--- C?lula 19 | code ---
+messages = [HumanMessage(content="Como está o tempo em São Paulo hoje?")]
+result = abot.graph.invoke({"messages": messages})
+
+--- C?lula 20 | code ---
+result['messages'][-1].content
+
+--- C?lula 21 | code ---
+messages = [HumanMessage(content="Como está o tempo em São Paulo e no Rio de Janeiro hoje?")]
+result = abot.graph.invoke({"messages": messages})
+
+--- C?lula 22 | code ---
+result['messages'][-1].content
+
+--- C?lula 23 | code ---
+query_passado = "Qual país sediou a Copa do Mundo de futebol em 1998? Quem foi o campeão e qual o placar da final? \
+Qual era o Produto Interno Bruto (PIB) desse país no ano da Copa e qual é o PIB atual (últimos dados disponíveis, como 2023 ou 2024)? \
+Qual a capital desse país e qual sua moeda atual? Responda a cada pergunta separadamente."
+messages = [HumanMessage(content=query_passado)]
+print("\nIniciando interação do agente para pergunta sobre o passado:")
+current_state = {}
+for s in abot.graph.stream({"messages": messages}):
+current_state.update(s)
+
+--- C?lula 24 | code ---
+print("\n--- Agente de Pesquisa Interativo ---")
+print("Digite sua pergunta ou 'sair' para encerrar.")
+while True:
+user_input = input("\nVocê: ")
+if user_input.lower() == "sair":
+print("Agente: Encerrando a conversa. Até logo!")
+break
+messages = [HumanMessage(content=user_input)]
+
+--- C?lula 25 | code ---
+# BUSCA_WEB_DDGS_OLLAMA
+# Consulta dados meteorol?gicos atuais diretamente ? API Open-Meteo.
+# N?o usa o Ollama para evitar que o modelo invente dados.
+import json
+from urllib.request import urlopen
+url = (
+"https://api.open-meteo.com/v1/forecast"
+"?latitude=-23.55&longitude=-46.63"
