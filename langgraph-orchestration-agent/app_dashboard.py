@@ -1,18 +1,18 @@
-﻿import streamlit as st
+import streamlit as st
 import os
 from email_assistant_memory import email_agent as graph
 
-st.set_page_config(page_title='Executive AI Agent Dashboard', layout='wide', page_icon='🤖')
-st.title('🤖 LangGraph Agent Dashboard & Executive Monitor')
+st.set_page_config(page_title='Executive AI Agent Dashboard', layout='wide', page_icon='??')
+st.title('?? LangGraph Agent Dashboard & Executive Monitor')
 st.markdown('Painel executivo para monitoramento de agentes, controle Human-in-the-Loop (HITL) e auditoria de decisoes.')
 
-tab1, tab2, tab3 = st.tabs(['📊 Topologia do Grafo', '📥 Triagem de E-mails', '⚙️ Auditoria & HITL'])
+tab1, tab2, tab3 = st.tabs(['?? Topologia do Grafo', '?? Triagem de E-mails', '?? Auditoria & HITL'])
 
 with tab1:
     st.subheader('Topologia do Grafo de Decisao')
     img = os.path.join(os.path.dirname(__file__), 'grafo_email.png')
     if os.path.exists(img):
-        st.image(img, caption='Topologia LangGraph com HITL e Memoria Semantica', use_container_width=True)
+        st.image(img, caption='Topologia LangGraph com HITL e Memoria Semantica', width='stretch')
     else:
         st.warning('grafo_email.png nao encontrado.')
 
