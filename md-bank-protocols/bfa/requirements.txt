@@ -1,0 +1,6 @@
+﻿fastapi
+uvicorn
+httpx
+a2a-sdk
+rank-bm25
+numpy

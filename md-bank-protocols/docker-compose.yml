@@ -1,4 +1,4 @@
-version: '3.8'
+﻿version: '3.8'
 
 services:
   abrir_conta_agent:
@@ -58,6 +58,20 @@ services:
     depends_on:
       - supervisor
 
+  bfa:
+    build:
+      context: ./bfa
+      dockerfile: Dockerfile
+    container_name: bfa
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./bfa:/app
+    depends_on:
+      - recursos
+      - supervisor
+      - abrir_conta_agent
+      - cartao_credito_agent
   recursos:
     container_name: recursos
     build:
@@ -66,3 +80,19 @@ services:
       - ./recursos:/app
     ports:
       - "8084:8000"
+
+  frontend-ag-ui:
+    build: ./front-end2
+    container_name: frontend-ag-ui
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front-end2:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_INTERVAL=1000
+      - FAST_REFRESH=true
+    command: npm start
+
