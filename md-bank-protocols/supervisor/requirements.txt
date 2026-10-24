@@ -1,8 +1,9 @@
-﻿fastapi
+fastapi
 uvicorn
-python-dotenv
-pydantic
-langchain
-langchain-openai
+a2a-sdk
 langgraph
-requests
+langchain
+langchain_openai
+langchain-community
+httpx
+python-dotenv

@@ -1,18 +1,15 @@
 ﻿from fastapi import FastAPI
 from pydantic import BaseModel
-from dotenv import load_dotenv
-import os
-from langchain.chat_models import init_chat_model
+from langchain_openai import ChatOpenAI
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
-load_dotenv()
-
 app = FastAPI(title="Agente Abrir Conta")
 
-__llm = init_chat_model(
-    model="gpt-4o",
-    api_key=os.getenv("OPENAI_API_KEY"),
+__llm = ChatOpenAI(
+    base_url="http://host.docker.internal:11434/v1",
+    api_key="ollama",
+    model="gemma3:1b",
     temperature=0.7
 )
 

@@ -1,35 +1,68 @@
-﻿services:
+version: '3.8'
+
+services:
+  abrir_conta_agent:
+    build:
+      context: ./agents/abrir_conta
+      dockerfile: Dockerfile
+    container_name: abrir_conta_agent
+    ports:
+      - "8081:8000"
+    environment:
+      - OPENAI_API_KEY=ollama
+      - OPENAI_API_BASE=http://host.docker.internal:11434/v1
+      - MODEL_NAME=llama3.2:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  cartao_credito_agent:
+    build:
+      context: ./agents/cartao_credito
+      dockerfile: Dockerfile
+    container_name: cartao_credito_agent
+    ports:
+      - "8082:8000"
+    environment:
+      - OPENAI_API_KEY=ollama
+      - OPENAI_API_BASE=http://host.docker.internal:11434/v1
+      - MODEL_NAME=llama3.2:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   supervisor:
-    build: ./supervisor
+    build:
+      context: ./supervisor
+      dockerfile: Dockerfile
     container_name: mdbank_supervisor_agents
     ports:
       - "8000:8000"
-    volumes:
-      - ./supervisor:/app
+    environment:
+      - OPENAI_API_KEY=ollama
+      - OPENAI_API_BASE=http://host.docker.internal:11434/v1
+      - MODEL_NAME=llama3.2:latest
+      - ABRIR_CONTA_URL=http://abrir_conta_agent:8000
+      - CARTAO_CREDITO_URL=http://cartao_credito_agent:8000
+    depends_on:
+      - abrir_conta_agent
+      - cartao_credito_agent
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: mdbank_frontend
     ports:
       - "9090:9090"
-    volumes:
-      - ./frontend:/app
+    depends_on:
+      - supervisor
 
-  abrir_conta_agent:
-    container_name: abrir_conta_agent
+  recursos:
+    container_name: recursos
     build:
-      context: ./agents/abrir_conta
+      context: ./recursos
     volumes:
-      - ./agents/abrir_conta:/app
+      - ./recursos:/app
     ports:
-      - "8081:8000"
-
-  cartao_credito_agent:
-    container_name: cartao_credito_agent
-    build:
-      context: ./agents/cartao_credito
-    volumes:
-      - ./agents/cartao_credito:/app
-    ports:
-      - "8082:8000"
+      - "8084:8000"

@@ -1,25 +1,21 @@
-﻿import logging
-from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+import json
+from fastapi import FastAPI, Response
+from pydantic import BaseModel
+from src.service import executar_supervisor
 
-from src.schemas import ChatRequest
-from src.agents import executar_supervisor
+app = FastAPI(title="Supervisor Agents")
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+class ChatRequest(BaseModel):
+    message: str
+    session_id: str = "123"
+    client_id: str = "123"
 
-app = FastAPI()
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.post("/chat")
-async def chat_endpoint(payload: ChatRequest):
-    if not payload.message:
-        return JSONResponse(status_code=400, content={"error": "Campo 'message' é obrigatório"})
-
-    try:
-        logger.info(f"Mensagem recebida no /chat: {payload.message}")
-        resposta = await executar_supervisor(texto_usuario=payload.message)
-        logger.info(f"Resposta gerada: {resposta}")
-        return {"resposta": resposta}
-    except Exception as e:
-        logger.exception("Erro ao processar requisição no endpoint /chat")
-        return JSONResponse(status_code=500, content={"error": str(e)})
+async def chat(payload: ChatRequest):
+    resposta = await executar_supervisor(payload.message)
+    conteudo = json.dumps({"resposta": resposta}, ensure_ascii=False)
+    return Response(content=conteudo, media_type="application/json; charset=utf-8")
