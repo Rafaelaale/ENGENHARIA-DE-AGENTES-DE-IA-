@@ -1,0 +1,4 @@
+import numpy as np
+plt.show()
+plt.savefig('C:/Users/rafal/Desktop/redes_neurais_pytorch/exercicio_classificacao_linear.png')
+plt.show()

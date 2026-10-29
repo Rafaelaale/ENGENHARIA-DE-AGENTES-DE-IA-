@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+  <rect width="700" height="420" fill="white"/>
+  <line x1="250" y1="30" x2="250" y2="370" stroke="black"/>
+  <line x1="40" y1="200" x2="660" y2="200" stroke="black"/>
+  <line x1="50" y1="290" x2="650" y2="65" stroke="blue" stroke-width="2"/>  <circle cx="450" cy="140" r="6" fill="blue"/>
+  <text x="459" y="132" font-size="14">p1</text>  <circle cx="350" cy="110" r="6" fill="red"/>
+  <text x="359" y="102" font-size="14">p2</text>  <circle cx="550" cy="260" r="6" fill="green"/>
+  <text x="559" y="252" font-size="14">p3</text></svg>
