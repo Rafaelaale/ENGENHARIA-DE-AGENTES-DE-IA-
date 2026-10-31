@@ -1,31 +1,24 @@
-﻿# 🤖 Engenharia de Agentes Autônomos: LangGraph, RAG & Executive Dashboards
+﻿# Engenharia de Agentes de IA
 
-## 📌 Visão Geral do Repositório
-Solução corporativa voltada para a arquitetura de agentes autônomos utilizando grafos de decisão com LangGraph, recuperação contextual via RAG e interfaces executivas com Streamlit. Foco em execução local com Ollama, determinismo e Human-in-the-Loop (HITL).
+Repositório de estudos e materiais da trilha de Engenharia de Agentes de IA.
 
----
+## Assuntos
 
-## 🏗️ Módulos Principais
+- Redes neurais com PyTorch
+- Funções de perda
+- Classificação e regressão com PyTorch
+- Otimização de redes neurais e taxa de aprendizado
+- Otimizadores: SGD, momentum, Nesterov, AdaGrad, AdaDelta, RMSprop e Adam
+- Batches, iterações e épocas
+- Datasets e DataLoader, incluindo MNIST
+- Dataset customizado de aluguel de bicicletas
+- Fluxos de treinamento e validação
+- Dashboard com LangGraph
 
-### 1. `langgraph-orchestration-agent/` (Core do Agente & HITL)
-- **LangGraph State Management:** Grafos de decisão, controle de estado e memória semântica com checkpoints.
-- **Human-in-the-Loop (HITL):** Pontos de interrupção determinísticos para aprovação humana em ações críticas.
-- **LLM Local:** Processamento via Ollama (`llama3.2:1b`), garantindo privacidade e custo zero.
-- **Executive Dashboard (`app_dashboard.py`):** Visualização do grafo, simulador de triagem e painel de auditoria.
+## Dashboard
 
-### 2. `rag-foundations-langchain/` (Fundamentos de RAG)
-- **Base Vetorial:** ChromaDB local para recuperação semântica de documentos.
-- **Embeddings:** Execução local com Nomic-Embed-Text e Gemma via Ollama CLI.
-
----
-
-## ⚙️ Instruções de Execução
+Para iniciar o dashboard, execute:
 
 ```powershell
-# Execução do agente via terminal (com HITL interativo)
-cd langgraph-orchestration-agent
-py -3.11 email_assistant_memory.py
-
-# Execução do Dashboard Executivo
-streamlit run app_dashboard.py
+py -m streamlit run dashboard.py
 ```
