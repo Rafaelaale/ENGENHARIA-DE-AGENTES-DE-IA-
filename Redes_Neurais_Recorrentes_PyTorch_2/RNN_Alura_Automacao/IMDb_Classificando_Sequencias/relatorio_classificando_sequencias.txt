@@ -1,0 +1,26 @@
+AULA - CLASSIFICANDO SEQUENCIAS
+
+1. Modelo possui Embedding, GRU e Linear: APROVADO
+2. Saida possui dimensao B x 2: APROVADO
+3. Rotulos possuem formato correto: APROVADO
+4. CrossEntropyLoss calcula perda valida: APROVADO
+5. Softmax produz probabilidades que somam 1: APROVADO
+6. Batch de tamanho 1 preserva dimensao 1 x 2: APROVADO
+7. Treinamento executou todas as epocas: APROVADO
+8. Perdas permaneceram finitas: APROVADO
+9. Predicao aceita multiplas frases: APROVADO
+10. Probabilidades de cada frase somam 1: APROVADO
+11. Checkpoint treinado salvo: APROVADO
+
+Amostras didaticas: 6
+Epocas: 30
+Embedding: 100
+Hidden: 256
+Saida: 2
+Acuracia nas frases de treino: 100.00%
+
+Treinamento apenas demonstrativo.
+Nao foi utilizado IMDb oficial nem GloVe.
+Nao ha teste independente de generalizacao.
+
+11/11 TESTES APROVADOS

@@ -1,0 +1,13 @@
+LABORATORIO - GATES
+
+Gate com valores entre 0 e 1: APROVADO
+Multiplicacao elemento a elemento: APROVADO
+Gate produzido por nn.Linear e sigmoid: APROVADO
+Gate aprendeu os valores desejados: APROVADO
+
+Perda inicial: 0.04784494
+Perda final: 0.00000000
+
+4/4 TESTES APROVADOS
+
+Observacao: laboratorio didatico, sem treinar LSTM/GRU.

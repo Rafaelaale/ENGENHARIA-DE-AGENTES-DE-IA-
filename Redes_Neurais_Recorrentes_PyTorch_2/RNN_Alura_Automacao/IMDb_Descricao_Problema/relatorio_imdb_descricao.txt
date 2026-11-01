@@ -1,0 +1,19 @@
+AULA - DESCRICAO DO PROBLEMA IMDb
+
+1. Carregamento das avaliacoes de demonstracao: APROVADO
+2. Tokenizacao em minusculas: APROVADO
+3. Separacao entre texto e rotulo: APROVADO
+4. Comprimento de cada sequencia: APROVADO
+5. Rotulos convertidos para torch.long: APROVADO
+6. Comprimentos armazenados como tensores: APROVADO
+7. Vocabulario numerico criado: APROVADO
+8. batch_first altera organizacao B x S e S x B: APROVADO
+
+PyTorch: 2.15.0+cpu
+Amostras didaticas: 6
+Vocabulario: 34 tokens
+Maior sequencia: 10 tokens
+IMDb local: nao encontrado
+
+8/8 TESTES APROVADOS
+Nenhum modelo foi treinado.

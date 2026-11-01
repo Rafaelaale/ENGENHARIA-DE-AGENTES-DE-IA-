@@ -1,0 +1,21 @@
+LABORATORIO - LSTM E GRU
+
+1. RNNCell produz hidden state: APROVADO
+2. GRUCell produz hidden state: APROVADO
+3. LSTMCell produz duas memorias: APROVADO
+4. Quantidade de parametros: RNN < GRU < LSTM: APROVADO
+5. GRU e LSTM processam sequencias: APROVADO
+6. Treinamento GRU e LSTM executado: APROVADO
+
+PARAMETROS
+RNNCell: 448
+GRUCell: 1344
+LSTMCell: 1792
+
+ACURACIA DE TESTE
+GRU: 100.00%
+LSTM: 100.00%
+
+6/6 TESTES ESTRUTURAIS APROVADOS
+Acuracia registrada, sem minimo exigido.
+Dados sinteticos; modelos anteriores preservados.

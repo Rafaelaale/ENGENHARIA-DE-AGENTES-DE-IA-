@@ -1,0 +1,21 @@
+LABORATORIO - CAMADA RNN
+
+1. Entrada organizada em B x S x N: APROVADO
+2. GRU retorna output e hidden: APROVADO
+3. Ultimo output igual ao hidden final: APROVADO
+4. Formato S x B x N e saida S x B x F: APROVADO
+5. batch_first altera dimensoes, nao calculos: APROVADO
+6. GRUCell com loop equivale a GRU: APROVADO
+7. LSTM retorna output, hidden e cell state: APROVADO
+8. Hidden acompanha numero de camadas: APROVADO
+
+DIMENSOES
+Entrada: (4, 7, 1)
+GRU output: (4, 7, 16)
+GRU hidden: (1, 4, 16)
+LSTM cell: (1, 4, 16)
+GRU 3 camadas hidden: (3, 4, 16)
+
+8/8 TESTES APROVADOS
+Experimentos estruturais, sem treinamento.
+Checkpoint anterior preservado.

@@ -1,0 +1,124 @@
+{
+  "origem": "Exemplos didaticos, nao IMDb",
+  "amostras": [
+    {
+      "text": [
+        "this",
+        "movie",
+        "was",
+        "amazing",
+        "!",
+        "great",
+        "acting",
+        "and",
+        "story",
+        "."
+      ],
+      "label": "pos",
+      "length": 10
+    },
+    {
+      "text": [
+        "terrible",
+        "movie",
+        ".",
+        "i",
+        "hated",
+        "the",
+        "ending",
+        "."
+      ],
+      "label": "neg",
+      "length": 8
+    },
+    {
+      "text": [
+        "a",
+        "wonderful",
+        "film",
+        "with",
+        "excellent",
+        "performances",
+        "."
+      ],
+      "label": "pos",
+      "length": 7
+    },
+    {
+      "text": [
+        "boring",
+        "plot",
+        "and",
+        "very",
+        "bad",
+        "dialogue",
+        "."
+      ],
+      "label": "neg",
+      "length": 7
+    },
+    {
+      "text": [
+        "i",
+        "really",
+        "loved",
+        "this",
+        "fantastic",
+        "movie",
+        "!"
+      ],
+      "label": "pos",
+      "length": 7
+    },
+    {
+      "text": [
+        "the",
+        "film",
+        "was",
+        "disappointing",
+        "and",
+        "too",
+        "long",
+        "."
+      ],
+      "label": "neg",
+      "length": 8
+    }
+  ],
+  "vocabulario": {
+    "<PAD>": 0,
+    "<UNK>": 1,
+    "this": 2,
+    "movie": 3,
+    "was": 4,
+    "amazing": 5,
+    "!": 6,
+    "great": 7,
+    "acting": 8,
+    "and": 9,
+    "story": 10,
+    ".": 11,
+    "terrible": 12,
+    "i": 13,
+    "hated": 14,
+    "the": 15,
+    "ending": 16,
+    "a": 17,
+    "wonderful": 18,
+    "film": 19,
+    "with": 20,
+    "excellent": 21,
+    "performances": 22,
+    "boring": 23,
+    "plot": 24,
+    "very": 25,
+    "bad": 26,
+    "dialogue": 27,
+    "really": 28,
+    "loved": 29,
+    "fantastic": 30,
+    "disappointing": 31,
+    "too": 32,
+    "long": 33
+  }
+}

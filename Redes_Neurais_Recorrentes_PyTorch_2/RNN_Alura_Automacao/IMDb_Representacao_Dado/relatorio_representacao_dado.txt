@@ -1,0 +1,25 @@
+AULA - REPRESENTACAO DO DADO
+
+1. Vocabulario com tokens especiais: APROVADO
+2. Limite de vocabulario respeitado: APROVADO
+3. Frequencias dos tokens calculadas: APROVADO
+4. Palavras desconhecidas recebem indice UNK: APROVADO
+5. Rotulos convertidos para torch.long: APROVADO
+6. Textos convertidos em sequencias de indices: APROVADO
+7. Batch com formato S x B e padding: APROVADO
+8. Embedding transforma S x B em S x B x 100: APROVADO
+9. Vetores UNK e PAD inicializados com zeros: APROVADO
+10. Embedding equivale a selecionar vetor por one-hot: APROVADO
+
+Amostras: 6
+Vocabulario: 34
+Embedding: 100
+Tensor X: (10, 6)
+Tensor embedding: (10, 6, 100)
+Rotulos: (6,)
+
+Origem: exemplos didaticos.
+Embedding inicializado aleatoriamente, nao GloVe.
+Nenhum classificador foi treinado.
+
+10/10 TESTES APROVADOS

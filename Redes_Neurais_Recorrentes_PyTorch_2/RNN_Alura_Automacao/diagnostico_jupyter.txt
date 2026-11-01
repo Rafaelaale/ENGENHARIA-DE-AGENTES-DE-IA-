@@ -1,0 +1,4 @@
+INICIANDO EXECUCAO JUPYTER
+CELULAS: 30
+FALHAS: []
+NOTEBOOK EXECUTADO: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\Classificacao_Execucao_Jupyter.ipynb

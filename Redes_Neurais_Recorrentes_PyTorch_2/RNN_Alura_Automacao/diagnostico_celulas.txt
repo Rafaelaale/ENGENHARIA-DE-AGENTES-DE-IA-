@@ -1,0 +1,21 @@
+NOTEBOOK: ESTRUTURA VALIDA
+TOTAL DE CELULAS: 30
+CELULAS CORRIGIDAS: []
+PENDENCIAS ESTATICAS: 3
+Celula 4: comando especial Jupyter
+Celula 8: comando especial Jupyter
+Celula 9: outro uso de decode exige verificacao do tipo de dado
+
+INICIANDO VALIDACAO SEQUENCIAL
+CELULA 4: NAO EXECUTADA (comando especial Jupyter)
+CELULA 5: ERRO
+Traceback (most recent call last):
+  File "C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\validar_celulas_rnn.py", line 151, in <module>
+    exec(codigo, contexto)
+  File "<celula 5>", line 6, in <module>
+NameError: name 'torch' is not defined
+
+
+CELULAS EXECUTADAS: 0
+FALHAS: [5]
+RESULTADO: VALIDACAO INCOMPLETA

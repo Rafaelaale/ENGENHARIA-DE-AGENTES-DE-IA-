@@ -1,0 +1,11 @@
+ANALISE DO NOTEBOOK ORIGINAL
+Total de celulas: 30
+Correcoes: 1
+Pendencias de sintaxe: 2
+
+CORRECOES:
+Celula 13: decode em strings (1)
+
+PENDENCIAS:
+Celula 3: linha 13: invalid syntax
+Celula 7: linha 2: invalid syntax

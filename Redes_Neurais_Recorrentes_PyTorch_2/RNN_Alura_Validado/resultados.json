@@ -1,0 +1,86 @@
+{
+  "categorias": [
+    "Arabic",
+    "Chinese",
+    "Czech",
+    "Dutch",
+    "English",
+    "French",
+    "German",
+    "Greek",
+    "Irish",
+    "Italian",
+    "Japanese",
+    "Korean",
+    "Polish",
+    "Portuguese",
+    "Russian",
+    "Scottish",
+    "Spanish",
+    "Vietnamese"
+  ],
+  "historico": [
+    {
+      "epoca": 1,
+      "perda": 1.8260698167979716,
+      "acuracia_treino": 0.47
+    },
+    {
+      "epoca": 2,
+      "perda": 1.6248643260449172,
+      "acuracia_treino": 0.5
+    },
+    {
+      "epoca": 3,
+      "perda": 1.6246777244160573,
+      "acuracia_treino": 0.5466666666666666
+    }
+  ],
+  "acuracia_teste": 0.537578027465668,
+  "previsoes": {
+    "Araujo": [
+      {
+        "categoria": "English",
+        "probabilidade": 0.23875035345554352
+      },
+      {
+        "categoria": "Russian",
+        "probabilidade": 0.19373804330825806
+      },
+      {
+        "categoria": "Arabic",
+        "probabilidade": 0.19282841682434082
+      }
+    ],
+    "Cabral": [
+      {
+        "categoria": "Russian",
+        "probabilidade": 0.2901141345500946
+      },
+      {
+        "categoria": "English",
+        "probabilidade": 0.23919105529785156
+      },
+      {
+        "categoria": "Arabic",
+        "probabilidade": 0.20763474702835083
+      }
+    ],
+    "Schmidt": [
+      {
+        "categoria": "English",
+        "probabilidade": 0.3136872351169586
+      },
+      {
+        "categoria": "Russian",
+        "probabilidade": 0.24853144586086273
+      },
+      {
+        "categoria": "Arabic",
+        "probabilidade": 0.08288943022489548
+      }
+    ]
+  },
+  "treino": 16069,
+  "teste": 4005
+}

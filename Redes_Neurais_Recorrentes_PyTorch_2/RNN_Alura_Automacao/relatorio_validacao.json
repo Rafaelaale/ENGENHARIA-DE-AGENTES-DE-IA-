@@ -1,0 +1,25 @@
+{
+  "celulas_originais": 30,
+  "correcoes_seguras": [],
+  "pendencias": [
+    {
+      "celula": 4,
+      "tipo": "sintaxe especial Jupyter"
+    },
+    {
+      "celula": 8,
+      "tipo": "sintaxe especial Jupyter"
+    },
+    {
+      "celula": 9,
+      "tipo": "decode requer verificacao de tipo"
+    },
+    {
+      "celula": 14,
+      "tipo": "decode requer verificacao de tipo"
+    }
+  ],
+  "original_modificado": false,
+  "notebook_corrigido": "C:\\Users\\rafal\\Desktop\\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\\RNN_Alura_Automacao\\Classificacao_Sequencias_Corrigido.ipynb",
+  "execucao_integral_original": false
+}

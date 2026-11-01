@@ -1,0 +1,25 @@
+LABORATORIO - RNN PROFUNDA BIDIRECIONAL
+
+1. GRU simples: output S x B x F e hidden 1 x B x F: APROVADO
+2. GRU profunda: hidden L x B x F: APROVADO
+3. GRU bidirecional: output S x B x 2F: APROVADO
+4. GRU profunda bidirecional: hidden L*D x B x F: APROVADO
+5. Reshape separa camadas e direcoes: APROVADO
+6. Concatenacao dos estados finais produz B x 2F: APROVADO
+7. Estados finais correspondem as pontas corretas: APROVADO
+8. LSTM profunda bidirecional possui h e c: APROVADO
+9. Arquiteturas profundas e bidirecionais aumentam parametros: APROVADO
+10. Classificador profundo bidirecional retorna 18 classes: APROVADO
+
+PARAMETROS
+GRU simples: 1344
+GRU profunda: 4608
+GRU bidirecional: 2688
+GRU profunda bidirecional: 12288
+
+Nomes carregados: 20074
+Nacionalidades: 18
+
+10/10 TESTES APROVADOS
+Modelo profundo bidirecional criado, nao treinado.
+Checkpoints anteriores preservados.

@@ -1,0 +1,33 @@
+AULA - SEQUENCIAS EMPACOTADAS
+
+1. Batches construidos com comprimentos variaveis: APROVADO
+2. Sequencias ordenadas do maior para o menor: APROVADO
+3. Modelo possui Embedding e GRU: APROVADO
+4. Batch 1: embedding S x B x 100: APROVADO
+5. Batch 1: hidden inicial 1 x B x 256: APROVADO
+6. Batch 1: empacotamento correto: APROVADO
+7. Batch 1: batch_sizes corretos: APROVADO
+8. Batch 1: packed_output preserva batch_sizes: APROVADO
+9. Batch 1: output S x B x 256: APROVADO
+10. Batch 1: comprimentos recuperados: APROVADO
+11. Batch 1: hidden ignora padding: APROVADO
+12. Batch 1: padding restaurado com zeros: APROVADO
+4. Batch 2: embedding S x B x 100: APROVADO
+5. Batch 2: hidden inicial 1 x B x 256: APROVADO
+6. Batch 2: empacotamento correto: APROVADO
+7. Batch 2: batch_sizes corretos: APROVADO
+8. Batch 2: packed_output preserva batch_sizes: APROVADO
+9. Batch 2: output S x B x 256: APROVADO
+10. Batch 2: comprimentos recuperados: APROVADO
+11. Batch 2: hidden ignora padding: APROVADO
+12. Batch 2: padding restaurado com zeros: APROVADO
+
+Dispositivo: cpu
+Vocabulario: 34
+Embedding: 100
+Hidden: 256
+Batches: 2
+
+Todos os testes aprovados.
+Amostras didaticas, nao IMDb oficial.
+Modelo nao treinado.

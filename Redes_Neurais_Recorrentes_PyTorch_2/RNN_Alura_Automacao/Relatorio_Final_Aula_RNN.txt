@@ -1,0 +1,17 @@
+RELATORIO DE EXECUCAO - AULA RNN
+=======================================================
+Total de celulas: 30
+Celulas de codigo executadas: 15
+Celulas de codigo com tentativa de execucao: [4, 5, 8, 9, 12, 14, 16, 18, 20, 22, 24, 25, 27, 29, 30]
+
+CELULAS DE TREINAMENTO OMITIDAS:
+Celula 24: Treinamento omitido para preservar o checkpoint
+
+ERROS IDENTIFICADOS:
+Celula 25: NameError - name 'forward' is not defined
+
+IMPORTANTE:
+Uma celula executada pode conter erro.
+Celulas de treinamento substituidas foram omitidas.
+O checkpoint existente nao foi sobrescrito.
+Notebook de resultados: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\Aula_RNN_Executada_Segura.ipynb

@@ -1,0 +1,133 @@
+{
+  "status": "executado_e_validado",
+  "python": "3.11.9",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "categorias": [
+    "Arabic",
+    "Chinese",
+    "Czech",
+    "Dutch",
+    "English",
+    "French",
+    "German",
+    "Greek",
+    "Irish",
+    "Italian",
+    "Japanese",
+    "Korean",
+    "Polish",
+    "Portuguese",
+    "Russian",
+    "Scottish",
+    "Spanish",
+    "Vietnamese"
+  ],
+  "total_nomes": 20074,
+  "total_treino": 16053,
+  "total_teste": 4021,
+  "epocas": 3,
+  "amostras_por_classe_por_epoca": 50,
+  "historico_treino": [
+    {
+      "loss_media": 2.8742489200168184,
+      "loss_desvio": 0.05773311242154649,
+      "acuracia": 0.10444444444444445,
+      "amostras": 900,
+      "epoca": 1
+    },
+    {
+      "loss_media": 2.739523222181532,
+      "loss_desvio": 0.25401417924176456,
+      "acuracia": 0.15888888888888889,
+      "amostras": 900,
+      "epoca": 2
+    },
+    {
+      "loss_media": 2.6044035763210722,
+      "loss_desvio": 0.41804244870067625,
+      "acuracia": 0.16555555555555557,
+      "amostras": 900,
+      "epoca": 3
+    }
+  ],
+  "metricas_teste": {
+    "loss_media": 2.5555690543860887,
+    "loss_desvio": 0.5429725744255687,
+    "acuracia": 0.3832380004973887,
+    "amostras": 4021
+  },
+  "previsoes_top3": {
+    "Araujo": [
+      {
+        "categoria": "Portuguese",
+        "probabilidade": 0.088247
+      },
+      {
+        "categoria": "Spanish",
+        "probabilidade": 0.079942
+      },
+      {
+        "categoria": "Irish",
+        "probabilidade": 0.073652
+      }
+    ],
+    "Cabral": [
+      {
+        "categoria": "Arabic",
+        "probabilidade": 0.091077
+      },
+      {
+        "categoria": "English",
+        "probabilidade": 0.080382
+      },
+      {
+        "categoria": "Irish",
+        "probabilidade": 0.079377
+      }
+    ],
+    "Schmidt": [
+      {
+        "categoria": "Portuguese",
+        "probabilidade": 0.080472
+      },
+      {
+        "categoria": "French",
+        "probabilidade": 0.079639
+      },
+      {
+        "categoria": "Irish",
+        "probabilidade": 0.078962
+      }
+    ]
+  },
+  "tempo_segundos": 6.94,
+  "notebook_original_executado_integralmente": false,
+  "notebook_original_preservado": true,
+  "pendencias_notebook_original": [
+    {
+      "celula": 4,
+      "tipo": "sintaxe especial Jupyter"
+    },
+    {
+      "celula": 8,
+      "tipo": "sintaxe especial Jupyter"
+    },
+    {
+      "celula": 9,
+      "tipo": "decode requer verificacao de tipo"
+    },
+    {
+      "celula": 14,
+      "tipo": "decode requer verificacao de tipo"
+    }
+  ],
+  "adaptacoes": [
+    "Implementacao supervisionada independente",
+    "Entrada dimensionada pelo dicionario real",
+    "Amostragem balanceada com reposicao",
+    "Separacao treino/teste antes da amostragem",
+    "Limite de tres epocas",
+    "Sem executar celulas arbitrarias do original"
+  ]
+}

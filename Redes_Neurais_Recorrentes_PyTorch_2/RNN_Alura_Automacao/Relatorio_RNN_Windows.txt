@@ -1,0 +1,16 @@
+VALIDACAO RNN - WINDOWS
+=======================================================
+Arquivos de nacionalidade: 18
+Celulas totais: 30
+Celulas de codigo processadas: 15
+Celulas: [4, 5, 8, 9, 12, 14, 16, 18, 20, 22, 24, 25, 27, 29, 30]
+
+Celula 8: arquivos locais utilizados.
+Celula 24: funcao forward definida.
+Celula 25: inferencia sem treinamento.
+
+ERROS:
+Nenhum erro Python registrado.
+
+AVISOS DE COMANDOS EXTERNOS:
+Nenhum identificado.

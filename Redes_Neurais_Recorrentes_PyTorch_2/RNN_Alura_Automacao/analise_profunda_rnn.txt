@@ -1,0 +1,95 @@
+
+$ErrorActionPreference = "Stop"
+
+$projeto = "C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2"
+$python = Join-Path $projeto ".venv\Scripts\python.exe"
+$pasta = Join-Path $projeto "RNN_Alura_Automacao"
+$notebook = Join-Path $pasta "Classificacao_Sequencias_Corrigido.ipynb"
+$relatorio = Join-Path $pasta "diagnostico_split.txt"
+$scriptPython = Join-Path $pasta "diagnosticar_split.py"
+
+if (!(Test-Path -LiteralPath $python)) {
+    throw "Python 3.11 nao encontrado."
+}
+
+if (!(Test-Path -LiteralPath $notebook)) {
+    throw "Notebook corrigido nao encontrado."
+}
+
+$codigo = @'
+import ast
+import sys
+import nbformat
+from pathlib import Path
+
+origem = Path(sys.argv[1])
+destino = Path(sys.argv[2])
+
+nb = nbformat.read(str(origem), as_version=4)
+
+linhas = [
+    "DIAGNOSTICO DO ERRO SPLIT - RNN ALURA",
+    "=" * 70,
+    f"Total de celulas: {len(nb.cells)}",
+    ""
+]
+
+for numero, celula in enumerate(nb.cells, 1):
+    if celula.cell_type != "code":
+        continue
+
+    fonte = celula.source
+
+    if numero not in (18, 30) and "split" not in fonte:
+        continue
+
+    linhas.append("=" * 70)
+    linhas.append(f"CELULA {numero}")
+    linhas.append("=" * 70)
+
+    for indice, linha in enumerate(fonte.splitlines(), 1):
+        linhas.append(f"{indice:03d} | {linha}")
+
+    linhas.append("")
+
+    try:
+        arvore = ast.parse(fonte)
+        definicoes = sorted({
+            node.id
+            for node in ast.walk(arvore)
+            if isinstance(node, ast.Name)
+            and isinstance(node.ctx, ast.Store)
+        })
+
+        linhas.append("Variaveis atribuidas:")
+        linhas.append(", ".join(definicoes) or "Nenhuma")
+    except SyntaxError as erro:
+        linhas.append(
+            f"Erro de sintaxe: linha {erro.lineno}: {erro.msg}"
+        )
+
+    linhas.append("")
+
+destino.write_text(
+    "\n".join(linhas),
+    encoding="utf-8"
+)
+
+print("Relatorio criado:", destino)
+'@
+
+New-Item -ItemType Directory -Force -Path $pasta | Out-Null
+
+[System.IO.File]::WriteAllText(
+    $scriptPython,
+    $codigo,
+    [System.Text.UTF8Encoding]::new($false)
+)
+
+& $python $scriptPython $notebook $relatorio
+
+if ($LASTEXITCODE -ne 0) {
+    throw "Falha ao gerar diagnostico."
+}
+
+Start-Process notepad.exe -ArgumentList "`"$relatorio`""

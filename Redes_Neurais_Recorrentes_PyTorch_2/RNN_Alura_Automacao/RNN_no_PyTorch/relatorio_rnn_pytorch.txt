@@ -1,0 +1,13 @@
+AULA - RNN NO PYTORCH
+
+Arquitetura: nn.GRU
+Nacionalidades: 18
+Nomes carregados: 20074
+Vocabulario: 62
+Formato entrada: S x 1 x N
+Formato hidden: 1 x 1 x F
+Formato classificacao: 1 x 18
+Acuracia no teste: 65.00%
+Treinamento: 3 epocas x ate 250 exemplos
+6/6 TESTES APROVADOS
+Checkpoint anterior preservado.

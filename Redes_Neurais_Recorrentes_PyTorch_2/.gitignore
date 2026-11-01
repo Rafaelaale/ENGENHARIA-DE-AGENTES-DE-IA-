@@ -1,0 +1,48 @@
+﻿.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+node_modules/
+.env
+.env.*
+*.pt
+*.pth
+*.pkl
+*.pyc
+*.key
+*.pem
+*.p12
+
+# Backups de notebooks
+*.bak
+*_backup_*
+backups/
+backup/
+
+# Arquivos temporarios
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# Ambientes e configuracoes locais
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+
+# Modelos binarios
+*.pt
+*.pth
+*.pkl
+
+# Backups adicionais
+Backup_Original_*
+Original_20*.ipynb
+
+# Logs locais
+erro_rnn.txt

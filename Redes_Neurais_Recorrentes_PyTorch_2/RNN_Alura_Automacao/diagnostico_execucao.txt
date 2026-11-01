@@ -1,0 +1,20 @@
+﻿[2026-10-31 22:17:57] INICIO DA AUTOMACAO
+[2026-10-31 22:17:57] Projeto: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2
+[2026-10-31 22:17:57] Notebook original preservado.
+[2026-10-31 22:17:57] Backup criado: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\backups\original_20261031_221757_2115587.ipynb
+[2026-10-31 22:17:57] Python 3.11 confirmado.
+[2026-10-31 22:17:58] Dependencia instalada: torch
+[2026-10-31 22:17:58] Dependencia instalada: numpy
+[2026-10-31 22:17:59] Dependencia instalada: matplotlib
+[2026-10-31 22:18:00] Dependencia instalada: nbformat
+[2026-10-31 22:18:00] Dependencia instalada: ipykernel
+[2026-10-31 22:18:01] Dependencia instalada: sympy
+[2026-10-31 22:18:01] Verificando integridade das dependencias.
+No broken requirements found.
+IMPORTS_VALIDOS 2.15.0+cpu
+[2026-10-31 22:18:05] Dependencias importadas com sucesso.
+[2026-10-31 22:18:05] Programa Python gerado.
+SINTAXE_VALIDADA
+[2026-10-31 22:18:05] Sintaxe Python validada.
+[2026-10-31 22:18:05] Iniciando treinamento limitado a 3 epocas.
+[2026-10-31 22:18:15] Todos os arquivos principais foram verificados.

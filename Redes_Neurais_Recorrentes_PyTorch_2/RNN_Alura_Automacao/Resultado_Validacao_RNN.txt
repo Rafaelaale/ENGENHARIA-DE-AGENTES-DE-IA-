@@ -1,0 +1,16 @@
+VALIDACAO DA AULA RNN
+=======================================================
+Total de celulas: 30
+Celulas de codigo executadas: 15
+Numeros das celulas: [4, 5, 8, 9, 12, 14, 16, 18, 20, 22, 24, 25, 27, 29, 30]
+
+Celula 24: definicao de forward preservada.
+Celula 25: treinamento de 200 epocas omitido.
+Checkpoint original nao foi sobrescrito.
+
+ERROS:
+Nenhum erro registrado.
+
+OBSERVACAO:
+A validacao nao comprova a execucao das 200 epocas.
+A celula 25 foi substituida somente na copia executada.

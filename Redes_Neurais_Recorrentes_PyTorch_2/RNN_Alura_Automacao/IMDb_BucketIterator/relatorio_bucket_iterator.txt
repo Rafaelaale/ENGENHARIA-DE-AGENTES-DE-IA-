@@ -1,0 +1,23 @@
+AULA - BUCKET ITERATOR
+
+1. Dataset recupera sequencias e rotulos: APROVADO
+2. Bucket agrupa exemplos por comprimento: APROVADO
+3. DataLoader cria batches automaticamente: APROVADO
+4. Batch organizado em S x B: APROVADO
+5. Tamanhos ordenados do maior para o menor: APROVADO
+6. Padding completa sequencias menores: APROVADO
+7. Rotulos mantem correspondencia com textos: APROVADO
+8. Bucket nao aumenta padding neste conjunto: APROVADO
+9. Embedding recebe batch e retorna S x B x 100: APROVADO
+10. Batch transferido ao dispositivo correto: APROVADO
+
+Amostras: 6
+Batch size: 3
+Quantidade de batches: 2
+Padding global: 13
+Padding por bucket: 4
+Dispositivo: cpu
+
+10/10 TESTES APROVADOS
+Dados didaticos, nao IMDb oficial.
+Sem treinamento nesta etapa.

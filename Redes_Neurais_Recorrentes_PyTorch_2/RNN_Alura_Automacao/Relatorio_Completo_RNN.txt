@@ -1,0 +1,95 @@
+RELATORIO COMPLETO DA AULA RNN
+=================================================================
+Total de celulas: 30
+Celulas de codigo executadas: 15
+Numeros: [4, 5, 8, 9, 12, 14, 16, 18, 20, 22, 24, 25, 27, 29, 30]
+
+CELULA 24:
+Funcao forward definida e preservada.
+
+CELULA 25:
+Treinamento de 200 epocas substituido por inferencia.
+Nenhuma etapa de otimizacao executada nessa celula.
+
+ERROS:
+Nenhum erro registrado.
+
+SAIDAS DAS CELULAS:
+
+CELULA 8
+'wget' nÆo ‚ reconhecido como um comando interno
+ou externo, um programa oper vel ou um arquivo em lotes.
+
+'unzip' nÆo ‚ reconhecido como um comando interno
+ou externo, um programa oper vel ou um arquivo em lotes.
+
+
+CELULA 9
+[('Arabic.txt', 2000), ('Chinese.txt', 268), ('Czech.txt', 519), ('Dutch.txt', 297), ('English.txt', 3668), ('French.txt', 277), ('German.txt', 724), ('Greek.txt', 203), ('Irish.txt', 232), ('Italian.txt', 709), ('Japanese.txt', 991), ('Korean.txt', 94), ('Polish.txt', 139), ('Portuguese.txt', 74), ('Russian.txt', 9408), ('Scottish.txt', 100), ('Spanish.txt', 298), ('Vietnamese.txt', 73)]
+Mínimo de amostras: ('Vietnamese.txt', 73) 
+
+['Abreu', 'Albuquerque', 'Almeida', 'Alves', 'Araujo', 'Araullo', 'Barros', 'Basurto', 'Belo', 'Cabral']
+['Portuguese' 'Portuguese' 'Portuguese' 'Portuguese' 'Portuguese'
+ 'Portuguese' 'Portuguese' 'Portuguese' 'Portuguese' 'Portuguese']
+
+
+CELULA 12
+<class 'torch.Tensor'> Arabic tensor([0])
+
+
+CELULA 14
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+K 
+ tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+
+
+CELULA 16
+1128 torch.Size([6, 52]) torch.Size([1128, 1])
+
+
+CELULA 18
+1600
+ 400
+
+
+CELULA 25
+Validacao da arquitetura da RNN
+Amostras avaliadas: 88
+Formato da primeira saida: torch.Size([1, 18])
+Inferencia concluida sem alterar pesos.
+
+
+CELULA 29
+Mota
+(-2.79) Czech
+(-2.80) Italian
+(-2.83) German
+
+
+Kamikaze
+(-2.81) Italian
+(-2.81) Czech
+(-2.84) English
+
+
+Suarez
+(-2.81) English
+(-2.81) Italian
+(-2.83) Czech
+
+
+
+
+CELULA 30
+Formato da saída: torch.Size([1, 18])
+Quantidade de nacionalidades: 18
+
+
+ARQUIVOS:
+Notebook: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\Aula_RNN_Completa_Validada.ipynb
+Relatorio: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\Relatorio_Completo_RNN.txt
+
+CHECKPOINT:
+O arquivo modelo_rnn_treinado.pt nao foi sobrescrito.

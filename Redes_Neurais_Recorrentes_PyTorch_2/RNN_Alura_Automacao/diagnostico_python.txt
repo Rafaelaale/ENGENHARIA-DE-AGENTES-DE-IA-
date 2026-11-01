@@ -1,0 +1,16 @@
+ANALISANDO NOTEBOOK ORIGINAL
+Celulas analisadas: 30; correcoes: 0; pendencias: 4
+Dados: 20074 nomes; 18 categorias
+Dispositivo: cpu
+Treinamento: 3 epocas; 50 exemplos por categoria em cada epoca.
+Teste estrutural da RNN: APROVADO
+Epoca 1/3 | Loss 2.8742 | Acc 10.44%
+Epoca 2/3 | Loss 2.7395 | Acc 15.89%
+Epoca 3/3 | Loss 2.6044 | Acc 16.56%
+Teste separado | Loss 2.5556 | Acc 38.32%
+Checkpoint recarregado: APROVADO
+MODELO TREINADO E VALIDADO
+Modelo: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\modelo_rnn_treinado.pt
+Resultados: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\resultados_treinamento.json
+Notebook: C:\Users\rafal\Desktop\Redes Neurais Recorrentes - Deep Learning com PyTorch 2\RNN_Alura_Automacao\RNN_Alura_Execucao_Validada.ipynb
+AUTOMACAO CONCLUIDA

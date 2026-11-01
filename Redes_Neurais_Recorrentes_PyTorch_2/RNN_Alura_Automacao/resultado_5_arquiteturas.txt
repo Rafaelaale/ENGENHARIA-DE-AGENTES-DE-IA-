@@ -1,0 +1,31 @@
+
+LABORATORIO RNN - VARIACOES NA ARQUITETURA
+==================================================
+1. ONE-TO-ONE
+Entrada: (2, 10)
+Saida: (2, 3)
+TESTE: APROVADO
+
+2. ONE-TO-MANY
+Entrada: (2, 10)
+Saida: (2, 5, 3)
+TESTE: APROVADO
+
+3. MANY-TO-ONE
+Entrada: (2, 5, 10)
+Saida: (2, 3)
+TESTE: APROVADO
+
+4. MANY-TO-MANY SINCRONIZADO
+Entrada: (2, 5, 10)
+Saida: (2, 5, 3)
+TESTE: APROVADO
+
+5. MANY-TO-MANY NAO SINCRONIZADO
+Entrada: (2, 7, 10)
+Saida: (2, 4, 3)
+TESTE: APROVADO
+
+5 ARQUITETURAS VALIDADAS
+Nenhum treinamento executado.
+Modelo anterior preservado.

@@ -1,0 +1,25 @@
+
+LABORATORIO - VANISHING GRADIENT
+
+Passos analisados: 150
+
+VANISHING:
+Gradiente inicial: 8.00000012e-01
+Gradiente final: 2.90736330e-15
+
+EXPLODING:
+Gradiente inicial: 1.20000005e+00
+Gradiente final: 7.53684447e+11
+
+GRADIENT CLIPPING:
+Antes: 8.28179760e+07
+Depois: 9.99999940e-01
+
+RESULTADOS:
+Vanishing gradient: APROVADO
+Exploding gradient: APROVADO
+Gradient clipping: APROVADO
+
+OBSERVACAO:
+Experimento escalar didatico.
+Nao representa treinamento completo de uma RNN.
