@@ -1,0 +1,37 @@
+﻿ID,Resenha,Sentimento,Prob_POS,Prob_NEU,Prob_NEG
+24,"A fritadeira é sensacional, muito além do que imaginava. É linda, super funcional e muito fácil de manusear. Fácil de limpar e potente. Super recomendo.",POS,0.9889166355133057,0.00868446659296751,0.002398932119831443
+733,"Após usar o produto, achei-o fácil e muito eficiente. Fácil de usar e de limpar.",POS,0.6698645353317261,0.31955787539482117,0.010577590204775333
+865,"Muito funcional, prática e moderna.",POS,0.9001427888870239,0.09685395658016205,0.003003219608217478
+809,"Boa, mas não das melhores pois a frente de vidro dificulta na limpeza.",NEG,0.010228754952549934,0.2589631676673889,0.7308081388473511
+628,Eu comecei a usar e é bem espaçosa. Gostei pois dá para fazer várias coisas ao mesmo tempo.,POS,0.9760913252830505,0.020922809839248657,0.0029858993366360664
+657,"Usei ela algumas vezes já, muito silenciosa, linda demais a cor e o espaço então nem se fala.",POS,0.9561139345169067,0.03680059313774109,0.007085449527949095
+182,"Superou minhas expectativas, por enquanto tudo certo, porém fiquei decepcionada com as datas de entregas que não estavam certas. Mas do resto tá tudo certo, chegou certinho e sem defeito.",POS,0.838102400302887,0.09302052855491638,0.06887703388929367
+815,"Chegou no prazo. Amei, é muito linda. Não vejo a hora de usar.",POS,0.9902721047401428,0.007926956750452518,0.001800933270715177
+343,"Estou muito satisfeito com a negociação, recebimento tudo ok, e antes do esperado.",POS,0.9606003761291504,0.03612567111849785,0.0032739914022386074
+624,Lindaaaa amei super indico,POS,0.990177571773529,0.006946980953216553,0.0028754810336977243
+365,"A fritadeira é ok, mas desde os primeiros dias de uso a mesma começou a enferrujar e a cada dia fica pior, lembrando que tem apenas 7 meses de uso.",NEG,0.004199658520519733,0.10000316798686981,0.8957972526550293
+543,"O produto em si é bom, porém oxida, infelizmente não sei a causa, mas fica com a aparência muito feia",NEG,0.0029073592741042376,0.007553366478532553,0.9895392060279846
+62,Infelizmente começa a enferrujar do nada. pelo preço deveria ter o material melhor,NEG,0.0034124376252293587,0.011170666664838791,0.9854169487953186
+690,"Beleza, mas não muito eficaz como na propaganda",NEU,0.2468205839395523,0.5990554094314575,0.15412397682666779
+909,"Comprei o produto de uma marca mais confiável, porém me decepcionei. O desempenho do forno é bom, mas oxidou em menos de um ano! Pelo preço, pensei que seria melhor! Quero meu dinheiro de volta",NEG,0.004014651756733656,0.0077332681976258755,0.9882519841194153
+766,"Com 5 meses de uso percebi que tinha locais enferrujados, fiquei muito triste! fora isso ela é ok.",NEG,0.016132211312651634,0.14260965585708618,0.8412581086158752
+614,"Horrível! Começou a enferrujar a parte externa com pouco tempo de uso, mesmo sem contato com água.",NEG,0.002118505770340562,0.007285933941602707,0.9905955791473389
+452,"Gostei, só que não está com 3 meses e ela já está enferrujando",NEU,0.30612850189208984,0.5182102918624878,0.17566123604774475
+735,"Além de enferrujar, estourou o vidro do nada",NEG,0.007870960980653763,0.08468392491340637,0.9074450135231018
+135,"O aparelho é bom e funciona bem, mas o acabamento é de baixa qualidade e está enferrujando com apenas 4 meses de uso",NEG,0.005645206663757563,0.03116448037326336,0.9631903767585754
+395,"Ruim!!!Enferruja rápido. Até na tampa, onde em tese não pega gordura ou altas temperaturas",NEU,0.025826578959822655,0.7231171727180481,0.2510562837123871
+987,"O produto em si é bom, mas com um mês de uso reparei que estava oxidando e com o passar do tempo passou para outras partes do aparelho, fiquei decepcionada pois esperava uma qualidade melhor do produto. Não recomendo!",NEG,0.006870970595628023,0.008793390356004238,0.9843356609344482
+504,"Realmente, para assar ela é maravilhosa, entrega tudo o que promete. Porém quanto ao inox você pode esquecer, ela enferrujou toda com 3 meses de uso!!! Já estou com ela há 6 meses, e só está piorando. Pelo preço que paguei deveria ser um material de qualidade.",NEG,0.37014585733413696,0.11013702303171158,0.5197170972824097
+405,"Conforme relatado por outras pessoas, o acabamento é péssimo. Ela começa a perder todo o 'inox' na parte de fora e fica parecendo ferrugem. A qualidade das grelhas, cesto e bandeja são ruins também, em pouco tempo estão perdendo o anti-aderente",NEG,0.004139170050621033,0.007989133708178997,0.9878717660903931
+647,"Com o tempo vai ficando feia. A aparencia, o inox amarela tudo por causa do calor. Feia demais",NEG,0.0025415231939405203,0.004476972855627537,0.9929814338684082
+503,Estou totalmente decepcionada com esta compra.,NEG,0.0029751090332865715,0.004400252364575863,0.9926247000694275
+123,"Material horrível, arrependido dessa compra. Nos primeiros dias de uso já começaram a aparecer pequenas marcas de oxidação.",NEG,0.002574155805632472,0.005028190091252327,0.9923976063728333
+771,"Produto com 4 meses de uso enferrujou, na hora de tirar a carne pelo recipiente, a gordura cai tudo em cima da porta, tendo o trabalho de limpar toda vez que usa, mas o que mais chamou a atenção, foi o fato do material 'inoxidável' enferrujar com o tempo.",NEG,0.01262986846268177,0.11964765936136246,0.8677224516868591
+121,"Não recomendo esse aparelho! Atende bem as funções mas a parte dita 'inox' parece não ser inox uma vez que estourou com menos de um mês de uso, conforme fotos.",NEG,0.0047345529310405254,0.026900485157966614,0.9683648943901062
+437,"Ela pode ser boa, mas a qualidade do material é péssima. Como podem ver, em menos de 1 ano ela está enferrujada. Não tinha avaliado antes pq sempre espero bastante tempo de uso para avalizar, já que o que é novo é tudo ótimo. Tá aí o resultado e a avaliação.",NEG,0.16324996948242188,0.12208317220211029,0.7146669030189514
+847,"Linda em design, ótimos funcionamento, porém oxida rapidamente, a minha está horrível, oxidou na porta e na parte de cima, produto caro para acontecer esse tipo de problema.",NEG,0.018505990505218506,0.012949268333613873,0.9685447812080383
+47,Achei bem boa e super fácil de usar! Recomendo,POS,0.9871829748153687,0.010792864486575127,0.002024146495386958
+462,"Muito boa! Me ajuda muito, não precisamos virar os alimentos, tudo fica muito gostoso. O único problema é na hora da limpeza. Se vc tem pressa e não tem tempo de limpar logo o seu compartimento interno, tenho uma péssima notícia: A sujeira não vai sair com facilidade!",POS,0.8452862501144409,0.08132129907608032,0.07339249551296234
+21,"Aparelho bom, mas a sua tampa enferrujou muito rápido.",NEU,0.012832820415496826,0.6556167006492615,0.3315504789352417
+202,"Estou usando há 10 dias, funciona muito bem até o momento nada a reclamar, fiz carne, biscoitos tudo 100%",POS,0.8846533894538879,0.1046379804611206,0.01070860493928194
+284,"Design moderno, excelente a proposta dupla de grades...adorei e recomendo... ah, o tão famoso custo × beneficio super aprovado",POS,0.9927206039428711,0.005632827058434486,0.0016465733060613275

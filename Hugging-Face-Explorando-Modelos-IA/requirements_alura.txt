@@ -1,0 +1,13 @@
+﻿# Versoes originais do curso Alura
+# Preferencia: Python 3.11 convencional
+
+transformers==4.42.4
+pysentimiento==0.7.3
+pandas==2.0.3
+plotly==5.15.0
+nltk==3.8.1
+liqfit==1.0.0
+gradio==4.38.1
+Pillow==9.4.0
+torch==2.3.1
+numpy==1.26.4

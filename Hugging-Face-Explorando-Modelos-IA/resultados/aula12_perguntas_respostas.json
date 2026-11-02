@@ -1,0 +1,13 @@
+{
+    "modelo": "deepset/roberta-base-squad2",
+    "tarefa": "question-answering",
+    "idioma": "ingles",
+    "pergunta": "What are the payment options available?",
+    "contexto": "In our e-commerce, you can make payments using credit card, debit card, Apple Pay, or through bank transfers.",
+    "resposta": "credit card, debit card, Apple Pay, or through bank transfers",
+    "score": 0.8174910545349121,
+    "inicio": 47,
+    "fim": 108,
+    "resposta_esperada": "credit card, debit card, Apple Pay, or through bank transfers",
+    "corresponde_alura": true
+}

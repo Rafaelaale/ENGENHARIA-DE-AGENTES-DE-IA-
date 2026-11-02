@@ -1,0 +1,29 @@
+{
+    "modelo": "microsoft/DialoGPT-medium",
+    "historico": [
+        {
+            "usuario": "Hello!",
+            "bot": "I don't know where I am."
+        },
+        {
+            "usuario": "I would like to check the status of my order",
+            "bot": "Could you please enter your order number?"
+        },
+        {
+            "usuario": "12345",
+            "bot": "The status of your order 12345 is: Shipped"
+        },
+        {
+            "usuario": "Check my order",
+            "bot": "Could you please enter your order number?"
+        },
+        {
+            "usuario": "99999",
+            "bot": "Order number not found. Please check and try again."
+        },
+        {
+            "usuario": "stop",
+            "bot": "Goodbye!"
+        }
+    ]
+}

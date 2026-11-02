@@ -1,0 +1,25 @@
+{
+    "modelo": "facebook/bart-large-mnli",
+    "tarefa": "zero-shot-classification",
+    "descricao": "Latest model of smartphone with 5G connectivity and 128GB internal storage",
+    "categorias_candidatas": [
+        "electronics",
+        "food",
+        "toys",
+        "books"
+    ],
+    "categoria_prevista": "electronics",
+    "maior_score": 0.9613721370697021,
+    "labels": [
+        "electronics",
+        "toys",
+        "food",
+        "books"
+    ],
+    "scores": [
+        0.9613721370697021,
+        0.01337999664247036,
+        0.012821842916309834,
+        0.012426041066646576
+    ]
+}

@@ -1,0 +1,36 @@
+[
+    {
+        "produto": "Gel hidratante facial",
+        "descricao": "Este water gel leve e refrescante, proporciona hidratação imediata que ajuda a aliviar o repuxamento e aspereza da pele sensível.",
+        "esperado": "beleza",
+        "previsto": "beleza",
+        "corresponde": true,
+        "labels": [
+            "beleza",
+            "livros",
+            "cozinha"
+        ],
+        "scores": [
+            0.9386341571807861,
+            0.04146721214056015,
+            0.019898628816008568
+        ]
+    },
+    {
+        "produto": "Fritadeira eletrica",
+        "descricao": "A fritadeira eletrica sem óleo start fry da elgin possui um design único, capacidade para até 3,5 litros, potência de 1400w e revestimento antiaderente. Seu sistema de circulação de ar ultra rápido frita e economiza energia. Sua grelha de fritura é removível e super fácil de limpar. Ela conta com uma proteção contra super aquecimento. Possui controle de temperatura de 80°c a 200°c que permite você programar a temperatura de preparo para cada tipo de alimento, timer para até 60 minutos com aviso sonoro e desligamento automático, assim você pode deixar preparando sua refeição enquanto realiza outras tarefas.",
+        "esperado": "cozinha",
+        "previsto": "cozinha",
+        "corresponde": true,
+        "labels": [
+            "cozinha",
+            "beleza",
+            "livros"
+        ],
+        "scores": [
+            0.7097982168197632,
+            0.23662085831165314,
+            0.05358094349503517
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "avaliacao": 1,
+        "texto": "A fritadeira é sensacional, muito além do que imaginava. É linda, super funcional e muito fácil de manusear. Fácil de limpar e potente. Super recomendo.",
+        "esperado": "POSITIVO",
+        "previsto": "POSITIVO",
+        "classe": "POS",
+        "probabilidades": {
+            "NEG": 0.002398932119831443,
+            "NEU": 0.00868446659296751,
+            "POS": 0.9889166355133057
+        },
+        "corresponde_ao_esperado": true
+    },
+    {
+        "avaliacao": 2,
+        "texto": "Após poucos meses de uso a carcaça de aço escovado começou a oxidar, demonstrando a baixa qualidade de proteção. Fora esse detalhe, o produto cumpre o prometido.",
+        "esperado": "NEUTRO",
+        "previsto": "NEUTRO",
+        "classe": "NEU",
+        "probabilidades": {
+            "NEG": 0.07092998176813126,
+            "NEU": 0.9165017008781433,
+            "POS": 0.012568286620080471
+        },
+        "corresponde_ao_esperado": true
+    },
+    {
+        "avaliacao": 3,
+        "texto": "Em menos de 1 ano parou de funcionar, enviei para assistência técnica por estar na garantia, trocaram o motor, passou a ficar menos potente e não durou 2 utilizações. Isso se repetiu várias vezes, até que desisti de ficar levando lá e queimando de novo em seguida, vi outros clientes com o mesmo problema. Não comprem!!",
+        "esperado": "NEGATIVO",
+        "previsto": "NEGATIVO",
+        "classe": "NEG",
+        "probabilidades": {
+            "NEG": 0.9478533267974854,
+            "NEU": 0.03685516119003296,
+            "POS": 0.015291508287191391
+        },
+        "corresponde_ao_esperado": true
+    }
+]

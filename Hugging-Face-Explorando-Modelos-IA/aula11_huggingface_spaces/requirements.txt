@@ -1,0 +1,11 @@
+﻿gradio==4.44.1
+transformers==4.42.4
+torch==2.3.1
+torchvision==0.18.1
+Pillow>=10,<11
+scikit-image==0.24.0
+numpy==1.26.4
+huggingface-hub>=0.23,<1
+fastapi==0.115.14
+starlette==0.46.2
+pydantic==2.10.6

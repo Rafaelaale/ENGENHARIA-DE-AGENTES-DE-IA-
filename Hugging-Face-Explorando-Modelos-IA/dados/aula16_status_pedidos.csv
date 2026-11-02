@@ -1,0 +1,5 @@
+﻿numero_pedido,status
+12345,Shipped
+67890,Processing
+11121,Delivered
+22232,Cancelled

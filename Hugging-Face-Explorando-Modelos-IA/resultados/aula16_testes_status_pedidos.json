@@ -1,0 +1,43 @@
+{
+    "total_pedidos": 4,
+    "palavras_chave": [
+        "order",
+        "order status",
+        "status of my order",
+        "check my order",
+        "track my order",
+        "order update"
+    ],
+    "testes": [
+        {
+            "numero_pedido": "12345",
+            "status_esperado": "Shipped",
+            "resposta": "The status of your order 12345 is: Shipped",
+            "correto": true
+        },
+        {
+            "numero_pedido": "67890",
+            "status_esperado": "Processing",
+            "resposta": "The status of your order 67890 is: Processing",
+            "correto": true
+        },
+        {
+            "numero_pedido": "11121",
+            "status_esperado": "Delivered",
+            "resposta": "The status of your order 11121 is: Delivered",
+            "correto": true
+        },
+        {
+            "numero_pedido": "22232",
+            "status_esperado": "Cancelled",
+            "resposta": "The status of your order 22232 is: Cancelled",
+            "correto": true
+        },
+        {
+            "numero_pedido": "99999",
+            "status_esperado": "Not found",
+            "resposta": "Order number not found. Please check and try again.",
+            "correto": true
+        }
+    ]
+}

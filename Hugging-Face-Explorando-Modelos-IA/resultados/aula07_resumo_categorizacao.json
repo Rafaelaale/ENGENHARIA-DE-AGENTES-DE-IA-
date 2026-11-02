@@ -1,0 +1,17 @@
+{
+    "modelo": "knowledgator/comprehend_it-multilingual-t5-base",
+    "total_produtos": 22,
+    "categorias": [
+        "eletrodomésticos",
+        "eletrônicos",
+        "beleza",
+        "brinquedos"
+    ],
+    "contagem": {
+        "eletrodomésticos": 5,
+        "eletrônicos": 7,
+        "beleza": 7,
+        "brinquedos": 3
+    },
+    "correspondencias_alura": 22
+}

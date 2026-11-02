@@ -1,0 +1,12 @@
+[
+    {
+        "texto": "I love this product",
+        "sentimento": "POSITIVE",
+        "score": 0.9998788833618164
+    },
+    {
+        "texto": "I am totally disappointed in this product",
+        "sentimento": "NEGATIVE",
+        "score": 0.9997952580451965
+    }
+]

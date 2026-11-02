@@ -1,0 +1,32 @@
+{
+    "modelo": "microsoft/DialoGPT-medium",
+    "data_execucao": "2026-11-02T18:28:30.553780",
+    "total_interacoes": 5,
+    "historico": [
+        {
+            "interacao": 1,
+            "usuario": "Hello!",
+            "chatbot": "Hey there"
+        },
+        {
+            "interacao": 2,
+            "usuario": "How are you doing?",
+            "chatbot": "I'm good, you?"
+        },
+        {
+            "interacao": 3,
+            "usuario": "I'm fine.",
+            "chatbot": "Well, I hope you feel better soon!"
+        },
+        {
+            "interacao": 4,
+            "usuario": "Have a good day.",
+            "chatbot": "You too."
+        },
+        {
+            "interacao": 5,
+            "usuario": "Bye!",
+            "chatbot": "Bye!"
+        }
+    ]
+}
