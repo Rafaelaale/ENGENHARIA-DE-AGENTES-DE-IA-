@@ -1,0 +1,87 @@
+{
+  "aula": 10,
+  "tema": "Avaliacao e Validacao",
+  "checkpoint_origem": "aula09_best_model.pt",
+  "prompts": [
+    {
+      "prompt": "Astronomia é",
+      "temperatura": 0.8,
+      "texto": "Astronomia é 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971"
+    },
+    {
+      "prompt": "Astronomia é",
+      "temperatura": 1.0,
+      "texto": "Astronomia é 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971 1971"
+    },
+    {
+      "prompt": "Astronomia é",
+      "temperatura": 1.2,
+      "texto": "Astronomia é tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro tesouro"
+    },
+    {
+      "prompt": "O gato subiu no telhado",
+      "temperatura": 0.8,
+      "texto": "O gato subiu no telhado síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla"
+    },
+    {
+      "prompt": "O gato subiu no telhado",
+      "temperatura": 1.0,
+      "texto": "O gato subiu no telhadoವವವವವವವವವವವವವವವವವವವವ"
+    },
+    {
+      "prompt": "O gato subiu no telhado",
+      "temperatura": 1.2,
+      "texto": "O gato subiu no telhadoವವವವವವವವವವವವವವವವವವವವ"
+    },
+    {
+      "prompt": "Ciência de Dados",
+      "temperatura": 0.8,
+      "texto": "Ciência de Dados classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica"
+    },
+    {
+      "prompt": "Ciência de Dados",
+      "temperatura": 1.0,
+      "texto": "Ciência de Dados classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica"
+    },
+    {
+      "prompt": "Ciência de Dados",
+      "temperatura": 1.2,
+      "texto": "Ciência de Dados classifica classifica classifica classifica classifica classifica classifica classifica classifica classifica classificaemiaemia흌흌흌흌흌흌 apoio"
+    },
+    {
+      "prompt": "Em 2001",
+      "temperatura": 0.8,
+      "texto": "Em 2001ckscksckscksckscksckscksckscksckscksckscksckscksckscksckscks"
+    },
+    {
+      "prompt": "Em 2001",
+      "temperatura": 1.0,
+      "texto": "Em 2001ckscksckscksckscksckscksckscksckscksckscksckscksckscksckscks"
+    },
+    {
+      "prompt": "Em 2001",
+      "temperatura": 1.2,
+      "texto": "Em 2001 sinônimo sinônimo sinônimo sinônimo sinônimo sinônimo n n n n n n n n n n n n n n"
+    },
+    {
+      "prompt": "O Brasil",
+      "temperatura": 0.8,
+      "texto": "O Brasil síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla"
+    },
+    {
+      "prompt": "O Brasil",
+      "temperatura": 1.0,
+      "texto": "O Brasil síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla"
+    },
+    {
+      "prompt": "O Brasil",
+      "temperatura": 1.2,
+      "texto": "O Brasil síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla síla"
+    }
+  ],
+  "perplexidade_treino": 699533648315.2549,
+  "perplexidade_validacao": 2762327996980.1357,
+  "grafico_atencao": "aula10_padroes_atencao.png",
+  "checkpoint_final": "aula10_transformer_final.pt",
+  "validacao_executada": true
+}

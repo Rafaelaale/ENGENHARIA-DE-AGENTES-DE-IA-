@@ -1,0 +1,49 @@
+{
+  "aula": 9,
+  "tema": "Treinamento do Transformer",
+  "device": "cpu",
+  "tokens": 1156,
+  "parametros": 2008960,
+  "config": {
+    "vocab_size": 29794,
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 2,
+    "block_size": 32,
+    "dropout": 0.1,
+    "batch_size": 8,
+    "learning_rate": 0.0003
+  },
+  "iteracoes": 80,
+  "steps": [
+    1,
+    21,
+    41,
+    61,
+    80
+  ],
+  "train_losses": [
+    43.061868286132814,
+    39.34604415893555,
+    37.5496337890625,
+    30.539288330078126,
+    27.198770141601564
+  ],
+  "val_losses": [
+    43.99700088500977,
+    40.251329040527345,
+    38.75554428100586,
+    31.99731025695801,
+    28.555736923217772
+  ],
+  "val_perplexities": [
+    6.611818956400707e+18,
+    2.3374743228099274e+17,
+    7.252087957332723e+16,
+    116735220428089.53,
+    2621838956980.243
+  ],
+  "best_val_loss": 28.555736923217772,
+  "grafico": "aula09_curvas_treinamento.png",
+  "treinamento_realizado": true
+}

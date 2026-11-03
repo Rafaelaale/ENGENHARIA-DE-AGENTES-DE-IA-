@@ -1,0 +1,45 @@
+{
+  "aula": 8,
+  "tema": "Feed-Forward Network",
+  "d_model": 8,
+  "d_ff": 32,
+  "activation": "gelu",
+  "parametros_treinaveis_ffn": 552,
+  "grafico": "aula08_relu_gelu.png",
+  "integracao": {
+    "tokens": [
+      4,
+      16
+    ],
+    "embeddings": [
+      4,
+      16,
+      8
+    ],
+    "multihead": [
+      4,
+      16,
+      8
+    ],
+    "feedforward": [
+      4,
+      16,
+      8
+    ],
+    "pesos_atencao": [
+      4,
+      2,
+      16,
+      16
+    ]
+  },
+  "testes": {
+    "gelu_numpy_pytorch": true,
+    "dimensoes": true,
+    "processamento_por_posicao": true,
+    "gradientes": true,
+    "relu": true,
+    "multihead_ffn": true
+  },
+  "treinamento_realizado": false
+}

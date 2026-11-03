@@ -1,0 +1,19 @@
+{
+  "aula": 3,
+  "dataset": "pablo-moreira/wikipedia-pt",
+  "subset": "default",
+  "split": "train",
+  "limite_caracteres": 5000,
+  "caracteres": 4975,
+  "estatisticas": {
+    "recebidos": 34,
+    "descartados_filtro": 18,
+    "descartados_curto_bruto": 12,
+    "aprovados": 4,
+    "textos_no_corpus": 4,
+    "caracteres": 4975
+  },
+  "arquivo_corpus": "dados\\wikipedia_pt_limpo_5000.txt",
+  "data_processamento": "2026-11-03T16:10:34.363479-03:00",
+  "observacao": "Amostra do dataset. Nao representa a Wikipedia inteira."
+}
