@@ -1,0 +1,38 @@
+{
+  "aula": 20,
+  "origem": "Brain MRI - U-Net condicional",
+  "modelo": "ConditionalUNet",
+  "parametros": 3982513,
+  "base_channels": 16,
+  "classes": {
+    "x": 0,
+    "y": 1,
+    "z": 2
+  },
+  "descricoes": {
+    "x": "sagittal",
+    "y": "coronal",
+    "z": "axial"
+  },
+  "classe_nula": 3,
+  "diffusion_scheduler": {
+    "T": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02
+  },
+  "treinamento": {
+    "epocas": 1,
+    "por_classe": 1,
+    "validacao": 1,
+    "base": 16,
+    "micro": 1,
+    "acum": 1
+  },
+  "n_treino": 3,
+  "n_validacao": 3,
+  "hash_indices": "983f0f1ffdf86523890d19a1d687e820d8c4b6f16976b510cf72deff4e018cd0",
+  "device": "cpu",
+  "torch": "2.15.0+cpu",
+  "inicializacao_aula17_solicitada": false,
+  "uso": "Educacional. Sem validacao clinica."
+}

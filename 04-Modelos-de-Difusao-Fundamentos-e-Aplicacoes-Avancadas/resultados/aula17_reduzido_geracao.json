@@ -1,0 +1,27 @@
+{
+  "aula": 17,
+  "classes": [
+    {
+      "classe": "x",
+      "gif": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_x_diffusion.gif",
+      "imagem": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_x_final.png",
+      "snapshots": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_x_snapshots.png"
+    },
+    {
+      "classe": "y",
+      "gif": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_y_diffusion.gif",
+      "imagem": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_y_final.png",
+      "snapshots": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_y_snapshots.png"
+    },
+    {
+      "classe": "z",
+      "gif": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_z_diffusion.gif",
+      "imagem": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_z_final.png",
+      "snapshots": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula17_reduzido_z_snapshots.png"
+    }
+  ],
+  "guidance": 3.0,
+  "timesteps": 1000,
+  "amostras": 1,
+  "modelo_base": 16
+}

@@ -1,0 +1,32 @@
+{
+    "aula": 12,
+    "dataset": "ashfakyeafi/brain-mri-images",
+    "total_imagens_z": 2564,
+    "image_shape": [
+        1,
+        64,
+        64
+    ],
+    "batch_size": 128,
+    "base_channels": 64,
+    "time_dim": 256,
+    "parametros": 48595905,
+    "learning_rate": 0.0001,
+    "otimizador": "AdamW",
+    "timestep_teste": 500,
+    "entrada": [
+        1,
+        1,
+        64,
+        64
+    ],
+    "saida": [
+        1,
+        1,
+        64,
+        64
+    ],
+    "torchview": "DOT gerado",
+    "device": "cpu",
+    "treinamento_executado": false
+}

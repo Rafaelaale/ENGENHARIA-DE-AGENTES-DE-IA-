@@ -1,0 +1,12 @@
+{
+  "experiment_id": "conditional_diffusion_20261102_235431_73aa15d9",
+  "model_version": "v1.0.0",
+  "framework": "PyTorch",
+  "python_version": "3.11.9",
+  "pytorch_version": "2.15.0+cpu",
+  "created_by": "Projeto 04 - Curso Modelos de Difusao",
+  "creation_date": "2026-11-02T23:54:31.570148-03:00",
+  "git_commit": null,
+  "environment": "exportacao",
+  "source_weights_sha256": "73aa15d9c3a5823cfca71901419e648bbd9e49ce652332647f7571ba4a1d221e"
+}

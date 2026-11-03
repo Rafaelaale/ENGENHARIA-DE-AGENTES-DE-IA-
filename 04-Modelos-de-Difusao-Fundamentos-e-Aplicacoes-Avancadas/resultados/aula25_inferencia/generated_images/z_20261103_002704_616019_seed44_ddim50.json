@@ -1,0 +1,13 @@
+{
+  "experimento": "model_artifacts_conditional_diffusion_20261102_235758_73aa15d9",
+  "classe_id": 2,
+  "classe": "z",
+  "plano": "axial",
+  "seed": 44,
+  "guidance_scale": 3.0,
+  "sampler": "ddim",
+  "passos": 50,
+  "peso_sha256": "73aa15d9c3a5823cfca71901419e648bbd9e49ce652332647f7571ba4a1d221e",
+  "data": "2026-11-03T00:27:04.632038",
+  "uso": "Imagem sintetica educacional. Sem validacao clinica."
+}

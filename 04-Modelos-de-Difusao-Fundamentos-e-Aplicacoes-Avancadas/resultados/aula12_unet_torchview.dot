@@ -1,0 +1,964 @@
+strict digraph "UNet Brain MRI" {
+	graph [ordering=in rankdir=TB size="47.699999999999996,47.699999999999996"]
+	node [align=left fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	edge [fontsize=10]
+	0 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 1, 64, 64)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
+	1 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">mul<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	2 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">div<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	3 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">exp<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	4 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">__getitem__<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1,) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	5 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">float<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	6 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">__getitem__<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(128,) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	7 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">mul<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1), (1, 128) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	8 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">sin<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	9 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">cos<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	10 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">cat<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">2 x (1, 128) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	11 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Linear<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	12 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">SiLU<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	13 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Linear<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	14 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1, 64, 64), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	15 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	16 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	17 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	18 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 32, 32), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	19 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 32, 32) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	20 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	21 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256, 16, 16), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	22 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256, 16, 16) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	23 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	24 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 8, 8), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	25 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 8, 8) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	26 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	27 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	28 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">GroupNorm<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	29 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">SiLU<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	30 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Linear<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	31 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">__getitem__<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 1, 1) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	32 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">add<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4), (1, 1024, 1, 1) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	33 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	34 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">GroupNorm<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	35 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">SiLU<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	36 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">add<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">2 x (1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	37 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">div<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	38 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	39 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 1024, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	40 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">GroupNorm<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	41 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">SiLU<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	42 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Linear<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	43 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">__getitem__<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 1, 1) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	44 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">add<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4), (1, 512, 1, 1) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	45 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	46 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">GroupNorm<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	47 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">SiLU<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	48 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">add<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">2 x (1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	49 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">div<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	50 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 512, 4, 4) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	51 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">cat<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8), (1, 512, 8, 8) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 768, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	52 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 768, 8, 8), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	53 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	54 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 256, 8, 8) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	55 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">cat<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16), (1, 256, 16, 16) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 384, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	56 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 384, 16, 16), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	57 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	58 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 16, 16) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	59 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">cat<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32), (1, 128, 32, 32) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 192, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	60 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 192, 32, 32), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	61 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	62 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 32, 32) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	63 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">cat<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">2 x (1, 64, 64, 64) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 128, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=aliceblue]
+	64 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 128, 64, 64), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	65 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ResidualTimeBlock<BR/>depth:3</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64), (1, 256) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	66 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:2</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 64, 64, 64) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1, 64, 64) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	67 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD>output-tensor<BR/>depth:0</TD><TD>(1, 1, 64, 64)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
+	1 -> 2
+	2 -> 3
+	3 -> 6
+	4 -> 5
+	5 -> 7
+	6 -> 7
+	7 -> 8
+	7 -> 9
+	8 -> 10
+	9 -> 10
+	10 -> 11
+	11 -> 12
+	12 -> 13
+	0 -> 14
+	13 -> 14
+	13 -> 15
+	14 -> 15
+	15 -> 16
+	16 -> 17
+	13 -> 17
+	13 -> 18
+	17 -> 18
+	18 -> 19
+	19 -> 20
+	13 -> 20
+	13 -> 21
+	20 -> 21
+	21 -> 22
+	22 -> 23
+	13 -> 23
+	13 -> 24
+	23 -> 24
+	24 -> 25
+	25 -> 26
+	25 -> 27
+	13 -> 30
+	26 -> 36
+	27 -> 28
+	28 -> 29
+	29 -> 32
+	30 -> 31
+	31 -> 32
+	32 -> 33
+	33 -> 34
+	34 -> 35
+	35 -> 36
+	36 -> 37
+	37 -> 38
+	37 -> 39
+	13 -> 42
+	38 -> 48
+	39 -> 40
+	40 -> 41
+	41 -> 44
+	42 -> 43
+	43 -> 44
+	44 -> 45
+	45 -> 46
+	46 -> 47
+	47 -> 48
+	48 -> 49
+	49 -> 50
+	24 -> 51
+	13 -> 52
+	13 -> 53
+	50 -> 51
+	51 -> 52
+	52 -> 53
+	53 -> 54
+	21 -> 55
+	13 -> 56
+	13 -> 57
+	54 -> 55
+	55 -> 56
+	56 -> 57
+	57 -> 58
+	18 -> 59
+	13 -> 60
+	13 -> 61
+	58 -> 59
+	59 -> 60
+	60 -> 61
+	61 -> 62
+	15 -> 63
+	13 -> 64
+	13 -> 65
+	62 -> 63
+	63 -> 64
+	64 -> 65
+	65 -> 66
+	66 -> 67
+}

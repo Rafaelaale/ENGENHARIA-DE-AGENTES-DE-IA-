@@ -1,0 +1,33 @@
+{
+  "aula": 21,
+  "modo": "reduzido",
+  "classes": {
+    "x": 0,
+    "y": 1,
+    "z": 2
+  },
+  "descricoes": {
+    "x": "sagital",
+    "y": "coronal",
+    "z": "axial"
+  },
+  "quantidade_dataset": 7692,
+  "amostras_treino": 48,
+  "amostras_validacao": 12,
+  "configuracao": {
+    "epocas": 3,
+    "por_classe": 16,
+    "validacao": 4,
+    "base": 16,
+    "micro": 2,
+    "acum": 2
+  },
+  "scheduler": {
+    "T": 1000,
+    "beta_inicio": 0.0001,
+    "beta_fim": 0.02
+  },
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "uso": "Educacional. Sem validacao clinica."
+}

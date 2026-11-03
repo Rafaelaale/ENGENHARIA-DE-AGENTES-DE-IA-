@@ -1,0 +1,30 @@
+{
+    "aula": 10,
+    "modelo": "MiniUNet",
+    "dataset_filtrado": 34999,
+    "in_channels": 3,
+    "base_channels": 32,
+    "time_dim": 128,
+    "timesteps": 500,
+    "scheduler": "linear",
+    "otimizador": "AdamW",
+    "learning_rate": 0.0002,
+    "epocas_configuradas": 10,
+    "treinamento_executado": false,
+    "parametros": 631971,
+    "entrada": [
+        1,
+        3,
+        16,
+        16
+    ],
+    "saida": [
+        1,
+        3,
+        16,
+        16
+    ],
+    "mse_inicial_sem_treino": 1.1694639921188354,
+    "torchview_status": "grafo DOT gerado",
+    "device": "cpu"
+}

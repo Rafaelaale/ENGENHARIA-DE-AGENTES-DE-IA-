@@ -1,0 +1,41 @@
+{
+  "aula": 14,
+  "timesteps": 1000,
+  "passos_registrados": [
+    1000,
+    950,
+    900,
+    850,
+    800,
+    750,
+    700,
+    650,
+    600,
+    550,
+    500,
+    450,
+    400,
+    350,
+    300,
+    250,
+    200,
+    150,
+    100,
+    50,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "tipo_pesos": "reduzido",
+  "amostras": 1,
+  "pesos": "C:\\Users\\rafal\\Documents\\04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas\\resultados\\aula14_reduzido_modelo_treinado.pth",
+  "feature_steps": [
+    900,
+    500,
+    100,
+    0
+  ],
+  "paineis": 12
+}

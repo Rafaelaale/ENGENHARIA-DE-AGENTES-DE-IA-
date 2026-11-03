@@ -1,0 +1,29 @@
+{
+    "aula": 9,
+    "tema": "UNet - preparacao do dataset",
+    "seed": 42,
+    "device": "cpu",
+    "total_original": 89400,
+    "total_filtrado": 34999,
+    "filter_label_value": 1.0,
+    "filter_index": 3,
+    "quantidade_rotulos": 89400,
+    "batch_size": 8,
+    "shuffle": true,
+    "image_shape": [
+        3,
+        16,
+        16
+    ],
+    "normalizacao": [
+        -1,
+        1
+    ],
+    "augmentations": [
+        "RandomHorizontalFlip",
+        "ColorJitter",
+        "Resize",
+        "ToTensor",
+        "Normalize"
+    ]
+}

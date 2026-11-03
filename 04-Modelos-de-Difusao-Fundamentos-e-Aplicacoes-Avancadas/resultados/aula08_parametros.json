@@ -1,0 +1,26 @@
+{
+  "aula": 8,
+  "total_imagens": 89400,
+  "rotulos_indexados": 89400,
+  "timesteps": 1000,
+  "steps_observados": [
+    0,
+    100,
+    250,
+    400,
+    600,
+    700,
+    999
+  ],
+  "indices": [
+    83810,
+    14592,
+    3278,
+    36048,
+    32098
+  ],
+  "device": "cpu",
+  "seed": 42,
+  "scheduler_linear": true,
+  "scheduler_cosine": true
+}

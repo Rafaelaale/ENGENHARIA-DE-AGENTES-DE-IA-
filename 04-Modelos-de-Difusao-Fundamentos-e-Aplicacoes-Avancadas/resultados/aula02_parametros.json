@@ -1,0 +1,9 @@
+{
+    "aula": 2,
+    "tema": "Movimento Browniano",
+    "passos": 500,
+    "particulas": 100,
+    "particula_destacada": 10,
+    "desvio_padrao_ruido": 0.2,
+    "seed": 42
+}

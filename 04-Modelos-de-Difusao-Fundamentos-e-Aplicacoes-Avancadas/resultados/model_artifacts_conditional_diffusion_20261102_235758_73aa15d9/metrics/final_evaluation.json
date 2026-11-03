@@ -1,0 +1,72 @@
+{
+  "overall_metrics": {
+    "fid": 19.956939697265625,
+    "fid_feature": 64,
+    "inception_score_media": 1.0891852378845215,
+    "inception_score_desvio": 0.04000943899154663,
+    "lpips_real_gerada_nao_pareadas": 0.6658141801754633,
+    "lpips_real_gerada_dp": 0.027140569227204873,
+    "lpips_diversidade_sintetica": 0.03768837860409628,
+    "lpips_diversidade_dp": 0.005629670041909992,
+    "lpips_net": "squeeze",
+    "num_amostras_reais": 60,
+    "num_amostras_geradas": 60,
+    "classes": {
+      "x": 0,
+      "y": 1,
+      "z": 2
+    },
+    "sampling": {
+      "pesos_sha256": "73aa15d9c3a5823cfca71901419e648bbd9e49ce652332647f7571ba4a1d221e",
+      "n": 60,
+      "passos": 50,
+      "sampler": "ddim",
+      "guidance": 3.0,
+      "batch": 2
+    },
+    "observacao": "Avaliacao exploratoria. Sem validade clinica."
+  },
+  "class_metrics": {
+    "x": {
+      "descricao": "sagital",
+      "n_reais": 20,
+      "n_geradas": 20,
+      "intensidade_media_real_01": 0.16968993842601776,
+      "intensidade_media_gerada_01": 0.4475613534450531,
+      "fid64": null,
+      "fid64_status": "Nao calculado nesta exportacao"
+    },
+    "y": {
+      "descricao": "coronal",
+      "n_reais": 20,
+      "n_geradas": 20,
+      "intensidade_media_real_01": 0.16681157052516937,
+      "intensidade_media_gerada_01": 0.448458194732666,
+      "fid64": null,
+      "fid64_status": "Nao calculado nesta exportacao"
+    },
+    "z": {
+      "descricao": "axial",
+      "n_reais": 20,
+      "n_geradas": 20,
+      "intensidade_media_real_01": 0.13759659230709076,
+      "intensidade_media_gerada_01": 0.4376743733882904,
+      "fid64": null,
+      "fid64_status": "Nao calculado nesta exportacao"
+    }
+  },
+  "evaluation_samples": {
+    "real": 60,
+    "generated": 60
+  },
+  "evaluation_date": "2026-11-02T23:57:58.627465-03:00",
+  "evaluation_source": "resultados/aula22_avaliacao_final/avaliar_ddim50_n60_g3/metricas.json",
+  "notes": [
+    "Metricas reutilizadas da Aula 22.",
+    "FID64 nao equivale a FID2048.",
+    "FID por classe com 20 imagens e instavel.",
+    "LPIPS da Aula 22 utiliza SqueezeNet.",
+    "Amostras podem aparecer em treinos anteriores.",
+    "Modelo sem validacao clinica."
+  ]
+}

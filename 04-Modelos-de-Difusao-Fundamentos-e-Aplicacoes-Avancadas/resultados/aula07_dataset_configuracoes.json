@@ -1,0 +1,22 @@
+{
+    "aula": 7,
+    "tema": "Dataset e DataLoader PixelArt",
+    "origem": "ebrahimelgazar/pixel-art",
+    "total_imagens": 89400,
+    "imagem_dimensoes": [
+        3,
+        16,
+        16
+    ],
+    "normalizacao": [
+        -1,
+        1
+    ],
+    "batch_size": 8,
+    "shuffle": true,
+    "rotulos_csv_encontrado": true,
+    "rotulos_associados": 89399,
+    "rotulos_invalidos": 0,
+    "amostras_visualizadas": 16,
+    "dispositivo": "cpu"
+}

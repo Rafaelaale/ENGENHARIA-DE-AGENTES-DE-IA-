@@ -1,0 +1,53 @@
+{
+    "aula": 5,
+    "tema": "Estrutura Markoviana",
+    "seed": 42,
+    "estado_inicial": "Casa",
+    "total_transicoes": 10,
+    "total_estados_historico": 11,
+    "estados": [
+        "Casa",
+        "Trabalho",
+        "Mercado",
+        "Parque"
+    ],
+    "matriz_transicao": [
+        [
+            0.1,
+            0.6,
+            0.2,
+            0.1
+        ],
+        [
+            0.4,
+            0.2,
+            0.3,
+            0.1
+        ],
+        [
+            0.5,
+            0.1,
+            0.1,
+            0.3
+        ],
+        [
+            0.3,
+            0.1,
+            0.2,
+            0.4
+        ]
+    ],
+    "historico": [
+        "Casa",
+        "Trabalho",
+        "Parque",
+        "Parque",
+        "Mercado",
+        "Casa",
+        "Trabalho",
+        "Casa",
+        "Mercado",
+        "Mercado",
+        "Parque"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+  "aula": 13,
+  "dataset": "brain-mri-images",
+  "imagens_plano_z": 2564,
+  "modelo_parametros": 48595905,
+  "imagens_inspecionadas": 3,
+  "total_camadas_registradas": 91,
+  "camadas_visualizadas": [
+    "down1.block1.conv1",
+    "bot1.conv1",
+    "out"
+  ],
+  "timesteps": 1000,
+  "beta_start": 0.001,
+  "beta_end": 0.02,
+  "treinamento_executado": false,
+  "processo_reverso_completo_executado": false
+}

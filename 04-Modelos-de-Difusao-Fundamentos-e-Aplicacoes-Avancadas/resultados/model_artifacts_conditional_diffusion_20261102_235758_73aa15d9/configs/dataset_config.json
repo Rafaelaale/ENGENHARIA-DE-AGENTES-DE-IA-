@@ -1,0 +1,33 @@
+{
+  "class_mapping": {
+    "x": 0,
+    "y": 1,
+    "z": 2
+  },
+  "idx_to_label": {
+    "0": "x",
+    "1": "y",
+    "2": "z"
+  },
+  "class_descriptions": {
+    "x": "sagital",
+    "y": "coronal",
+    "z": "axial"
+  },
+  "num_classes": 3,
+  "dataset_name": "Brain MRI",
+  "total_samples": 7692,
+  "preprocessing": {
+    "resize": [
+      64,
+      64
+    ],
+    "channels": 1,
+    "normalize_mean": 0.5,
+    "normalize_std": 0.5,
+    "range": [
+      -1,
+      1
+    ]
+  }
+}

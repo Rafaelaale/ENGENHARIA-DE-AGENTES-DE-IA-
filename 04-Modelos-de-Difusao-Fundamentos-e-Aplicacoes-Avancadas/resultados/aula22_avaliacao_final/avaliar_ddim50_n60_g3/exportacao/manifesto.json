@@ -1,0 +1,78 @@
+{
+  "aula": 22,
+  "modelo": "ConditionalUNet",
+  "origem_pesos": "aula21_reduzido_melhor_modelo.pth",
+  "sha256_pesos": "73aa15d9c3a5823cfca71901419e648bbd9e49ce652332647f7571ba4a1d221e",
+  "arquivo_pesos": "conditional_unet_best.pth",
+  "base_channels": 16,
+  "in_channels": 1,
+  "num_classes_reais": 3,
+  "null_label": 3,
+  "label_to_idx": {
+    "x": 0,
+    "y": 1,
+    "z": 2
+  },
+  "class_descriptions": {
+    "x": "sagital",
+    "y": "coronal",
+    "z": "axial"
+  },
+  "img_size": 64,
+  "input_range": [
+    -1,
+    1
+  ],
+  "diffusion": {
+    "T": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02
+  },
+  "inferencia_avaliada": {
+    "sampler": "ddim",
+    "passos": 50,
+    "guidance_scale": 3.0,
+    "n_amostras": 60
+  },
+  "bibliotecas": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6",
+    "torchmetrics": "1.9.0",
+    "torch-fidelity": "0.4.0",
+    "Pillow": "13.0.0"
+  },
+  "metricas": {
+    "fid": 19.956939697265625,
+    "fid_feature": 64,
+    "inception_score_media": 1.0891852378845215,
+    "inception_score_desvio": 0.04000943899154663,
+    "lpips_real_gerada_nao_pareadas": 0.6658141801754633,
+    "lpips_real_gerada_dp": 0.027140569227204873,
+    "lpips_diversidade_sintetica": 0.03768837860409628,
+    "lpips_diversidade_dp": 0.005629670041909992,
+    "lpips_net": "squeeze",
+    "num_amostras_reais": 60,
+    "num_amostras_geradas": 60,
+    "classes": {
+      "x": 0,
+      "y": 1,
+      "z": 2
+    },
+    "sampling": {
+      "pesos_sha256": "73aa15d9c3a5823cfca71901419e648bbd9e49ce652332647f7571ba4a1d221e",
+      "n": 60,
+      "passos": 50,
+      "sampler": "ddim",
+      "guidance": 3.0,
+      "batch": 2
+    },
+    "observacao": "Avaliacao exploratoria. Sem validade clinica."
+  },
+  "limitacoes": [
+    "Modelo educacional, sem validacao clinica.",
+    "FID de 64 features nao equivale ao FID2048.",
+    "LPIPS nao pareado nao mede reconstrucao.",
+    "Imagens podem ter sido vistas nas aulas anteriores.",
+    "Modelos perceptuais fora do dominio MRI."
+  ]
+}

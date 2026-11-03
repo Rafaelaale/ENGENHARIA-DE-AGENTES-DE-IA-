@@ -1,0 +1,69 @@
+{
+    "aula": 6,
+    "tema": "Forward Process",
+    "seed": 42,
+    "timesteps": 1000,
+    "scheduler_utilizado": "linear",
+    "scheduler_cosine_implementado": true,
+    "dimensoes_imagem": [
+        128,
+        128,
+        3
+    ],
+    "origem_imagem": "ilustracao local alternativa",
+    "passos_visualizados": [
+        0,
+        20,
+        50,
+        100,
+        999
+    ],
+    "passos_score": 30,
+    "eta_reverse": 0.1,
+    "ponto_final_reverse": [
+        0.10597789568804042,
+        -0.08478231655043239
+    ],
+    "estatisticas": [
+        {
+            "timestep": 0,
+            "beta": 9.999999747378752e-05,
+            "alpha_acumulado": 0.9999000000025262,
+            "media": 0.6865113470144729,
+            "desvio_padrao": 0.26539407253836056,
+            "entropia": -0.9602174218545254
+        },
+        {
+            "timestep": 20,
+            "beta": 0.0004983983817510307,
+            "alpha_acumulado": 0.9937354284866282,
+            "media": 0.6845091654249407,
+            "desvio_padrao": 0.27613516795096166,
+            "entropia": -0.0554044801094742
+        },
+        {
+            "timestep": 50,
+            "beta": 0.00109599600546062,
+            "alpha_acumulado": 0.96995149312318,
+            "media": 0.6762375577520023,
+            "desvio_padrao": 0.3142693984824719,
+            "entropia": 0.22987977040262447
+        },
+        {
+            "timestep": 100,
+            "beta": 0.0020919921807944775,
+            "alpha_acumulado": 0.8951415909472787,
+            "media": 0.6515948348807113,
+            "desvio_padrao": 0.40653190994532534,
+            "entropia": 0.5172336454529168
+        },
+        {
+            "timestep": 999,
+            "beta": 0.019999999552965164,
+            "alpha_acumulado": 4.035830882504454e-05,
+            "media": -0.0022563520958569067,
+            "desvio_padrao": 1.0017495986697424,
+            "entropia": 1.421741302819951
+        }
+    ]
+}

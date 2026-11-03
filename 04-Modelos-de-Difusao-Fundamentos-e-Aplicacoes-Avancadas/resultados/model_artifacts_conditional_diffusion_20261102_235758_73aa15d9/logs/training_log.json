@@ -1,0 +1,42 @@
+{
+  "experiment_id": "conditional_diffusion_20261102_235758_73aa15d9",
+  "model_version": "v1.0.0",
+  "operation": "documentation_and_inference_export",
+  "status": "completed",
+  "training_scope": "reduced_experiment",
+  "training_start_time": null,
+  "export_start_time": "2026-11-03T00:05:30.534046-03:00",
+  "export_end_time": "2026-11-03T00:05:30.570448-03:00",
+  "epochs_recorded": 3,
+  "final_metrics": {
+    "fid": 19.956939697265625,
+    "fid_feature": 64,
+    "inception_score_media": 1.0891852378845215,
+    "inception_score_desvio": 0.04000943899154663,
+    "lpips_real_gerada_nao_pareadas": 0.6658141801754633,
+    "lpips_real_gerada_dp": 0.027140569227204873,
+    "lpips_diversidade_sintetica": 0.03768837860409628,
+    "lpips_diversidade_dp": 0.005629670041909992,
+    "lpips_net": "squeeze",
+    "num_amostras_reais": 60,
+    "num_amostras_geradas": 60,
+    "classes": {
+      "x": 0,
+      "y": 1,
+      "z": 2
+    },
+    "sampling": {
+      "pesos_sha256": "73aa15d9c3a5823cfca71901419e648bbd9e49ce652332647f7571ba4a1d221e",
+      "n": 60,
+      "passos": 50,
+      "sampler": "ddim",
+      "guidance": 3.0,
+      "batch": 2
+    },
+    "observacao": "Avaliacao exploratoria. Sem validade clinica."
+  },
+  "model_path": "models/conditional_unet_final.pth",
+  "inference_weights": "models/model_weights_only.pth",
+  "artifacts_directory": ".",
+  "note": "O inicio do treinamento original nao foi registrado."
+}

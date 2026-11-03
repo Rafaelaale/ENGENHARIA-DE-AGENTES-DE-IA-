@@ -1,0 +1,34 @@
+{
+  "source": "logs/historico_treinamento.csv",
+  "epochs_recorded": 3,
+  "records": [
+    {
+      "epoca": 1,
+      "mse_treino": 0.203822519009312,
+      "mse_validacao": 0.1916950431962808,
+      "learning_rate": 7.500000000000001e-05,
+      "fid": null,
+      "is_score": null,
+      "lpips_diversidade": null
+    },
+    {
+      "epoca": 2,
+      "mse_treino": 0.166977367674311,
+      "mse_validacao": 0.1748713025202354,
+      "learning_rate": 2.5000000000000015e-05,
+      "fid": null,
+      "is_score": null,
+      "lpips_diversidade": null
+    },
+    {
+      "epoca": 3,
+      "mse_treino": 0.2178430383404096,
+      "mse_validacao": 0.1696497481316328,
+      "learning_rate": 0,
+      "fid": null,
+      "is_score": null,
+      "lpips_diversidade": null
+    }
+  ],
+  "note": "FID, IS e LPIPS foram calculados separadamente na Aula 22."
+}

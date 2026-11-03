@@ -27,10 +27,11 @@ Meu portfólio documenta implementações, experimentos, avaliação de modelos,
 | 01 | [Fundamentos de redes neurais](redes_neurais_pytorch/) | PyTorch, MLP, tensores, gradientes e otimizadores |
 | 02 | [Redes neurais recorrentes](Redes_Neurais_Recorrentes_PyTorch_2/) | RNN, GRU, LSTM, embeddings e sequências |
 | 03 | [Redes neurais convolucionais](03-Redes-Neurais-Convolucionais-PyTorch/) | CNN, LeNet-5, CIFAR-10, VGG16-BN e fine-tuning |
-| 04 | [Análise de sentimentos](nlp_analise_sentimento/) | NLP, preparação de textos e classificação |
-| 05 | [RAG com LangChain](rag-foundations-langchain/) | Embeddings, Chroma, Ollama e busca semântica |
-| 06 | [Agentes com LangGraph](langgraph-orchestration-agent/) | ReAct, ferramentas, persistência, HITL e multiagentes |
-| 07 | [Integração de agentes](md-bank-protocols/) | Python, componentes, interfaces e Docker Compose |
+| 04 | [Modelos de difusao](04-Modelos-de-Difusao-Fundamentos-e-Aplicacoes-Avancadas/) | PyTorch, DDPM, DDIM, CFG, inferencia e MLOps |
+| 05 | [Análise de sentimentos](nlp_analise_sentimento/) | NLP, preparação de textos e classificação |
+| 06 | [RAG com LangChain](rag-foundations-langchain/) | Embeddings, Chroma, Ollama e busca semântica |
+| 07 | [Agentes com LangGraph](langgraph-orchestration-agent/) | ReAct, ferramentas, persistência, HITL e multiagentes |
+| 08 | [Integração de agentes](md-bank-protocols/) | Python, componentes, interfaces e Docker Compose |
 
 **Todos os projetos fazem parte da mesma trilha.**
 

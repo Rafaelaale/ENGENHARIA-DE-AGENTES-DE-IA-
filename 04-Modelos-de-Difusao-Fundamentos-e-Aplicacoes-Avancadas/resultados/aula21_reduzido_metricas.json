@@ -1,0 +1,9 @@
+{
+  "fid64": 20.143993377685547,
+  "is_media": 1.0844229459762573,
+  "is_desvio": 0.023703008890151978,
+  "lpips_diversidade": 0.08070283383131027,
+  "amostras": 60,
+  "passos_ddim": 50,
+  "limitacoes": "FID64 exploratorio. Inception treinado fora do dominio MRI. LPIPS aqui mede diversidade entre imagens sinteticas, nao fidelidade clinica."
+}

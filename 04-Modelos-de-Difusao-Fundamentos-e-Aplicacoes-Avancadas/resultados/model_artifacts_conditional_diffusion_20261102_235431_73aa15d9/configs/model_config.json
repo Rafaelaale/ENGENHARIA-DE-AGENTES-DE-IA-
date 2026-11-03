@@ -1,0 +1,49 @@
+{
+  "architecture": "ConditionalUNet",
+  "model_params": {
+    "in_channels": 1,
+    "base_channels": 16,
+    "num_classes": 3,
+    "null_label": 3,
+    "time_dim": 256,
+    "label_dim": 128,
+    "dropout_prob": 0.1
+  },
+  "training_params": {
+    "epochs_configuradas": 3,
+    "microbatch": 2,
+    "acumulacao_gradiente": 2,
+    "batch_efetivo": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "diffusion_steps": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02
+  },
+  "dataset_info": {
+    "name": "Brain MRI",
+    "source": "Kaggle: ashfakyeafi/brain-mri-images",
+    "num_classes": 3,
+    "class_mapping": {
+      "x": 0,
+      "y": 1,
+      "z": 2
+    },
+    "class_descriptions": {
+      "x": "sagital",
+      "y": "coronal",
+      "z": "axial"
+    },
+    "image_size": 64,
+    "total_samples": 7692,
+    "train_samples_aula21": 48,
+    "validation_samples_aula21": 12
+  },
+  "inference_params": {
+    "sampler": "ddim",
+    "steps": 50,
+    "guidance_scale": 3.0
+  }
+}

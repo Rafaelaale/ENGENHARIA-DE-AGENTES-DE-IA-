@@ -1,0 +1,23 @@
+{
+    "aula": 16,
+    "modelo": "ConditionalUNet",
+    "parametros": 48826561,
+    "dataset_imagens": 7692,
+    "classes_reais": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+    },
+    "classe_nula": 3,
+    "scheduler": "linear",
+    "timesteps": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "guidance_scale_teste": 3.0,
+    "timestep_teste": 500,
+    "q_sample_executado": true,
+    "p_sample_um_passo_executado": true,
+    "geracao_completa_executada": false,
+    "treinamento_executado": false,
+    "device": "cpu"
+}

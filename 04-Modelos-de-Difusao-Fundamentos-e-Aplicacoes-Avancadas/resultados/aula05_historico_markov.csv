@@ -1,0 +1,12 @@
+﻿passo,estado,estado_anterior,probabilidade_transicao
+0,Casa,,
+1,Trabalho,Casa,0.6
+2,Parque,Trabalho,0.1
+3,Parque,Parque,0.4
+4,Mercado,Parque,0.2
+5,Casa,Mercado,0.5
+6,Trabalho,Casa,0.6
+7,Casa,Trabalho,0.4
+8,Mercado,Casa,0.2
+9,Mercado,Mercado,0.1
+10,Parque,Mercado,0.3

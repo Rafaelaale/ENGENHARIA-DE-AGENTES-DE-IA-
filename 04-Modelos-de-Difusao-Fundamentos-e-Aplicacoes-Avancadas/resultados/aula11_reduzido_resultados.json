@@ -1,0 +1,64 @@
+{
+    "aula": 11,
+    "modo": "reduzido",
+    "imagens_treinamento": 512,
+    "epocas": 10,
+    "batch_size": 8,
+    "timesteps": 500,
+    "learning_rate": 0.0002,
+    "device": "cpu",
+    "historico": [
+        {
+            "epoch": 1,
+            "loss": 0.4935125664342195,
+            "batches": 64
+        },
+        {
+            "epoch": 2,
+            "loss": 0.2829008677508682,
+            "batches": 64
+        },
+        {
+            "epoch": 3,
+            "loss": 0.26999533199705184,
+            "batches": 64
+        },
+        {
+            "epoch": 4,
+            "loss": 0.24610476131783798,
+            "batches": 64
+        },
+        {
+            "epoch": 5,
+            "loss": 0.2275435731280595,
+            "batches": 64
+        },
+        {
+            "epoch": 6,
+            "loss": 0.2270899799768813,
+            "batches": 64
+        },
+        {
+            "epoch": 7,
+            "loss": 0.23903591535054147,
+            "batches": 64
+        },
+        {
+            "epoch": 8,
+            "loss": 0.23373255413025618,
+            "batches": 64
+        },
+        {
+            "epoch": 9,
+            "loss": 0.21451959118712693,
+            "batches": 64
+        },
+        {
+            "epoch": 10,
+            "loss": 0.21455628494732082,
+            "batches": 64
+        }
+    ],
+    "frames_gif": 15,
+    "treinamento_concluido": true
+}

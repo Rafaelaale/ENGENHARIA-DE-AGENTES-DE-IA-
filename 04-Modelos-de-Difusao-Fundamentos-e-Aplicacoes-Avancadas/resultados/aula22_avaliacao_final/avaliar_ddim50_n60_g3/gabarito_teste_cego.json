@@ -1,0 +1,62 @@
+{
+  "01": {
+    "origem": "real",
+    "classe": "y",
+    "plano": "coronal"
+  },
+  "02": {
+    "origem": "gerada",
+    "classe": "y",
+    "plano": "coronal"
+  },
+  "03": {
+    "origem": "real",
+    "classe": "x",
+    "plano": "sagital"
+  },
+  "04": {
+    "origem": "real",
+    "classe": "y",
+    "plano": "coronal"
+  },
+  "05": {
+    "origem": "real",
+    "classe": "x",
+    "plano": "sagital"
+  },
+  "06": {
+    "origem": "gerada",
+    "classe": "z",
+    "plano": "axial"
+  },
+  "07": {
+    "origem": "gerada",
+    "classe": "y",
+    "plano": "coronal"
+  },
+  "08": {
+    "origem": "gerada",
+    "classe": "x",
+    "plano": "sagital"
+  },
+  "09": {
+    "origem": "gerada",
+    "classe": "z",
+    "plano": "axial"
+  },
+  "10": {
+    "origem": "gerada",
+    "classe": "x",
+    "plano": "sagital"
+  },
+  "11": {
+    "origem": "real",
+    "classe": "z",
+    "plano": "axial"
+  },
+  "12": {
+    "origem": "real",
+    "classe": "z",
+    "plano": "axial"
+  }
+}

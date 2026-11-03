@@ -1,0 +1,23 @@
+{
+  "x": [
+    "samples/x_sample_1.png",
+    "samples/x_sample_2.png",
+    "samples/x_sample_3.png",
+    "samples/x_sample_4.png",
+    "samples/x_sample_5.png"
+  ],
+  "y": [
+    "samples/y_sample_1.png",
+    "samples/y_sample_2.png",
+    "samples/y_sample_3.png",
+    "samples/y_sample_4.png",
+    "samples/y_sample_5.png"
+  ],
+  "z": [
+    "samples/z_sample_1.png",
+    "samples/z_sample_2.png",
+    "samples/z_sample_3.png",
+    "samples/z_sample_4.png",
+    "samples/z_sample_5.png"
+  ]
+}
