@@ -1,0 +1,85 @@
+{
+  "experimento": 2,
+  "config": {
+    "vocab_size": 29794,
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 2,
+    "block_size": 32,
+    "dropout": 0.1,
+    "batch_size": 8,
+    "learning_rate": 0.0003,
+    "max_iters": 200
+  },
+  "tokens": 1156,
+  "best_val_loss": 8.516774940490723,
+  "historico": [
+    {
+      "iteracao": 1,
+      "train_loss": 10.284830093383789,
+      "val_loss": 10.279213142395019,
+      "val_perplexity": 29120.95049476966
+    },
+    {
+      "iteracao": 20,
+      "train_loss": 9.713920974731446,
+      "val_loss": 9.985905265808105,
+      "val_perplexity": 21718.18627676374
+    },
+    {
+      "iteracao": 40,
+      "train_loss": 9.07222385406494,
+      "val_loss": 9.67932415008545,
+      "val_perplexity": 15983.69069975929
+    },
+    {
+      "iteracao": 60,
+      "train_loss": 8.349897766113282,
+      "val_loss": 9.381257820129395,
+      "val_perplexity": 11863.928060619255
+    },
+    {
+      "iteracao": 80,
+      "train_loss": 7.689847373962403,
+      "val_loss": 9.135931968688965,
+      "val_perplexity": 9282.924987063167
+    },
+    {
+      "iteracao": 100,
+      "train_loss": 7.122374725341797,
+      "val_loss": 8.896524620056152,
+      "val_perplexity": 7306.536372881
+    },
+    {
+      "iteracao": 120,
+      "train_loss": 6.599804878234863,
+      "val_loss": 8.716304206848145,
+      "val_perplexity": 6101.58716223561
+    },
+    {
+      "iteracao": 140,
+      "train_loss": 6.241557025909424,
+      "val_loss": 8.70312442779541,
+      "val_perplexity": 6021.697213947265
+    },
+    {
+      "iteracao": 160,
+      "train_loss": 5.971734046936035,
+      "val_loss": 8.753520011901855,
+      "val_perplexity": 6332.940947491219
+    },
+    {
+      "iteracao": 180,
+      "train_loss": 5.825684642791748,
+      "val_loss": 8.516774940490723,
+      "val_perplexity": 4997.909182646056
+    },
+    {
+      "iteracao": 200,
+      "train_loss": 5.5784517288208,
+      "val_loss": 8.73134250640869,
+      "val_perplexity": 6194.038067670091
+    }
+  ],
+  "grafico": "experimento02_curvas.png"
+}
