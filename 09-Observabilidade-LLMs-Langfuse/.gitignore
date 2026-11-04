@@ -1,0 +1,16 @@
+﻿.env
+.env.*
+!.env.example
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pkl
+*.pickle
+*.key
+*.pem
+*.log
+*.backup*
+.ipynb_checkpoints/
+.pytest_cache/
