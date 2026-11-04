@@ -1,0 +1,4 @@
+google-adk
+litellm
+requests>=2.32.0,<3
+google-cloud-aiplatform[adk,agent_engines]

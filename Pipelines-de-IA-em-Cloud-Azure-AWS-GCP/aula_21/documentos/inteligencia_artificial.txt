@@ -1,0 +1,14 @@
+Introducao a Inteligencia Artificial
+
+Inteligencia Artificial e uma area da computacao que desenvolve
+sistemas capazes de executar tarefas associadas a capacidades
+como aprendizado, reconhecimento de padroes e tomada de decisao.
+
+Aplicacoes incluem sistemas de recomendacao, assistentes virtuais,
+classificacao de imagens e processamento de linguagem natural.
+
+Machine Learning e uma abordagem na qual modelos aprendem
+padroes a partir de dados.
+
+Modelos de linguagem podem gerar texto, responder perguntas
+e resumir documentos, mas podem produzir respostas incorretas.

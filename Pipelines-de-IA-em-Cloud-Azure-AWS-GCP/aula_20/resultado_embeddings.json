@@ -1,0 +1,158 @@
+{
+  "aula": 20,
+  "modelo": "nomic-embed-text:latest",
+  "frases": [
+    {
+      "id": "A1",
+      "categoria": "Animais",
+      "texto": "O cachorro está brincando no parque."
+    },
+    {
+      "id": "A2",
+      "categoria": "Animais",
+      "texto": "O cão corre feliz na grama."
+    },
+    {
+      "id": "T1",
+      "categoria": "Tecnologia",
+      "texto": "O computador está processando dados."
+    },
+    {
+      "id": "T2",
+      "categoria": "Tecnologia",
+      "texto": "O laptop foi usado para escrever o relatório."
+    },
+    {
+      "id": "C1",
+      "categoria": "Café",
+      "texto": "Adoro tomar café pela manhã."
+    },
+    {
+      "id": "C2",
+      "categoria": "Café",
+      "texto": "Bebo café todo dia antes de trabalhar."
+    }
+  ],
+  "dimensoes": 768,
+  "similaridade_cosseno": [
+    [
+      1.0000000000000004,
+      0.578433371977487,
+      0.5761051006564984,
+      0.5545470257265463,
+      0.5455164474815909,
+      0.5731790015277904
+    ],
+    [
+      0.578433371977487,
+      1.0000000000000004,
+      0.6113640845091991,
+      0.598197556961231,
+      0.5232428786344625,
+      0.5065484854532054
+    ],
+    [
+      0.5761051006564984,
+      0.6113640845091991,
+      0.9999999999999998,
+      0.6873975649168352,
+      0.4813862618165683,
+      0.5752873442106974
+    ],
+    [
+      0.5545470257265463,
+      0.598197556961231,
+      0.6873975649168352,
+      1.0,
+      0.5161643619079059,
+      0.53181322972336
+    ],
+    [
+      0.5455164474815909,
+      0.5232428786344625,
+      0.4813862618165683,
+      0.5161643619079059,
+      1.0,
+      0.7333348407493089
+    ],
+    [
+      0.5731790015277904,
+      0.5065484854532054,
+      0.5752873442106974,
+      0.53181322972336,
+      0.7333348407493089,
+      1.0000000000000002
+    ]
+  ],
+  "vizinhos": [
+    {
+      "frase": "A1",
+      "vizinho": "A2",
+      "mesma_categoria": true,
+      "similaridade": 0.578433
+    },
+    {
+      "frase": "A2",
+      "vizinho": "T1",
+      "mesma_categoria": false,
+      "similaridade": 0.611364
+    },
+    {
+      "frase": "T1",
+      "vizinho": "T2",
+      "mesma_categoria": true,
+      "similaridade": 0.687398
+    },
+    {
+      "frase": "T2",
+      "vizinho": "T1",
+      "mesma_categoria": true,
+      "similaridade": 0.687398
+    },
+    {
+      "frase": "C1",
+      "vizinho": "C2",
+      "mesma_categoria": true,
+      "similaridade": 0.733335
+    },
+    {
+      "frase": "C2",
+      "vizinho": "C1",
+      "mesma_categoria": true,
+      "similaridade": 0.733335
+    }
+  ],
+  "pca": {
+    "pontos": [
+      [
+        -0.0223878670748706,
+        0.486812660436559
+      ],
+      [
+        -0.2578608775481235,
+        0.24559279401458745
+      ],
+      [
+        -0.32257961937109847,
+        -0.230262294097914
+      ],
+      [
+        -0.3153343727394923,
+        -0.2935060160591348
+      ],
+      [
+        0.49592250175776437,
+        -0.06118149595611457
+      ],
+      [
+        0.42224023497582003,
+        -0.14745564833798352
+      ]
+    ],
+    "variancia_explicada": [
+      0.3252663094744675,
+      0.2162886321661365
+    ],
+    "variancia_total": 0.541554941640604
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "components": {
+    "comp-format-result": {
+      "executorLabel": "exec-format-result",
+      "inputDefinitions": {
+        "parameters": {
+          "sum_value": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "parameters": {
+          "Output": {
+            "parameterType": "STRING"
+          }
+        }
+      }
+    },
+    "comp-sum-numbers": {
+      "executorLabel": "exec-sum-numbers",
+      "inputDefinitions": {
+        "parameters": {
+          "a": {
+            "parameterType": "NUMBER_DOUBLE"
+          },
+          "b": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "parameters": {
+          "Output": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      }
+    }
+  },
+  "deploymentSpec": {
+    "executors": {
+      "exec-format-result": {
+        "container": {
+          "args": [
+            "--executor_input",
+            "{{$}}",
+            "--function_to_execute",
+            "format_result"
+          ],
+          "command": [
+            "sh",
+            "-c",
+            "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location 'kfp==2.18.0' '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"$0\" \"$@\"\n",
+            "sh",
+            "-ec",
+            "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+            "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef format_result(sum_value: float) -> str:\n    message = f\"A soma e {sum_value}\"\n    print(message)\n    return message\n\n"
+          ],
+          "image": "python:3.11-slim",
+          "resources": {
+            "cpuLimit": 1.0,
+            "resourceCpuLimit": "1"
+          }
+        }
+      },
+      "exec-sum-numbers": {
+        "container": {
+          "args": [
+            "--executor_input",
+            "{{$}}",
+            "--function_to_execute",
+            "sum_numbers"
+          ],
+          "command": [
+            "sh",
+            "-c",
+            "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location 'kfp==2.18.0' '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"$0\" \"$@\"\n",
+            "sh",
+            "-ec",
+            "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+            "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef sum_numbers(a: float, b: float) -> float:\n    return a + b\n\n"
+          ],
+          "image": "python:3.11-slim",
+          "resources": {
+            "cpuLimit": 1.0,
+            "resourceCpuLimit": "1"
+          }
+        }
+      }
+    }
+  },
+  "pipelineInfo": {
+    "name": "sum-and-format-pipeline"
+  },
+  "root": {
+    "dag": {
+      "tasks": {
+        "format-result": {
+          "cachingOptions": {
+            "enableCache": true
+          },
+          "componentRef": {
+            "name": "comp-format-result"
+          },
+          "dependentTasks": [
+            "sum-numbers"
+          ],
+          "inputs": {
+            "parameters": {
+              "sum_value": {
+                "taskOutputParameter": {
+                  "outputParameterKey": "Output",
+                  "producerTask": "sum-numbers"
+                }
+              }
+            }
+          },
+          "taskInfo": {
+            "name": "format-result"
+          }
+        },
+        "sum-numbers": {
+          "cachingOptions": {
+            "enableCache": true
+          },
+          "componentRef": {
+            "name": "comp-sum-numbers"
+          },
+          "inputs": {
+            "parameters": {
+              "a": {
+                "componentInputParameter": "a"
+              },
+              "b": {
+                "componentInputParameter": "b"
+              }
+            }
+          },
+          "taskInfo": {
+            "name": "sum-numbers"
+          }
+        }
+      }
+    },
+    "inputDefinitions": {
+      "parameters": {
+        "a": {
+          "defaultValue": 1.0,
+          "isOptional": true,
+          "parameterType": "NUMBER_DOUBLE"
+        },
+        "b": {
+          "defaultValue": 2.0,
+          "isOptional": true,
+          "parameterType": "NUMBER_DOUBLE"
+        }
+      }
+    }
+  },
+  "schemaVersion": "2.1.0",
+  "sdkVersion": "kfp-2.18.0"
+}

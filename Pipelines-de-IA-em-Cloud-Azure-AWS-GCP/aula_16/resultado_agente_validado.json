@@ -1,0 +1,47 @@
+{
+  "modelo": "llama3.2:latest",
+  "aprovado": true,
+  "decisao_llm_valida": true,
+  "eventos": [
+    {
+      "etapa": "decisao_llm",
+      "ferramenta_correta": true
+    },
+    {
+      "etapa": "consultar_cliente",
+      "cliente_id": 1,
+      "nome": "Maria"
+    },
+    {
+      "etapa": "consultar_pedidos",
+      "pedidos": [
+        {
+          "id": 1,
+          "valor_centavos": 12050
+        },
+        {
+          "id": 2,
+          "valor_centavos": 7990
+        },
+        {
+          "id": 3,
+          "valor_centavos": 20000
+        }
+      ]
+    },
+    {
+      "etapa": "calcular_total",
+      "resultado": {
+        "quantidade": 3,
+        "total": 400.4
+      }
+    }
+  ],
+  "resposta_llm_nao_confiavel": "Maria realizou 3 pedidos e o total foi de R$ 400,40.",
+  "resposta_validada": "Maria realizou 3 pedidos, totalizando R$ 400.40.",
+  "resultado": {
+    "quantidade": 3,
+    "total": 400.4
+  },
+  "tempo_segundos": 0.456
+}

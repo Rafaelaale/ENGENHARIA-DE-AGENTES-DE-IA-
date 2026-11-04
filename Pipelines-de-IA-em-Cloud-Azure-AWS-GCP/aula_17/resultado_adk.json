@@ -1,0 +1,71 @@
+{
+    "framework": "Google ADK",
+    "modelo": "llama3.2:latest",
+    "provedor": "Ollama local",
+    "session_id": "283fe462-8153-44ea-ae49-e54b34ea0196",
+    "perguntas": [
+        {
+            "pergunta": "Qual e a hora atual em Sao Paulo?",
+            "resposta": "A hora atual em São Paulo é 22:52 -03."
+        },
+        {
+            "pergunta": "Qual e o clima atual em Sao Paulo?",
+            "resposta": "O clima atual em São Paulo é de temperatura de 20.6°C, umidade de 92% e vento a 3.7 km/h."
+        },
+        {
+            "pergunta": "Qual e a hora e o clima em Nova York?",
+            "resposta": "A hora atual em Nova York é 20:52 -05. \n\nO clima atual em Nova York é de temperatura de 14.9°C, umidade de 85% e vento a 7.2 km/h."
+        },
+        {
+            "pergunta": "Qual e o clima em Campinas?",
+            "resposta": "Desculpe, não consegui encontrar as coordenadas para Campinas. Não posso fornecer informações climáticas precisas para essa cidade."
+        }
+    ],
+    "chamadas_ferramentas": [
+        {
+            "tool": "get_current_time",
+            "city": "São Paulo",
+            "resultado": {
+                "status": "success",
+                "report": "Hora em São Paulo: 2026-11-03 22:52:43 -03-0300"
+            }
+        },
+        {
+            "tool": "get_weather_online",
+            "city": "São Paulo",
+            "resultado": {
+                "status": "success",
+                "report": "Clima em São Paulo: 20.6 C, umidade 92%, vento 3.7 km/h.",
+                "source": "Open-Meteo",
+                "observado_em": "2026-11-03T22:45"
+            }
+        },
+        {
+            "tool": "get_current_time",
+            "city": "Nova York",
+            "resultado": {
+                "status": "success",
+                "report": "Hora em Nova York: 2026-11-03 20:52:45 EST-0500"
+            }
+        },
+        {
+            "tool": "get_weather_online",
+            "city": "Nova York",
+            "resultado": {
+                "status": "success",
+                "report": "Clima em Nova York: 14.9 C, umidade 85%, vento 7.2 km/h.",
+                "source": "Open-Meteo",
+                "observado_em": "2026-11-03T20:45"
+            }
+        },
+        {
+            "tool": "get_weather_online",
+            "city": "Campinas",
+            "resultado": {
+                "status": "error",
+                "report": "Sem coordenadas para Campinas",
+                "source": "Open-Meteo"
+            }
+        }
+    ]
+}

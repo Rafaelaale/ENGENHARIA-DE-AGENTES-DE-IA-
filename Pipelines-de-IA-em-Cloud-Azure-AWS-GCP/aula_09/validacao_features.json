@@ -1,0 +1,17 @@
+{
+    "versao": "1.0.0",
+    "quantidade_clientes": 500,
+    "features": [
+        "saldo_alto",
+        "score_baixo",
+        "faixa_saldo"
+    ],
+    "consistencia_treino_producao": true,
+    "saldo_alto": 188,
+    "score_baixo": 192,
+    "faixa_saldo_distribuicao": {
+        "0": 145,
+        "1": 167,
+        "2": 188
+    }
+}

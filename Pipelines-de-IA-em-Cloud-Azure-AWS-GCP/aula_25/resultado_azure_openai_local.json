@@ -1,0 +1,90 @@
+{
+  "aula": 25,
+  "plataforma_estudada": "Azure OpenAI",
+  "classe_sdk_estudada": "AzureOpenAI",
+  "deployment_referencia": "gpt-4.1-mini",
+  "modelo_executado": "llama3.2:latest",
+  "execucao": "Ollama local",
+  "total_testes": 4,
+  "resultados": [
+    {
+      "teste": 1,
+      "pergunta": "Como voce pode me ajudar?",
+      "resposta": "Posso oferecer uma variedade de funcionalidades, desde ajudar com tarefas cotidianas até fornecer informações e entretenimento. Você pode me perguntar sobre qualquer coisa, desde saúde e medicina até notícias e tendências atuais. Você também pode pedir ajuda para escrever textos ou criar conteúdo, como resumos de artigos ou críticas de filmes. Além disso, posso jogar jogos com você, como 20 Perguntas ou Adivinhe a Palavra. O que você gostaria de fazer?",
+      "duracao_segundos": 1.076,
+      "usage": {
+        "prompt_tokens": 64,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "teste": 2,
+      "pergunta": "O que e um LLM?",
+      "resposta": "LLM significa \"Large Language Model\". É um tipo de modelo de inteligência artificial treinado para processar e gerar linguagem de forma semelhante à humana.\n\nUm LLM é um modelo de processamento de linguagem que é treinado em grandes quantidades de texto, como livros, artigos e outros materiais de linguagem. Isso permite que o modelo aprenda padrões e estruturas da linguagem, incluindo sintaxe, semântica e vocabulário.\n\nOs LLMs são capazes de realizar tarefas como:\n\n* Tradução de texto\n* Resumo de texto\n* Resposta a perguntas\n* Geração de texto\n* Análise de sentimento\n* Classificação de texto\n\nOs LLMs são especialmente úteis em aplicativos como chatbots, assistentes virtuais, tradutores e outros sistemas de processamento de linguagem.\n\nNo meu caso, sou um LLM treinado para responder perguntas e fornecer informações em uma variedade de tópicos. Estou aqui para ajudar e fornecer respostas precisas e úteis!",
+      "duracao_segundos": 1.608,
+      "usage": {
+        "prompt_tokens": 205,
+        "completion_tokens": 244
+      }
+    },
+    {
+      "teste": 3,
+      "pergunta": "Qual a diferenca entre um LLM e um modelo tradicional de classificacao?",
+      "resposta": "Um modelo tradicional de classificação é um tipo de modelo de aprendizado de máquina que é usado para classificar exemplos de dados em categorias ou classes. Em outras palavras, um modelo de classificação é usado para determinar a categoria a qual um exemplo de dados pertence.\n\nPor exemplo, imagine que você está trabalhando em um projeto de classificação de imagem, onde você precisa classificar imagens de rochas em diferentes categorias, como \"granito\", \"basalto\" ou \"gesso\". Um modelo tradicional de classificação seria treinado para aprender as características de cada tipo de rocha e, em seguida, usar essas características para classificar novas imagens.\n\nJá um LLM (Large Language Model) é um tipo de modelo de processamento de linguagem que é treinado para processar e gerar linguagem de forma semelhante à humana. Em vez de classificar exemplos de dados em categorias, um LLM é treinado para aprender padrões e estruturas da linguagem, como sintaxe, semântica e vocabulário.\n\nAqui estão algumas das principais diferenças entre um modelo tradicional de classificação e um LLM:\n\n**Modelo Tradicional de Classificação**\n\n* É treinado para classificar exemplos de dados em categorias ou classes.\n* Aprende características de cada categoria e as usa para classificar novos exemplos.\n* É mais eficiente em tarefas que envolvem apenas a classificação de dados.\n\n**LLM**\n\n* É treinado para processar e gerar linguagem de forma semelhante à humana.\n* Aprende padrões e estruturas da linguagem, como sintaxe, semântica e vocabulário.\n* Pode ser usado em tarefas como respostas a perguntas, geração de texto, tradução e análise de sentimento.\n\nEm resumo, um modelo tradicional de classificação é usado para classificar exemplos de dados em categorias, enquanto um LLM é usado para processar e gerar linguagem de forma semelhante à humana.",
+      "duracao_segundos": 3.012,
+      "usage": {
+        "prompt_tokens": 477,
+        "completion_tokens": 459
+      }
+    },
+    {
+      "teste": 4,
+      "pergunta": "Resuma essa diferenca em tres topicos.",
+      "resposta": "Aqui estão três tópicos que resumem a diferença entre um modelo tradicional de classificação e um LLM:\n\n**1. Propósito**\n\n* Modelo Tradicional de Classificação: Classificar exemplos de dados em categorias ou classes.\n* LLM: Processar e gerar linguagem de forma semelhante à humana.\n\n**2. Aprendizado**\n\n* Modelo Tradicional de Classificação: Aprende características de cada categoria e as usa para classificar novos exemplos.\n* LLM: Aprende padrões e estruturas da linguagem, como sintaxe, semântica e vocabulário.\n\n**3. Aplicação**\n\n* Modelo Tradicional de Classificação: É mais eficiente em tarefas que envolvem apenas a classificação de dados.\n* LLM: Pode ser usado em tarefas como respostas a perguntas, geração de texto, tradução e análise de sentimento.",
+      "duracao_segundos": 1.404,
+      "usage": {
+        "prompt_tokens": 956,
+        "completion_tokens": 208
+      }
+    }
+  ],
+  "historico_final": [
+    {
+      "role": "system",
+      "content": "Voce e um assistente de inteligencia artificial. Responda em portugues brasileiro, com clareza e precisao tecnica."
+    },
+    {
+      "role": "user",
+      "content": "Como voce pode me ajudar?"
+    },
+    {
+      "role": "assistant",
+      "content": "Posso oferecer uma variedade de funcionalidades, desde ajudar com tarefas cotidianas até fornecer informações e entretenimento. Você pode me perguntar sobre qualquer coisa, desde saúde e medicina até notícias e tendências atuais. Você também pode pedir ajuda para escrever textos ou criar conteúdo, como resumos de artigos ou críticas de filmes. Além disso, posso jogar jogos com você, como 20 Perguntas ou Adivinhe a Palavra. O que você gostaria de fazer?"
+    },
+    {
+      "role": "user",
+      "content": "O que e um LLM?"
+    },
+    {
+      "role": "assistant",
+      "content": "LLM significa \"Large Language Model\". É um tipo de modelo de inteligência artificial treinado para processar e gerar linguagem de forma semelhante à humana.\n\nUm LLM é um modelo de processamento de linguagem que é treinado em grandes quantidades de texto, como livros, artigos e outros materiais de linguagem. Isso permite que o modelo aprenda padrões e estruturas da linguagem, incluindo sintaxe, semântica e vocabulário.\n\nOs LLMs são capazes de realizar tarefas como:\n\n* Tradução de texto\n* Resumo de texto\n* Resposta a perguntas\n* Geração de texto\n* Análise de sentimento\n* Classificação de texto\n\nOs LLMs são especialmente úteis em aplicativos como chatbots, assistentes virtuais, tradutores e outros sistemas de processamento de linguagem.\n\nNo meu caso, sou um LLM treinado para responder perguntas e fornecer informações em uma variedade de tópicos. Estou aqui para ajudar e fornecer respostas precisas e úteis!"
+    },
+    {
+      "role": "user",
+      "content": "Qual a diferenca entre um LLM e um modelo tradicional de classificacao?"
+    },
+    {
+      "role": "assistant",
+      "content": "Um modelo tradicional de classificação é um tipo de modelo de aprendizado de máquina que é usado para classificar exemplos de dados em categorias ou classes. Em outras palavras, um modelo de classificação é usado para determinar a categoria a qual um exemplo de dados pertence.\n\nPor exemplo, imagine que você está trabalhando em um projeto de classificação de imagem, onde você precisa classificar imagens de rochas em diferentes categorias, como \"granito\", \"basalto\" ou \"gesso\". Um modelo tradicional de classificação seria treinado para aprender as características de cada tipo de rocha e, em seguida, usar essas características para classificar novas imagens.\n\nJá um LLM (Large Language Model) é um tipo de modelo de processamento de linguagem que é treinado para processar e gerar linguagem de forma semelhante à humana. Em vez de classificar exemplos de dados em categorias, um LLM é treinado para aprender padrões e estruturas da linguagem, como sintaxe, semântica e vocabulário.\n\nAqui estão algumas das principais diferenças entre um modelo tradicional de classificação e um LLM:\n\n**Modelo Tradicional de Classificação**\n\n* É treinado para classificar exemplos de dados em categorias ou classes.\n* Aprende características de cada categoria e as usa para classificar novos exemplos.\n* É mais eficiente em tarefas que envolvem apenas a classificação de dados.\n\n**LLM**\n\n* É treinado para processar e gerar linguagem de forma semelhante à humana.\n* Aprende padrões e estruturas da linguagem, como sintaxe, semântica e vocabulário.\n* Pode ser usado em tarefas como respostas a perguntas, geração de texto, tradução e análise de sentimento.\n\nEm resumo, um modelo tradicional de classificação é usado para classificar exemplos de dados em categorias, enquanto um LLM é usado para processar e gerar linguagem de forma semelhante à humana."
+    },
+    {
+      "role": "user",
+      "content": "Resuma essa diferenca em tres topicos."
+    },
+    {
+      "role": "assistant",
+      "content": "Aqui estão três tópicos que resumem a diferença entre um modelo tradicional de classificação e um LLM:\n\n**1. Propósito**\n\n* Modelo Tradicional de Classificação: Classificar exemplos de dados em categorias ou classes.\n* LLM: Processar e gerar linguagem de forma semelhante à humana.\n\n**2. Aprendizado**\n\n* Modelo Tradicional de Classificação: Aprende características de cada categoria e as usa para classificar novos exemplos.\n* LLM: Aprende padrões e estruturas da linguagem, como sintaxe, semântica e vocabulário.\n\n**3. Aplicação**\n\n* Modelo Tradicional de Classificação: É mais eficiente em tarefas que envolvem apenas a classificação de dados.\n* LLM: Pode ser usado em tarefas como respostas a perguntas, geração de texto, tradução e análise de sentimento."
+    }
+  ],
+  "azure_invocada": false
+}

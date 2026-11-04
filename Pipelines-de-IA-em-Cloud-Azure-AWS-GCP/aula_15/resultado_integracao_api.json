@@ -1,0 +1,28 @@
+{
+    "status_api": {
+        "status": "online",
+        "modelo": "llama3.2:latest",
+        "provedor": "ollama-local"
+    },
+    "testes_executados": 3,
+    "resultados": [
+        {
+            "pergunta": "Explique em 3 passos como configurar autenticacao para usar LLMs no Vertex AI.",
+            "modelo": "llama3.2:latest",
+            "resposta": "Aqui estão os 3 passos para configurar autenticação para usar LLMs no Vertex AI:\n\n**Passo 1: Criar um serviço de autenticação**\n\n1. Abra o console do Google Cloud e navegue até a seção \"Serviços\" do Vertex AI.\n2. Clique em \"Criar serviço\" e selecione \"Serviço de autenticação\".\n3. Insira um nome para o serviço e selecione o tipo de autenticação desejado (por exemplo, \"Autenticação com token de OAuth\").\n4. Clique em \"Criar serviço\" para criar o serviço de autenticação.\n\n**Passo 2: Configurar o serviço de autenticação com o LLM**\n\n1. Abra o console do Google Cloud e navegue até a seção \"Serviços\" do Vertex AI.\n2. Selecione o serviço de autenticação criado no Passo 1.\n3. Clique em \"Configurar\" e selecione o tipo de LLM desejado (por exemplo, \"LLM de texto\").\n4. Insira as credenciais do LLM (por exemplo, API",
+            "tempo_segundos": 1.811
+        },
+        {
+            "pergunta": "Crie um checklist curto para investigar erro HTTP 404 em uma API de LLM.",
+            "modelo": "llama3.2:latest",
+            "resposta": "Aqui está um checklist curto para investigar erro HTTP 404 em uma API de LLM:\n\n**Passo 1: Verificar a URL**\n\n* Verifique se a URL da API está correta e completa.\n* Certifique-se de que a URL inclui todos os parâmetros necessários (e.g. `https://api.linguagem-de-máquina.com/v1/modelo?parametro=valor`).\n\n**Passo 2: Verificar os Parâmetros**\n\n* Verifique se os parâmetros são corretos e válidos.\n* Certifique-se de que os parâmetros estão em ordem correta (e.g. `https://api.linguagem-de-máquina.com/v1/modelo?parametro=valor&outro-parametro=otro-valor`).\n\n**Passo 3: Verificar a Query String**\n\n* Verifique se a query string está correta e completa.\n* Certifique-se de que a query string inclui todos os parâmetros necessários.\n\n**Passo 4: Verificar a API Documentation**\n\n* Verifique a documentação da API para garantir que você está usando os parâmetros corretos",
+            "tempo_segundos": 1.615
+        },
+        {
+            "pergunta": "Como voce pode me ajudar com integracoes de APIs em Python?",
+            "modelo": "llama3.2:latest",
+            "resposta": "Posso ajudar com integrações de APIs em Python de várias maneiras:\n\n1. **Autenticação e Tokenização**: Posso ajudar a gerenciar tokens de autenticação e autenticação de APIs, como o OAuth ou JWT.\n2. **Chamadas de API**: Posso ajudar a criar funções para fazer chamadas de API, como GET, POST, PUT, DELETE, etc.\n3. **Manipulação de Respostas**: Posso ajudar a manipular as respostas das APIs, como extrair dados, lidar com erros, etc.\n4. **Integração com Bibliotecas**: Posso ajudar a integrar com bibliotecas populares como `requests`, `BeautifulSoup`, `json`, etc.\n\nAqui estão alguns exemplos de como posso ajudar:\n\n**Exemplo 1: Autenticação com OAuth**\n```python\nimport requests\n\n# Configuração da API\napi_url = \"https://api.example.com\"\nclient_id = \"seu_client_id\"\nclient_secret = \"seu_client_secret\"\n\n# Autenticação com OAuth\nauth_url = f\"{api_url}/oauth/token\"\nheaders = {\"Content",
+            "tempo_segundos": 1.614
+        }
+    ]
+}

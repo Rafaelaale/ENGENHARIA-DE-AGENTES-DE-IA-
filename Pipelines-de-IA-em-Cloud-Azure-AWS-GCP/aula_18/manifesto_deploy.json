@@ -1,0 +1,27 @@
+{
+    "aula": 18,
+    "framework": "Google ADK",
+    "agent_name": "agente_clima_aula18",
+    "model": "ollama_chat/llama3.2:latest",
+    "execution_mode": "local",
+    "cloud_deployed": false,
+    "cloud_ready": false,
+    "tools": [
+        "get_weather_online"
+    ],
+    "requirements_file": "requirements.txt",
+    "agent_file": "root_agent.py",
+    "checks": {
+        "python_syntax": true,
+        "agent_import": true,
+        "tool_registered": true,
+        "unknown_city_handled": true
+    },
+    "deployment_blockers": [
+        "Ollama utiliza endereco localhost, inacessivel no Agent Engine remoto.",
+        "Projeto Google Cloud nao configurado.",
+        "Autenticacao e permissoes nao verificadas.",
+        "Bucket de staging nao configurado.",
+        "Dependencias ainda nao foram validadas em ambiente remoto."
+    ]
+}

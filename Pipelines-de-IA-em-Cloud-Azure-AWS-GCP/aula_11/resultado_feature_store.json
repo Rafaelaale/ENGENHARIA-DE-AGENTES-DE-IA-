@@ -1,0 +1,17 @@
+{
+    "quantidade_entidades": 500,
+    "entity_id": "1",
+    "saldo_inicial": 28181.0,
+    "saldo_origem_atualizado": 38181.0,
+    "saldo_online_antes_sync": 28181.0,
+    "saldo_online_depois_sync": 38181.0,
+    "sincronizacao_validada": true,
+    "features_cliente": {
+        "entity_id": "1",
+        "credit_score": 684.0,
+        "age": 40.0,
+        "balance": 38181.0,
+        "target_variable": 0,
+        "feature_timestamp": "2026-11-04T01:34:35.817047+00:00"
+    }
+}

@@ -1,0 +1,181 @@
+{
+  "components": {
+    "comp-load-data": {
+      "executorLabel": "exec-load-data",
+      "inputDefinitions": {
+        "parameters": {
+          "path": {
+            "parameterType": "STRING"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "artifacts": {
+          "df_art": {
+            "artifactType": {
+              "schemaTitle": "system.Dataset",
+              "schemaVersion": "0.0.1"
+            }
+          }
+        }
+      }
+    },
+    "comp-train-component": {
+      "executorLabel": "exec-train-component",
+      "inputDefinitions": {
+        "artifacts": {
+          "df_art": {
+            "artifactType": {
+              "schemaTitle": "system.Dataset",
+              "schemaVersion": "0.0.1"
+            }
+          }
+        },
+        "parameters": {
+          "numeric_cols": {
+            "parameterType": "LIST"
+          },
+          "target_col": {
+            "parameterType": "STRING"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "artifacts": {
+          "metrics": {
+            "artifactType": {
+              "schemaTitle": "system.Metrics",
+              "schemaVersion": "0.0.1"
+            }
+          },
+          "model_art": {
+            "artifactType": {
+              "schemaTitle": "system.Model",
+              "schemaVersion": "0.0.1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "deploymentSpec": {
+    "executors": {
+      "exec-load-data": {
+        "container": {
+          "args": [
+            "--executor_input",
+            "{{$}}",
+            "--function_to_execute",
+            "load_data"
+          ],
+          "command": [
+            "sh",
+            "-c",
+            "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location 'pandas>=2,<3'  &&  python3 -m pip install --quiet --no-warn-script-location 'kfp==2.18.0' '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"$0\" \"$@\"\n",
+            "sh",
+            "-ec",
+            "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+            "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef load_data(path: str, df_art: Output[Dataset]):\n    import pandas as pd\n\n    df = pd.read_csv(path)\n\n    required = [\"CreditScore\", \"Balance\", \"Exited\"]\n    missing = [col for col in required if col not in df.columns]\n\n    if missing:\n        raise ValueError(f\"Colunas ausentes: {missing}\")\n\n    df.to_json(df_art.path, orient=\"split\")\n    print(f\"Dados carregados: {len(df)} registros\")\n\n"
+          ],
+          "image": "python:3.11-slim"
+        }
+      },
+      "exec-train-component": {
+        "container": {
+          "args": [
+            "--executor_input",
+            "{{$}}",
+            "--function_to_execute",
+            "train_component"
+          ],
+          "command": [
+            "sh",
+            "-c",
+            "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location 'pandas>=2,<3' 'scikit-learn>=1.5,<2' 'joblib>=1.4,<2'  &&  python3 -m pip install --quiet --no-warn-script-location 'kfp==2.18.0' '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"$0\" \"$@\"\n",
+            "sh",
+            "-ec",
+            "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+            "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef train_component(\n    df_art: Input[Dataset],\n    numeric_cols: list,\n    target_col: str,\n    metrics: Output[Metrics],\n    model_art: Output[Model],\n):\n    import joblib\n    import pandas as pd\n\n    from sklearn.compose import ColumnTransformer\n    from sklearn.impute import SimpleImputer\n    from sklearn.linear_model import LogisticRegression\n    from sklearn.metrics import accuracy_score, f1_score, recall_score\n    from sklearn.model_selection import train_test_split\n    from sklearn.pipeline import Pipeline as SkPipeline\n    from sklearn.preprocessing import StandardScaler\n\n    df = pd.read_json(df_art.path, orient=\"split\")\n\n    X = df[numeric_cols]\n    y = df[target_col]\n\n    X_train, X_test, y_train, y_test = train_test_split(\n        X,\n        y,\n        test_size=0.20,\n        random_state=2,\n        stratify=y\n    )\n\n    numeric_pipeline = SkPipeline([\n        (\"imputer\", SimpleImputer(strategy=\"median\")),\n        (\"scaler\", StandardScaler())\n    ])\n\n    preprocessor = ColumnTransformer([\n        (\"numeric\", numeric_pipeline, numeric_cols)\n    ])\n\n    model = SkPipeline([\n        (\"preprocessor\", preprocessor),\n        (\"classifier\", LogisticRegression(max_iter=1000))\n    ])\n\n    model.fit(X_train, y_train)\n\n    predictions = model.predict(X_test)\n\n    accuracy = accuracy_score(y_test, predictions)\n    recall = recall_score(y_test, predictions)\n    f1 = f1_score(y_test, predictions)\n\n    metrics.log_metric(\"accuracy\", float(accuracy))\n    metrics.log_metric(\"recall\", float(recall))\n    metrics.log_metric(\"f1\", float(f1))\n\n    joblib.dump(model, model_art.path)\n\n    print(f\"Accuracy: {accuracy:.4f}\")\n    print(f\"Recall: {recall:.4f}\")\n    print(f\"F1: {f1:.4f}\")\n    print(\"Modelo salvo como artefato\")\n\n"
+          ],
+          "image": "python:3.11-slim"
+        }
+      }
+    }
+  },
+  "pipelineInfo": {
+    "name": "training-churn-pipeline"
+  },
+  "root": {
+    "dag": {
+      "tasks": {
+        "load-data": {
+          "cachingOptions": {
+            "enableCache": true
+          },
+          "componentRef": {
+            "name": "comp-load-data"
+          },
+          "inputs": {
+            "parameters": {
+              "path": {
+                "componentInputParameter": "path"
+              }
+            }
+          },
+          "taskInfo": {
+            "name": "load-data"
+          }
+        },
+        "train-component": {
+          "cachingOptions": {
+            "enableCache": true
+          },
+          "componentRef": {
+            "name": "comp-train-component"
+          },
+          "dependentTasks": [
+            "load-data"
+          ],
+          "inputs": {
+            "artifacts": {
+              "df_art": {
+                "taskOutputArtifact": {
+                  "outputArtifactKey": "df_art",
+                  "producerTask": "load-data"
+                }
+              }
+            },
+            "parameters": {
+              "numeric_cols": {
+                "componentInputParameter": "numeric_cols"
+              },
+              "target_col": {
+                "componentInputParameter": "target_col"
+              }
+            }
+          },
+          "taskInfo": {
+            "name": "train-component"
+          }
+        }
+      }
+    },
+    "inputDefinitions": {
+      "parameters": {
+        "numeric_cols": {
+          "parameterType": "LIST"
+        },
+        "path": {
+          "parameterType": "STRING"
+        },
+        "target_col": {
+          "defaultValue": "Exited",
+          "isOptional": true,
+          "parameterType": "STRING"
+        }
+      }
+    }
+  },
+  "schemaVersion": "2.1.0",
+  "sdkVersion": "kfp-2.18.0"
+}

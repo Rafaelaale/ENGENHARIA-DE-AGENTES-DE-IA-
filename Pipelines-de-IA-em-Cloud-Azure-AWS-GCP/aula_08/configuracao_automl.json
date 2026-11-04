@@ -1,0 +1,14 @@
+{
+    "project_id": "CONFIGURAR_PROJECT_ID",
+    "location": "us-central1",
+    "dataset_name": "ChurnData",
+    "gcs_source": "gs://alura-469701-bucket/Churn_Modelling.csv",
+    "job_name": "Treinamento_Churn_SDK",
+    "target_column": "Exited",
+    "prediction_type": "classification",
+    "optimization_objective": "maximize-au-prc",
+    "training_fraction": 0.8,
+    "validation_fraction": 0.1,
+    "test_fraction": 0.1,
+    "budget_milli_node_hours": 1000
+}

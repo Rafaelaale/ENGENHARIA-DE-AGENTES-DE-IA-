@@ -1,0 +1,18 @@
+{
+    "accuracy": 0.8,
+    "precision": 0.8349514563106796,
+    "recall": 0.7889908256880734,
+    "f1": 0.8113207547169812,
+    "matriz_confusao": [
+        [
+            74,
+            17
+        ],
+        [
+            23,
+            86
+        ]
+    ],
+    "status": "APROVADO",
+    "probabilidade_cliente_exemplo": 0.9932151856743984
+}

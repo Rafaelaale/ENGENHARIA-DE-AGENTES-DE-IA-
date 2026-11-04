@@ -1,0 +1,23 @@
+{
+    "saldo_alto": {
+        "versao": "1.0.0",
+        "origem": "Balance",
+        "regra": "Balance >= 120000",
+        "tipo": "int",
+        "descricao": "Indica saldo igual ou superior a 120000"
+    },
+    "score_baixo": {
+        "versao": "1.0.0",
+        "origem": "CreditScore",
+        "regra": "CreditScore < 550",
+        "tipo": "int",
+        "descricao": "Indica score de credito inferior a 550"
+    },
+    "faixa_saldo": {
+        "versao": "1.0.0",
+        "origem": "Balance",
+        "regra": "0: baixo; 1: medio; 2: alto",
+        "tipo": "int",
+        "descricao": "Classificacao do saldo em tres faixas"
+    }
+}

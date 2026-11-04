@@ -1,0 +1,48 @@
+{
+  "aula": 24,
+  "servico_estudado": "Amazon Bedrock",
+  "operacao": "Converse",
+  "tipo_execucao": "Adaptador local Ollama",
+  "modelo_real": "llama3.2:latest",
+  "modelos_aws_apenas_referencia": [
+    "amazon.nova-lite-v1:0",
+    "amazon.nova-micro-v1:0"
+  ],
+  "total_testes": 3,
+  "resultados": [
+    {
+      "modelo_solicitado": "amazon.nova-lite-v1:0",
+      "modelo_executado": "llama3.2:latest",
+      "pergunta": "Como voce pode me ajudar?",
+      "resposta": "Posso oferecer informações e esclarecimentos sobre uma variedade de assuntos. Você pode me perguntar sobre algo específico ou simplesmente me solicitar recomendações de assuntos. Você também pode me dizer se há algum assunto em que você gostaria de conversar. Quero ajudá-lo com o que você precisa. Como posso começar?",
+      "duracao_segundos": 0.746,
+      "usage": {
+        "inputTokens": 33,
+        "outputTokens": 79
+      }
+    },
+    {
+      "modelo_solicitado": "amazon.nova-lite-v1:0",
+      "modelo_executado": "llama3.2:latest",
+      "pergunta": "Explique em tres topicos por que prompts menores podem ser vantajosos para LLMs.",
+      "resposta": "**Vantagens de Prompts Menores para LLMs**\n\nOs prompts menores podem ser vantajosos para modelos de linguagem de grande escala (LLMs) em três áreas específicas:\n\n**1. Melhoria da Precisão e da Fidelidade**\n\nPrompts menores podem ajudar a melhorar a precisão e a fertilidade dos LLMs em várias maneiras:\n\n*   **Redução de Ambiguidade**: Prompts menores reduzem a ambiguidade e a confusão, pois são mais claros e específicos, o que permite que o modelo de linguagem entenda melhor o que é solicitado.\n*   **Aumento da Relevância**: Prompts menores aumentam a relevância das respostas, pois são mais direcionados e específicos, o que permite que o modelo de linguagem forneça respostas mais relevantes e úteis.\n*   **Melhoria da Fidelidade**: Prompts menores ajudam a melhorar a fertilidade dos LLMs, pois são mais claros e específicos, o que permite que o modelo de linguagem forneça respostas mais precisas e úteis.\n\n**2. Redução de Overfitting e Overgeneralização**\n\nPrompts menores podem ajudar a reduzir o overfitting e a overgeneralização dos LLMs:\n\n*   **Redução do Overfitting**: Prompts menores reduzem o overfitting, pois são mais claros e específicos, o que permite que o modelo de linguagem não se adapte excessivamente ao treinamento.\n*   **Redução da Overgeneralização**: Prompts menores reduzem a overgeneralização, pois são mais claros e específicos, o que permite que o modelo de linguagem forneça respostas mais precisas e úteis.\n\n**3. Aumento da Eficiência e da Escalabilidade**\n\nPrompts menores podem ajudar a aumentar a eficiência e a escalabilidade dos LLMs:\n\n*   **Aumento da Eficiência**: Prompts menores aumentam a eficiência dos LLMs, pois são mais claros e específicos, o que permite que o modelo de linguagem forneça respostas mais precisas e úteis em menos tempo.\n*   **Aumento da Escalabilidade**: Prompts men",
+      "duracao_segundos": 3.425,
+      "usage": {
+        "inputTokens": 46,
+        "outputTokens": 512
+      }
+    },
+    {
+      "modelo_solicitado": "amazon.nova-micro-v1:0",
+      "modelo_executado": "llama3.2:latest",
+      "pergunta": "Explique em tres topicos por que prompts menores podem ser vantajosos para LLMs.",
+      "resposta": "**Vantagens de prompts menores para LLMs**\n\nExistem várias razões pelas quais prompts menores podem ser vantajosos para LLMs (Modelos de Linguagem de Inteligência Artificial). Aqui estão três dos principais motivos:\n\n**1. Melhoria da precisão e da relevância**\n\nPrompts menores podem ajudar a melhorar a precisão e a relevância das respostas dos LLMs. Quando o prompt é mais curto e específico, o modelo tem menos informações para processar e pode se concentrar melhor na questão em questão. Isso pode levar a respostas mais precisas e relevantes, pois o modelo não está tentando responder a uma questão que não está relacionada ao prompt.\n\n**2. Redução da sobrecarga de dados**\n\nPrompts menores podem ajudar a reduzir a sobrecarga de dados que os LLMs recebem. Quando o prompt é mais curto, o modelo não precisa processar tanto texto para responder à questão. Isso pode ajudar a evitar a sobrecarga de dados e a melhorar a performance do modelo em termos de tempo de processamento.\n\n**3. Aumento da eficiência**\n\nPrompts menores podem ajudar a aumentar a eficiência dos LLMs. Quando o prompt é mais curto, o modelo pode processar mais prompts em um determinado tempo, o que pode ajudar a aumentar a produtividade. Além disso, prompts menores podem ajudar a reduzir a necessidade de treinamento adicional, o que pode ser benéfico para aplicações em que o modelo precisa ser treinado rapidamente.\n\nEm resumo, prompts menores podem ser vantajosos para LLMs porque podem melhorar a precisão e a relevância das respostas, reduzir a sobrecarga de dados e aumentar a eficiência do modelo.",
+      "duracao_segundos": 2.75,
+      "usage": {
+        "inputTokens": 46,
+        "outputTokens": 419
+      }
+    }
+  ],
+  "aws_invocada": false
+}

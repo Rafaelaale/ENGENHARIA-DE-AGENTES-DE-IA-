@@ -1,0 +1,82 @@
+{
+  "arquitetura": "RAG",
+  "modelo_embedding": "nomic-embed-text:latest",
+  "modelo_gerador": "llama3.2:latest",
+  "documentos_indexados": 4,
+  "top_k": 2,
+  "resultados": [
+    {
+      "pergunta": "Qual e o prazo para solicitar reembolso?",
+      "documentos_recuperados": [
+        {
+          "id": "POL-001",
+          "titulo": "Politica de Reembolso",
+          "texto": "Clientes podem solicitar reembolso em ate 7 dias corridos apos a compra. A solicitacao deve ser registrada no portal de atendimento. O prazo de processamento e de ate 5 dias uteis apos a aprovacao.",
+          "similaridade": 0.79367
+        },
+        {
+          "id": "ENT-001",
+          "titulo": "Politica de Entrega",
+          "texto": "As entregas sao realizadas em ate 10 dias uteis apos a confirmacao do pagamento. O cliente pode acompanhar o pedido pelo portal. Em caso de atraso, deve abrir uma solicitacao na central de atendimento.",
+          "similaridade": 0.643195
+        }
+      ],
+      "resposta": "Segundo a Fonte [POL-001]: Politica de Reembolso, os clientes podem solicitar reembolso em até 7 dias corridos após a compra."
+    },
+    {
+      "pergunta": "Qual e o horario de funcionamento do suporte tecnico?",
+      "documentos_recuperados": [
+        {
+          "id": "SUP-001",
+          "titulo": "Suporte Tecnico",
+          "texto": "O suporte tecnico funciona de segunda a sexta-feira, das 8h as 18h, horario de Brasilia. Os chamados devem ser abertos pelo portal. Chamados criticos recebem prioridade de atendimento.",
+          "similaridade": 0.743934
+        },
+        {
+          "id": "SEG-001",
+          "titulo": "Seguranca da Informacao",
+          "texto": "Os colaboradores devem utilizar autenticacao multifator para acessar sistemas internos. Senhas nao devem ser compartilhadas. Incidentes de seguranca devem ser comunicados imediatamente a equipe responsavel.",
+          "similaridade": 0.578802
+        }
+      ],
+      "resposta": "O horário de funcionamento do suporte tecnico é de segunda a sexta-feira, das 8h as 18h, horário de Brasilia."
+    },
+    {
+      "pergunta": "Como devo comunicar um incidente de seguranca?",
+      "documentos_recuperados": [
+        {
+          "id": "SEG-001",
+          "titulo": "Seguranca da Informacao",
+          "texto": "Os colaboradores devem utilizar autenticacao multifator para acessar sistemas internos. Senhas nao devem ser compartilhadas. Incidentes de seguranca devem ser comunicados imediatamente a equipe responsavel.",
+          "similaridade": 0.815077
+        },
+        {
+          "id": "SUP-001",
+          "titulo": "Suporte Tecnico",
+          "texto": "O suporte tecnico funciona de segunda a sexta-feira, das 8h as 18h, horario de Brasilia. Os chamados devem ser abertos pelo portal. Chamados criticos recebem prioridade de atendimento.",
+          "similaridade": 0.636854
+        }
+      ],
+      "resposta": "Deve-se comunicar um incidente de segurança imediatamente à equipe responsável."
+    },
+    {
+      "pergunta": "Qual e o nome do diretor financeiro da empresa?",
+      "documentos_recuperados": [
+        {
+          "id": "SEG-001",
+          "titulo": "Seguranca da Informacao",
+          "texto": "Os colaboradores devem utilizar autenticacao multifator para acessar sistemas internos. Senhas nao devem ser compartilhadas. Incidentes de seguranca devem ser comunicados imediatamente a equipe responsavel.",
+          "similaridade": 0.560183
+        },
+        {
+          "id": "POL-001",
+          "titulo": "Politica de Reembolso",
+          "texto": "Clientes podem solicitar reembolso em ate 7 dias corridos apos a compra. A solicitacao deve ser registrada no portal de atendimento. O prazo de processamento e de ate 5 dias uteis apos a aprovacao.",
+          "similaridade": 0.557165
+        }
+      ],
+      "resposta": "Nao encontrei essa informacao nos documentos."
+    }
+  ],
+  "tempo_segundos": 7.11
+}

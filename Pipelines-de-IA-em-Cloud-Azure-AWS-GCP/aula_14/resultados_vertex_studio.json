@@ -1,0 +1,57 @@
+{
+    "modelo": "llama3.2:latest",
+    "timestamp": "2026-11-04T01:41:44.156162+00:00",
+    "quantidade_testes": 4,
+    "resultados": [
+        {
+            "teste": "relevo",
+            "pergunta": "Como e o relevo do Brasil?",
+            "temperatura": 0.1,
+            "resposta": "O relevo do Brasil apresenta extensas áreas de planaltos, planicies e depressões. [Pagina 1]",
+            "tempo_segundos": 0.387,
+            "paginas_citadas": [
+                1
+            ],
+            "referencias_validas": true,
+            "citacao_esperada": true,
+            "recusa_detectada": false
+        },
+        {
+            "teste": "clima",
+            "pergunta": "Como e o clima do Brasil?",
+            "temperatura": 0.1,
+            "resposta": "O clima do Brasil apresenta diversidade, com predominio de climas tropicais em grande parte do territorio, enquanto a Regiao Sul possui areas de clima subtropical. [Pagina 2]",
+            "tempo_segundos": 0.332,
+            "paginas_citadas": [
+                2
+            ],
+            "referencias_validas": true,
+            "citacao_esperada": true,
+            "recusa_detectada": false
+        },
+        {
+            "teste": "fora_escopo",
+            "pergunta": "Quero uma receita de bolo.",
+            "temperatura": 0.1,
+            "resposta": "Não estou autorizado a responder esse assunto. Posso responder perguntas sobre a geografia do Brasil presentes no documento.",
+            "tempo_segundos": 0.198,
+            "paginas_citadas": [],
+            "referencias_validas": true,
+            "citacao_esperada": true,
+            "recusa_detectada": false
+        },
+        {
+            "teste": "clima_temperatura_alta",
+            "pergunta": "Como e o clima do Brasil?",
+            "temperatura": 0.9,
+            "resposta": "O clima do Brasil é diverso e apresenta predominio de climas tropicais em grande parte do territorio, enquanto a Região Sul possui áreas de clima subtropical. [Pagina 2]",
+            "tempo_segundos": 0.33,
+            "paginas_citadas": [
+                2
+            ],
+            "referencias_validas": true,
+            "citacao_esperada": true,
+            "recusa_detectada": false
+        }
+    ]
+}

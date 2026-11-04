@@ -1,0 +1,17 @@
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/credentials.json
+**/service-account.json
+**/*credentials*.csv
+**/*secret*.json
+**/*.pyc
+**/*.pyo

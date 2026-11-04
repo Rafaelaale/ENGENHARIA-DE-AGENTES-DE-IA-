@@ -1,0 +1,578 @@
+{
+  "aula": 22,
+  "tipo": "Retrieval e Generation",
+  "corpus": "C:\\Users\\rafal\\Desktop\\Pipelines-de-IA-em-Cloud-Azure-AWS-GCP\\aula_21\\corpus_completo.json",
+  "chunks": 11,
+  "perguntas": 5,
+  "valores_top_k": [
+    1,
+    3,
+    10
+  ],
+  "total_testes": 15,
+  "resultados": [
+    {
+      "pergunta": "O que e inteligencia artificial?",
+      "top_k": 1,
+      "recuperacao": [
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.798877,
+          "texto": "Introducao a Inteligencia Artificial"
+        }
+      ],
+      "resposta": "Infelizmente, não consegui encontrar informações suficientes nos trechos fornecidos para responder à sua pergunta. O trecho \"Introdução a Inteligência Artificial\" parece ser um resumo ou um título, mas não fornece informações sobre o que é inteligência artificial.\n\nSe você puder fornecer mais trechos ou contexto, ficarei feliz em tentar ajudar novamente.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "O que e inteligencia artificial?",
+      "top_k": 3,
+      "recuperacao": [
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.798877,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.690444,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.620552,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei informações suficientes nos trechos fornecidos para responder à sua pergunta sobre inteligência artificial.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "O que e inteligencia artificial?",
+      "top_k": 10,
+      "recuperacao": [
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.798877,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.690444,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.620552,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.617408,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 4,
+          "score": 0.611671,
+          "texto": "Machine Learning e uma abordagem na qual modelos aprendem\npadroes a partir de dados."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.593072,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 3,
+          "score": 0.590721,
+          "texto": "Aplicacoes incluem sistemas de recomendacao, assistentes virtuais,\nclassificacao de imagens e processamento de linguagem natural."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 3,
+          "score": 0.580523,
+          "texto": "Como ajustar a altura?\nO usuario pode utilizar os botoes de controle para subir ou descer a mesa."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 6,
+          "score": 0.570762,
+          "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 5,
+          "score": 0.545357,
+          "texto": "Modelos de linguagem podem gerar texto, responder perguntas\ne resumir documentos, mas podem produzir respostas incorretas."
+        }
+      ],
+      "resposta": "A inteligência artificial é uma área da computação que desenvolve sistemas capazes de executar tarefas associadas a capacidades como aprendizado, reconhecimento de padrões e tomada de decisão.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "O que e o LLM SmartDesk?",
+      "top_k": 1,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.777756,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        }
+      ],
+      "resposta": "O LLM SmartDesk é uma mesa de escritório com ajuste eletrico de altura.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "O que e o LLM SmartDesk?",
+      "top_k": 3,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.777756,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.729364,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 1,
+          "score": 0.726936,
+          "texto": "LLM SmartDesk - Perguntas Frequentes"
+        }
+      ],
+      "resposta": "O LLM SmartDesk é uma mesa de escritório com ajuste eletrico de altura.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "O que e o LLM SmartDesk?",
+      "top_k": 10,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.777756,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.729364,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 1,
+          "score": 0.726936,
+          "texto": "LLM SmartDesk - Perguntas Frequentes"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.630054,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.618989,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 4,
+          "score": 0.617473,
+          "texto": "Machine Learning e uma abordagem na qual modelos aprendem\npadroes a partir de dados."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.600644,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 3,
+          "score": 0.576918,
+          "texto": "Aplicacoes incluem sistemas de recomendacao, assistentes virtuais,\nclassificacao de imagens e processamento de linguagem natural."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 5,
+          "score": 0.569256,
+          "texto": "Modelos de linguagem podem gerar texto, responder perguntas\ne resumir documentos, mas podem produzir respostas incorretas."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 6,
+          "score": 0.564832,
+          "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular."
+        }
+      ],
+      "resposta": "O LLM SmartDesk é uma mesa de escritório com ajuste eletrico de altura.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "Quais funcionalidades possui o LLM SmartDesk?",
+      "top_k": 1,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.714986,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei informações suficientes nos trechos fornecidos para determinar quais funcionalidades o LLM SmartDesk possui.",
+      "avaliacao_funcionalidades": {
+        "ajuste_eletrico_no_contexto": true,
+        "memoria_no_contexto": false,
+        "botoes_no_contexto": false,
+        "ajuste_mencionado_na_resposta": false,
+        "memoria_mencionada_na_resposta": false,
+        "botoes_mencionados_na_resposta": false
+      }
+    },
+    {
+      "pergunta": "Quais funcionalidades possui o LLM SmartDesk?",
+      "top_k": 3,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.714986,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.700095,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 1,
+          "score": 0.693805,
+          "texto": "LLM SmartDesk - Perguntas Frequentes"
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei informações suficientes para responder à sua pergunta sobre as funcionalidades do LLM SmartDesk.",
+      "avaliacao_funcionalidades": {
+        "ajuste_eletrico_no_contexto": true,
+        "memoria_no_contexto": false,
+        "botoes_no_contexto": false,
+        "ajuste_mencionado_na_resposta": false,
+        "memoria_mencionada_na_resposta": false,
+        "botoes_mencionados_na_resposta": false
+      }
+    },
+    {
+      "pergunta": "Quais funcionalidades possui o LLM SmartDesk?",
+      "top_k": 10,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.714986,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.700095,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 1,
+          "score": 0.693805,
+          "texto": "LLM SmartDesk - Perguntas Frequentes"
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.631809,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.613217,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.611264,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 4,
+          "score": 0.589953,
+          "texto": "Machine Learning e uma abordagem na qual modelos aprendem\npadroes a partir de dados."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 3,
+          "score": 0.580765,
+          "texto": "Aplicacoes incluem sistemas de recomendacao, assistentes virtuais,\nclassificacao de imagens e processamento de linguagem natural."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 6,
+          "score": 0.562879,
+          "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 5,
+          "score": 0.549615,
+          "texto": "Modelos de linguagem podem gerar texto, responder perguntas\ne resumir documentos, mas podem produzir respostas incorretas."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei informações suficientes para responder à sua pergunta sobre as funcionalidades do LLM SmartDesk.",
+      "avaliacao_funcionalidades": {
+        "ajuste_eletrico_no_contexto": true,
+        "memoria_no_contexto": true,
+        "botoes_no_contexto": false,
+        "ajuste_mencionado_na_resposta": false,
+        "memoria_mencionada_na_resposta": false,
+        "botoes_mencionados_na_resposta": false
+      }
+    },
+    {
+      "pergunta": "Quem criou a inteligencia artificial?",
+      "top_k": 1,
+      "recuperacao": [
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.785031,
+          "texto": "Introducao a Inteligencia Artificial"
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei informações suficientes nos trechos fornecidos para determinar quem criou a inteligência artificial. O trecho \"Introdução a Inteligência Artificial\" não fornece informações sobre a criação da inteligência artificial. A fonte \"inteligência_artificial.txt\" não foi encontrada nos trechos fornecidos.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "Quem criou a inteligencia artificial?",
+      "top_k": 3,
+      "recuperacao": [
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.785031,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.693634,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.610568,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei informações sobre quem criou a inteligência artificial nos trechos fornecidos. A inteligência artificial é uma área da computação que desenvolve sistemas capazes de executar tarefas associadas a capacidades como aprendizado, reconhecimento de padrões e tomada de decisão, mas não há informações sobre quem criou essa área.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "Quem criou a inteligencia artificial?",
+      "top_k": 10,
+      "recuperacao": [
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.785031,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.693634,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.610568,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.603815,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 4,
+          "score": 0.598527,
+          "texto": "Machine Learning e uma abordagem na qual modelos aprendem\npadroes a partir de dados."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 3,
+          "score": 0.580881,
+          "texto": "Aplicacoes incluem sistemas de recomendacao, assistentes virtuais,\nclassificacao de imagens e processamento de linguagem natural."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.575108,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 3,
+          "score": 0.559937,
+          "texto": "Como ajustar a altura?\nO usuario pode utilizar os botoes de controle para subir ou descer a mesa."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 6,
+          "score": 0.559894,
+          "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 5,
+          "score": 0.529349,
+          "texto": "Modelos de linguagem podem gerar texto, responder perguntas\ne resumir documentos, mas podem produzir respostas incorretas."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei nenhuma informação nos trechos fornecidos que indique quem criou a inteligência artificial.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "Quero uma receita de bolo.",
+      "top_k": 1,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 3,
+          "score": 0.614597,
+          "texto": "Como ajustar a altura?\nO usuario pode utilizar os botoes de controle para subir ou descer a mesa."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei nenhuma informação sobre receitas de bolo nos trechos fornecidos. Além disso, não há informações sobre como ajustar a altura da mesa, pois o trecho apenas menciona os botões de controle para subir ou descer a mesa.\n\nA fonte mencionada é \"smartdesk_faq.txt\", mas não há um trecho específico sobre receitas de bolo ou ajuste de altura. Se você estiver procurando uma receita de bolo, recomendo procurar outra fonte.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "Quero uma receita de bolo.",
+      "top_k": 3,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 3,
+          "score": 0.614597,
+          "texto": "Como ajustar a altura?\nO usuario pode utilizar os botoes de controle para subir ou descer a mesa."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.596373,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 6,
+          "score": 0.595861,
+          "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei nenhuma informação sobre uma receita de bolo nos trechos fornecidos. A fonte parece ser uma documentação de FAQ sobre um produto, como uma mesa de trabalho, e não contém informações sobre receitas de bolo.",
+      "avaliacao_funcionalidades": null
+    },
+    {
+      "pergunta": "Quero uma receita de bolo.",
+      "top_k": 10,
+      "recuperacao": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 3,
+          "score": 0.614597,
+          "texto": "Como ajustar a altura?\nO usuario pode utilizar os botoes de controle para subir ou descer a mesa."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "score": 0.596373,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 6,
+          "score": 0.595861,
+          "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 1,
+          "score": 0.565484,
+          "texto": "Introducao a Inteligencia Artificial"
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 5,
+          "score": 0.544789,
+          "texto": "Modelos de linguagem podem gerar texto, responder perguntas\ne resumir documentos, mas podem produzir respostas incorretas."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "score": 0.541505,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 3,
+          "score": 0.532349,
+          "texto": "Aplicacoes incluem sistemas de recomendacao, assistentes virtuais,\nclassificacao de imagens e processamento de linguagem natural."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 2,
+          "score": 0.528351,
+          "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao."
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "score": 0.513995,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura."
+        },
+        {
+          "documento": "inteligencia_artificial.txt",
+          "chunk": 4,
+          "score": 0.5037,
+          "texto": "Machine Learning e uma abordagem na qual modelos aprendem\npadroes a partir de dados."
+        }
+      ],
+      "resposta": "Infelizmente, não encontrei nenhuma informação sobre uma receita de bolo nos trechos fornecidos. A fonte mais próxima relacionada a alimentos é a fonte \"inteligencia_artificial.txt\", mas não há informações sobre receitas de bolo nesse documento.",
+      "avaliacao_funcionalidades": null
+    }
+  ],
+  "tempo_segundos": 6.071,
+  "cloud_deployed": false
+}

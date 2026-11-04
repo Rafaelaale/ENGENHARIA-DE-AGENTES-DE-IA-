@@ -1,0 +1,16 @@
+{
+    "supervisionado": {
+        "accuracy": 0.69,
+        "recall": 0.1935483870967742,
+        "f1": 0.27906976744186046
+    },
+    "nao_supervisionado": {
+        "quantidade_grupos": 3,
+        "silhouette": 0.3935922449926515,
+        "clientes_por_grupo": {
+            "0": 164,
+            "1": 163,
+            "2": 173
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "modelo": "llama3.2:latest",
+    "timestamp": "2026-11-04T01:39:34.075899+00:00",
+    "tarefas_executadas": 3,
+    "resultados": [
+        {
+            "tarefa": "classificacao",
+            "resposta": "RECLAMACAO",
+            "duracao_segundos": 5.694
+        },
+        {
+            "tarefa": "resumo",
+            "resposta": "Uma empresa recebe centenas de mensagens de clientes diariamente, que atualmente são classificadas manualmente e encaminhadas para os setores responsáveis. Esse processo é demorado e pode causar atrasos no atendimento.",
+            "duracao_segundos": 0.376
+        },
+        {
+            "tarefa": "extracao_json",
+            "resposta": "{\"cliente\": \"Maria\", \"produto\": \"Notebooks\", \"quantidade\": 3}",
+            "duracao_segundos": 0.175,
+            "json_valido": true
+        }
+    ]
+}

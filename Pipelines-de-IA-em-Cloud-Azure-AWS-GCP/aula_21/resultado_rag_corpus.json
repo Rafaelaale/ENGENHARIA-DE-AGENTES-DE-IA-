@@ -1,0 +1,178 @@
+{
+  "aula": 21,
+  "arquitetura": "RAG Corpus local",
+  "modelo_embedding": "nomic-embed-text:latest",
+  "modelo_gerador": "llama3.2:latest",
+  "fase_1": {
+    "chunks": 6,
+    "resultados": [
+      {
+        "pergunta": "O que e o LLM SmartDesk?",
+        "top_k": 2,
+        "recuperados": [
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 2,
+            "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura.",
+            "score": 0.777756
+          },
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 5,
+            "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento.",
+            "score": 0.729364
+          }
+        ],
+        "resposta": "O LLM SmartDesk é uma mesa de escritório com ajuste eletrico de altura."
+      },
+      {
+        "pergunta": "Como ajustar a altura da mesa?",
+        "top_k": 2,
+        "recuperados": [
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 3,
+            "texto": "Como ajustar a altura?\nO usuario pode utilizar os botoes de controle para subir ou descer a mesa.",
+            "score": 0.722184
+          },
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 4,
+            "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas.",
+            "score": 0.558229
+          }
+        ],
+        "resposta": "De acordo com o contexto fornecido, a resposta é que o usuário pode ajustar a altura da mesa subindo ou descer com os botões de controle."
+      }
+    ]
+  },
+  "fase_2": {
+    "chunks": 11,
+    "resultados": [
+      {
+        "pergunta": "O que e inteligencia artificial?",
+        "top_k": 2,
+        "recuperados": [
+          {
+            "documento": "inteligencia_artificial.txt",
+            "chunk": 1,
+            "texto": "Introducao a Inteligencia Artificial",
+            "score": 0.798877
+          },
+          {
+            "documento": "inteligencia_artificial.txt",
+            "chunk": 2,
+            "texto": "Inteligencia Artificial e uma area da computacao que desenvolve\nsistemas capazes de executar tarefas associadas a capacidades\ncomo aprendizado, reconhecimento de padroes e tomada de decisao.",
+            "score": 0.690444
+          }
+        ],
+        "resposta": "A Inteligência Artificial é uma área da computação que desenvolve sistemas capazes de executar tarefas associadas a capacidades como aprendizado, reconhecimento de padrões e tomada de decisões."
+      },
+      {
+        "pergunta": "O LLM SmartDesk possui memoria de posicoes?",
+        "top_k": 2,
+        "recuperados": [
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 2,
+            "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura.",
+            "score": 0.705747
+          },
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 4,
+            "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas.",
+            "score": 0.689773
+          }
+        ],
+        "resposta": "Sim, o LLM SmartDesk possui memoria de posicoes, permitindo salvar duas alturas preferidas no painel."
+      },
+      {
+        "pergunta": "Qual e a receita de bolo de chocolate?",
+        "top_k": 2,
+        "recuperados": [
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 4,
+            "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas.",
+            "score": 0.585622
+          },
+          {
+            "documento": "smartdesk_faq.txt",
+            "chunk": 6,
+            "texto": "O produto possui aplicativo para celular?\nA documentacao disponivel nao informa suporte a aplicativo para celular.",
+            "score": 0.572606
+          }
+        ],
+        "resposta": "Desculpe, não encontrei a receita de bolo de chocolate no contexto fornecido. O contexto parece ser relacionado a perguntas frequentes sobre um produto, especificamente o SmartDesk, e não contém informações sobre receitas de bolo de chocolate.\n\nSe você puder fornecer mais contexto ou informações sobre o que está procurando, ficarei feliz em tentar ajudar."
+      }
+    ]
+  },
+  "comparacao_top_k": [
+    {
+      "pergunta": "Quais funcionalidades possui o LLM SmartDesk?",
+      "top_k": 1,
+      "recuperados": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura.",
+          "score": 0.714986
+        }
+      ],
+      "resposta": "Não encontrou a informação específica sobre as funcionalidades do LLM SmartDesk no contexto fornecido. No entanto, de acordo com o trecho do documento \"smartdesk_faq.txt\" que forneceu, sabemos que o LLM SmartDesk é uma mesa de escritório com ajuste eletrico de altura."
+    },
+    {
+      "pergunta": "Quais funcionalidades possui o LLM SmartDesk?",
+      "top_k": 2,
+      "recuperados": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura.",
+          "score": 0.714986
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento.",
+          "score": 0.700095
+        }
+      ],
+      "resposta": "Não encontrei a informação especificada no contexto fornecido. O contexto apenas menciona que o LLM SmartDesk é uma mesa de escritório com ajuste eletrico de altura, mas não fornece informações sobre suas funcionalidades."
+    },
+    {
+      "pergunta": "Quais funcionalidades possui o LLM SmartDesk?",
+      "top_k": 4,
+      "recuperados": [
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 2,
+          "texto": "O que e o LLM SmartDesk?\nO LLM SmartDesk e uma mesa de escritorio com ajuste eletrico de altura.",
+          "score": 0.714986
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 5,
+          "texto": "Como solicitar suporte?\nO suporte do LLM SmartDesk e solicitado pelo portal de atendimento.",
+          "score": 0.700095
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 1,
+          "texto": "LLM SmartDesk - Perguntas Frequentes",
+          "score": 0.693805
+        },
+        {
+          "documento": "smartdesk_faq.txt",
+          "chunk": 4,
+          "texto": "O produto possui memoria de posicoes?\nSim. O painel permite salvar duas alturas preferidas.",
+          "score": 0.631809
+        }
+      ],
+      "resposta": "O LLM SmartDesk possui a seguinte funcionalidade:\n\n- Ajuste eletrico de altura."
+    }
+  ],
+  "tempo_segundos": 15.334,
+  "cloud_deployed": false
+}
