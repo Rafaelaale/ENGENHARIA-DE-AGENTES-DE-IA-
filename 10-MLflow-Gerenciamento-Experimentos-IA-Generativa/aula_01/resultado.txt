@@ -1,0 +1,2 @@
+Primeiro experimento MLflow
+Accuracy demonstrativa: 0.95
