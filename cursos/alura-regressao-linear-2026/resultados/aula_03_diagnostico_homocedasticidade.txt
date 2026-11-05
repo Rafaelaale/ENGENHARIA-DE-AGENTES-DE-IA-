@@ -1,0 +1,32 @@
+ALURA - AULA 03 - HOMOCEDASTICIDADE
+
+Imoveis analisados: 1006
+R2 treinamento: 0.651129
+
+ESTATISTICAS DOS RESIDUOS
+Media: 0.000000
+Desvio padrao: 217456.469418
+
+TESTE BREUSCH-PAGAN
+LM: 143.220123
+P-valor LM: 5.76955433188e-30
+F: 41.541112
+P-valor F: 2.99589857603e-32
+
+CONCLUSAO
+Ha evidencia estatistica de heterocedasticidade ao nivel de 5%.
+
+ERROS POR FAIXA DE PREVISAO
+                   quantidade  media_erro_absoluto  desvio_residuos
+faixa_previsao                                                     
+Faixa 1 - Menores         252         98271.456288    115189.774804
+Faixa 2                   251        108482.060931    142930.965979
+Faixa 3                   251        156194.704854    201772.547321
+Faixa 4 - Maiores         252        257753.956176    336235.488020
+
+OBSERVACOES
+Homocedasticidade significa variancia
+condicional constante dos erros.
+Residuos sem padrao visual nao garantem
+todos os pressupostos da regressao.
+O teste nao demonstra causalidade.
