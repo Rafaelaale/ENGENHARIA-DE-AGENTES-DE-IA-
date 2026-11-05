@@ -1,0 +1,52 @@
+HUGGING FACE - AULA 08
+AJUSTANDO A VARIAVEL ALVO
+
+Tipo original: int64
+Tipo final: ClassLabel
+Classes: 0 a 10
+
+FEATURES FINAIS
+{'input_ids': Sequence(feature=Value(dtype='int32', id=None), length=-1, id=None), 'attention_mask': Sequence(feature=Value(dtype='int8', id=None), length=-1, id=None), 'label': ClassLabel(names=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], id=None)}
+
+TOTAL DE REDACOES
+Treino: 3656
+Teste: 914
+
+PRIMEIRAS LABELS
+Treino: 4
+Teste: 7
+
+VALIDACAO
+Todas as notas originais foram preservadas.
+
+Dataset salvo em: F:\HUGGING-FACE-TRANSFER-LEARNING-NLP\dados\redacoes_prontas_treinamento
+
+CONCLUSAO
+Dados preparados para classificacao.
+Nenhum modelo foi treinado nesta aula.
+
+DISTRIBUICAO - TREINO
+Label 0: 67
+Label 1: 10
+Label 2: 61
+Label 3: 61
+Label 4: 395
+Label 5: 531
+Label 6: 981
+Label 7: 699
+Label 8: 606
+Label 9: 201
+Label 10: 44
+
+DISTRIBUICAO - TESTE
+Label 0: 16
+Label 1: 2
+Label 2: 12
+Label 3: 17
+Label 4: 87
+Label 5: 135
+Label 6: 251
+Label 7: 185
+Label 8: 156
+Label 9: 40
+Label 10: 13

@@ -1,0 +1,27 @@
+HUGGING FACE - AULA 09
+CARREGANDO O MODELO PRE-TREINADO
+
+Checkpoint: Geotrend/distilbert-base-pt-cased
+Arquitetura: distilbert
+Numero de classes: 11
+Parametros totais: 62721035
+
+id2label: {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10'}
+label2id: {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10}
+
+Redacoes treino: 3656
+Redacoes teste: 914
+
+PYTORCH
+Dispositivo: CPU
+Batch size: 4
+Lotes de treino: 914
+Lotes de validacao: 229
+
+Modelo inicial salvo em: F:\HUGGING-FACE-TRANSFER-LEARNING-NLP\modelos\distilbert_redacoes_inicial
+
+OBSERVACOES
+Modelo base carregado.
+Camada classificadora ainda nao foi treinada.
+Lotes preparados com padding dinamico.
+Nao foi executado treinamento nesta aula.

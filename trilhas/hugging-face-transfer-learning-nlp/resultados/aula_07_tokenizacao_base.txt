@@ -1,0 +1,33 @@
+HUGGING FACE - AULA 07
+TOKENIZANDO A BASE DE DADOS
+
+Checkpoint: Geotrend/distilbert-base-pt-cased
+Treino: 3656
+Teste: 914
+
+FEATURES
+{'score': Value(dtype='int64', id=None), 'input_ids': Sequence(feature=Value(dtype='int32', id=None), length=-1, id=None), 'attention_mask': Sequence(feature=Value(dtype='int8', id=None), length=-1, id=None)}
+
+COMPRIMENTOS DOS TOKENS
+
+TREINO
+Minimo: 100
+Maximo: 512
+Media: 423.50
+Sequencias com 512 tokens: 1204
+
+TESTE
+Minimo: 155
+Maximo: 512
+Media: 427.42
+Sequencias com 512 tokens: 291
+
+Dataset salvo em: F:\HUGGING-FACE-TRANSFER-LEARNING-NLP\dados\redacoes_tokenizadas
+
+OBSERVACOES
+Tokenizacao em lotes com batched=True.
+Coluna essay removida somente da versao tokenizada.
+Coluna score preservada.
+Truncation=True e limite de 512 tokens.
+Padding sera tratado na preparacao dos lotes.
+Nenhum modelo foi treinado nesta aula.
