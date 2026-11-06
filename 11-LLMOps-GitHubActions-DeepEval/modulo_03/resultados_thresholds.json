@@ -1,0 +1,170 @@
+[
+  {
+    "caso": "preco_consulta",
+    "metrica": "AnswerRelevancy",
+    "threshold": 0.25,
+    "scores": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "media": 1.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 3,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "preco_consulta",
+    "metrica": "AnswerRelevancy",
+    "threshold": 0.5,
+    "scores": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "media": 1.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 3,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "preco_consulta",
+    "metrica": "AnswerRelevancy",
+    "threshold": 0.75,
+    "scores": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "media": 1.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 3,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "preco_consulta",
+    "metrica": "Faithfulness",
+    "threshold": 0.25,
+    "scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "media": 0.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 0,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "preco_consulta",
+    "metrica": "Faithfulness",
+    "threshold": 0.5,
+    "scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "media": 0.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 0,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "preco_consulta",
+    "metrica": "Faithfulness",
+    "threshold": 0.75,
+    "scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "media": 0.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 0,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "direito_familia",
+    "metrica": "AnswerRelevancy",
+    "threshold": 0.25,
+    "scores": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "media": 1.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 3,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "direito_familia",
+    "metrica": "AnswerRelevancy",
+    "threshold": 0.5,
+    "scores": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "media": 1.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 3,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "direito_familia",
+    "metrica": "AnswerRelevancy",
+    "threshold": 0.75,
+    "scores": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "media": 1.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 3,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "direito_familia",
+    "metrica": "Faithfulness",
+    "threshold": 0.25,
+    "scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "media": 0.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 0,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "direito_familia",
+    "metrica": "Faithfulness",
+    "threshold": 0.5,
+    "scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "media": 0.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 0,
+    "execucoes_validas": 3
+  },
+  {
+    "caso": "direito_familia",
+    "metrica": "Faithfulness",
+    "threshold": 0.75,
+    "scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "media": 0.0,
+    "desvio_padrao": 0.0,
+    "aprovacoes": 0,
+    "execucoes_validas": 3
+  }
+]
